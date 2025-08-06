@@ -22,9 +22,19 @@ const getBookmarkIcon = (type) => {
 
 export default function Card({ item, type }) {
   const bookmarkIcon = getBookmarkIcon(item.type);
+   const shadowColor = {
+    movie: "hover:shadow-[0_4px_10px_rgba(138,56,245,1)]",   // purple
+    series: "hover:shadow-[0_4px_10px_rgba(0,189,214,1)]",   // cyan
+    game: "hover:shadow-[0_4px_10px_rgba(255,107,107,1)]",   // red
+    book: "hover:shadow-[0_4px_10px_rgba(0,255,144,1)]",     // green
+  };
 
   return (
-    <div className="bg-[#1C2230] rounded-[20px] overflow-hidden text-white shadow-md max-w-[207px] flex flex-col hover:shadow-[0_4px_10px_rgba(138,56,245,1)]">
+    <div
+      className={`bg-[#1F2842] rounded-[20px] overflow-hidden text-white shadow-md max-w-[207px] flex flex-col ${
+        shadowColor[type] || ""
+      }`}
+    >
       {/* Image section */}
       <div className="relative">
         <Image
@@ -75,10 +85,10 @@ export default function Card({ item, type }) {
 
         {/* Buttons */}
         <div className="flex items-center justify-between mt-3 text-sm">
-          <button className="flex items-center gap-1 bg-[#2A3145] px-3 py-1 rounded-lg">
+          <button className="flex items-center gap-1 bg-[#35436C] px-3 py-1.5 rounded-full">
             <FiThumbsUp /> Like
           </button>
-          <button className="flex items-center gap-1 bg-[#2A3145] px-3 py-1 rounded-lg">
+          <button className="flex items-center gap-1 bg-[#394056] px-3 py-1.5 rounded-full">
             <FaTimes /> Pass
           </button>
         </div>

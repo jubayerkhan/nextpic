@@ -119,9 +119,9 @@ export default function Filter() {
             <div className='md:flex justify-between'>
                 <div>
                     <h5 className='text-white pb-2'>Top Suggest</h5>
-                    <p className='text-[#7E8598] text-sm'>Click pass to remove already watched/unwanted items</p>
+                    <p className='result_text'>Click pass to remove already watched/unwanted items</p>
                 </div>
-                <p className='text-[#7E8598] text-sm mt-auto pt-4 md:pt-0'>Showing results for: Movies, Series, Games, Books</p>
+                <p className='result_text_right'>Showing results for: Movies, Series, Games, Books</p>
             </div>
         </div>
     )
