@@ -143,6 +143,41 @@
   }
 
   /* card style */
-  
+  .card_div {
+    @apply bg-[#1F2842] rounded-[20px] overflow-hidden text-white shadow-md max-w-[207px] flex flex-col;
+  }
+  .card_poster_img {
+    @apply w-full h-auto object-cover;
+  }
+  .card_bookmark_img {
+    @apply absolute top-2 right-2 cursor-pointer;
+  }
+  .card_rating_div {
+    @apply flex items-center gap-1 text-sm text-yellow-400 absolute bottom-3 left-3 bg-black/50 rounded-full px-1.5 py-[3px];
+  }
+  .card_content_div {
+    @apply p-3 flex flex-col justify-between h-full;
+  }
+  .card_title {
+    @apply font-semibold mt-2 text-white leading-tight;
+  }
+  .card_tag_div {
+    @apply text-xs text-[#7E8598] mt-1 flex flex-wrap gap-1;
+  }
+  .card_year {
+    @apply bg-[#2A3145] text-white px-2 py-0.5 rounded-full text-[10px];
+  }
+  .card_description {
+    @apply text-xs text-[#7E8598] mt-2;
+  }
+  .card_btn_div {
+    @apply flex items-center justify-between mt-3 text-sm;
+  }
+  .card_like_btn {
+    @apply flex items-center gap-1 bg-[#35436C] px-3 py-1.5 rounded-full;
+  }
+  .card_pass_btn {
+    @apply flex items-center gap-1 bg-[#394056] px-3 py-1.5 rounded-full;
+  }
 
 }

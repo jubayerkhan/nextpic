@@ -31,7 +31,7 @@ export default function Card({ item, type }) {
 
   return (
     <div
-      className={`bg-[#1F2842] rounded-[20px] overflow-hidden text-white shadow-md max-w-[207px] flex flex-col ${
+      className={`card_div ${
         shadowColor[type] || ""
       }`}
     >
@@ -42,36 +42,36 @@ export default function Card({ item, type }) {
           alt={item.title}
           width={300}
           height={450}
-          className="w-full h-auto object-cover"
+          className="card_poster_img"
         />
-        {/* Dynamic Bookmark icon */}
+        {/* Bookmark icon */}
         <Image
           src={bookmarkIcon}
           alt="bookmark"
           width={20}
           height={20}
-          className="absolute top-2 right-2 cursor-pointer"
+          className="card_bookmark_img"
         />
         
         {/* Rating */}
-        <div className="flex items-center gap-1 text-sm text-yellow-400 absolute bottom-3 left-3 bg-black/50 rounded-full px-1.5 py-[3px]">
+        <div className="card_rating_div">
           <FaStar /> <span className="text-white">{item.rating}/10</span>
         </div>
       </div>
 
       {/* Content section */}
-      <div className="p-3 flex flex-col justify-between h-full">
-        <h3 className="font-semibold mt-2 text-white leading-tight">
+      <div className="card_content_div">
+        <h3 className="card_title">
           {item.title}
         </h3>
 
         {/* Year + Tags */}
-        <div className="text-xs text-[#7E8598] mt-1 flex flex-wrap gap-1">
+        <div className="card_tag_div">
           <span>{item.year}</span>
           {item.genres.map((genre, idx) => (
             <span
               key={idx}
-              className="bg-[#2A3145] text-white px-2 py-0.5 rounded-full text-[10px]"
+              className="card_year"
             >
               {genre}
             </span>
@@ -79,16 +79,16 @@ export default function Card({ item, type }) {
         </div>
 
         {/* Description */}
-        <p className="text-xs text-[#7E8598] mt-2">
-          {item.description} <span className="text-[#5799EF]">...More</span>
+        <p className="card_description">
+          {item.description} <span className="text-[#5799EF]">More</span>
         </p>
 
         {/* Buttons */}
-        <div className="flex items-center justify-between mt-3 text-sm">
-          <button className="flex items-center gap-1 bg-[#35436C] px-3 py-1.5 rounded-full">
+        <div className="card_btn_div">
+          <button className="card_like_btn">
             <FiThumbsUp /> Like
           </button>
-          <button className="flex items-center gap-1 bg-[#394056] px-3 py-1.5 rounded-full">
+          <button className="card_pass_btn">
             <FaTimes /> Pass
           </button>
         </div>
