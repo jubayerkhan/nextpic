@@ -1,26 +1,139 @@
 @import "tailwindcss";
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer components {
+  /* ==================== */
+  /* home page styles */
+  /* ==================== */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* navbar styles */
+  .navbar {
+    @apply py-5 flex justify-between items-center md:px-12 px-4 bg-gradient-to-b from-[#6C3DF0]/20 from-0% to-[#10172A]/20 to-100% w-full;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  .navbar_btn {
+    @apply bg-[#FF4F6D] px-[30px] py-2.5 rounded-[10px] text-white cursor-pointer;
+  }
+
+  /* filter styles */
+  .filter_div {
+    @apply md:pt-6 pt-1 md:px-12 px-4;
+  }
+
+  .filter_heading_div {
+    @apply flex gap-2.5 justify-center;
+  }
+
+  .filter_heading {
+    @apply text-white font-semibold text-[34px] text-center;
+  }
+
+  .filter_subtitle {
+    @apply text-sm text-[#7E8598] text-center pt-2.5;
+  }
+
+  .filter_title {
+    @apply text-white text-center md:pt-12 pt-5 md:pb-6 pb-4;
+  }
+
+  .filter_option_movie_div {
+    @apply border-1 border-[#394056] hover:border-[#652CA8] hover:bg-radial from-[#8A38F5]/30 from-1% to-[#000]/0 md:max-w-[302px] rounded-[15px] py-[30px] cursor-pointer focus:bg-[#473956];
+  }
+
+  .filter_option_series_div {
+    @apply border-1 border-[#394056] hover:border-[#96207A] hover:bg-radial from-[#F316B0]/30 from-1% to-[#000]/0 md:max-w-[302px] rounded-[15px] py-[30px] cursor-pointer focus:bg-[#51344A];
+  }
+
+  .filter_option_game_div {
+    @apply border-1 border-[#394056] hover:border-[#B93F13] hover:bg-radial from-[#F65009]/30 from-1% to-[#000]/0 md:max-w-[302px] rounded-[15px] py-[30px] cursor-pointer focus:bg-[#603A2A];
+  }
+
+  .filter_option_book_div {
+    @apply border-1 border-[#394056] hover:border-[#105CAD] hover:bg-radial from-[#0C8CE9]/30 from-1% to-[#000]/0 md:max-w-[302px] rounded-[15px] py-[30px] cursor-pointer focus:bg-[#394360];
+  }
+
+  .filter_option_img_div {
+    @apply p-[15px] rounded-full w-[54px] mx-auto;
+  }
+
+  .filter_option_title {
+    @apply text-sm text-white text-center pt-[14px];
+  }
+
+  .filter_option_movies_div {
+    @apply max-w-[1280px] mx-auto grid md:grid-cols-4 grid-cols-2 gap-5;
+  }
+
+  .filter_option_movies_div input[type='checkbox'] {
+    display: none;
+  }
+
+  .filter_option_movies_div input[type='checkbox']+label {
+    text-align: center;
+    border-radius: 10px;
+    color: #2C2C2C;
+    float: left;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Checkbox 1 (ID: movie) */
+  #movie:hover+label {
+    background: radial-gradient(circle at center, rgba(138, 56, 245, 0.2), rgba(0, 0, 0, 0.2));
+    border: 1px solid #652CA8;
+  }
+
+  #movie:checked+label {
+    background-color: rgba(71, 57, 86, 1) !important;
+    background: linear-gradient(to top, rgba(138, 56, 245, 0.2), rgba(0, 0, 0, 0.2));
+    border: 1px solid #652CA8;
+  }
+
+  /* Checkbox 2 (ID: series) */
+  #series:hover+label {
+    background: radial-gradient(circle at center, rgba(255, 99, 132, 0.2), rgba(0, 0, 0, 0.2));
+    border: 1px solid #96207A;
+    /* Pink */
+  }
+
+  #series:checked+label {
+    background-color: rgba(81, 52, 74, 1) !important;
+    border: 1px solid #96207A;
+    background: linear-gradient(to top, rgba(255, 99, 132, 0.2), rgba(0, 0, 0, 0.2));
+    /* Pink */
+  }
+
+  /* Checkbox 3 (ID: game) */
+  #game:hover+label {
+    border: 1px solid #B93F13;
+    background: radial-gradient(circle at center, rgba(246, 80, 9, .2), rgba(0, 0, 0, 0.2));
+    /* Blue */
+  }
+
+  #game:checked+label {
+    background-color: #603A2A !important;
+    border: 1px solid #B93F13;
+    background: linear-gradient(to top, rgba(246, 80, 9, .2), rgba(0, 0, 0, 0.2));
+    /* Blue */
+  }
+
+  /* Checkbox 4 (ID: book) */
+  #book:hover+label {
+    border: 1px solid #105CAD;
+    background: radial-gradient(circle at center, rgba(75, 192, 192, 0.2), rgba(0, 0, 0, 0.2));
+    /* Teal */
+  }
+
+  #book:checked+label {
+    background-color: #394360 !important;
+    border: 1px solid #105CAD;
+    background: linear-gradient(to top, rgba(75, 192, 192, 0.2), rgba(0, 0, 0, 0.2));
+    /* Teal */
+  }
+
+  /* filter btn */
+  .filter_btn {
+    @apply border-1 border-[#394056] py-3 px-6 rounded-[10px] flex gap-2.5 items-center text-white font-medium w-full md:w-auto mb-4 md:mb-0 justify-center;
+  }
+
 }
