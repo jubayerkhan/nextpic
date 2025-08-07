@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { FaStar, FaTimes } from "react-icons/fa";
 import { FiThumbsUp } from "react-icons/fi";
+import thumbs from "@/public/assets/thumbs-up.png";
+import pass from "@/public/assets/pass.png";
 
 // Helper function to get the correct bookmark icon path
 const getBookmarkIcon = (type) => {
@@ -21,19 +23,19 @@ const getBookmarkIcon = (type) => {
 };
 
 export default function Card({ item, type }) {
-  const bookmarkIcon = getBookmarkIcon(item.type);
-   const shadowColor = {
-    movie: "hover:shadow-[0_4px_10px_rgba(138,56,245,1)]",   // purple
-    series: "hover:shadow-[0_4px_10px_rgba(0,189,214,1)]",   // cyan
-    game: "hover:shadow-[0_4px_10px_rgba(255,107,107,1)]",   // red
-    book: "hover:shadow-[0_4px_10px_rgba(0,255,144,1)]",     // green
-  };
+  const bookmarkIcon = getBookmarkIcon(type);
+  const shadowColor = {
+  movie: "hover:shadow-[0_4px_10px_rgba(138,56,245,1)]",
+  series: "hover:shadow-[0_4px_10px_rgba(243,22,176,1)]",
+  game: "hover:shadow-[0_4px_10px_rgba(246,80,9,1)]",
+  book: "hover:shadow-[0_4px_10px_rgba(12,140,233,1)]",
+};
+
 
   return (
     <div
-      className={`card_div ${
-        shadowColor[type] || ""
-      }`}
+      className={`card_div h-full ${shadowColor[type] || ""
+        }`}
     >
       {/* Image section */}
       <div className="relative">
@@ -52,7 +54,7 @@ export default function Card({ item, type }) {
           height={20}
           className="card_bookmark_img"
         />
-        
+
         {/* Rating */}
         <div className="card_rating_div">
           <FaStar /> <span className="text-white">{item.rating}/10</span>
@@ -86,10 +88,18 @@ export default function Card({ item, type }) {
         {/* Buttons */}
         <div className="card_btn_div">
           <button className="card_like_btn">
-            <FiThumbsUp /> Like
+            <Image
+              src={thumbs}
+              alt="thumbs"
+            />
+             Like
           </button>
           <button className="card_pass_btn">
-            <FaTimes /> Pass
+            <Image
+              src={pass}
+              alt="pass"
+            />
+            Pass
           </button>
         </div>
       </div>

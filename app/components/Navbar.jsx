@@ -7,7 +7,9 @@ export default function Navbar() {
   return (
     <div className='navbar'>
       <Link href="/"><Image src={logo} alt='logo' /></Link>
-      <button className='navbar_btn'>Sign Up</button>
+      <div className="navbar_btn_div">
+        <button className='navbar_btn'>Sign Up</button>
+      </div>
     </div>
   )
 }

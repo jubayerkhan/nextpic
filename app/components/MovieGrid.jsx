@@ -1,4 +1,3 @@
-// MOVIE GRID COMPONENT
 import MovieCard from "./Card";
 
 const dummyMovies = [
@@ -19,20 +18,20 @@ const dummyMovies = [
         image: "/assets/movie2.png",
     },
     {
-        title: "The Shawshank Redemption",
+        title: "Interstellar",
         year: "2014",
         genres: ["Adventure", "Drama"],
         rating: 8.6,
         description: "A journey through space and time...",
-        image: "/assets/movie3.png",
+        image: "/assets/movie4.png",
     },
     {
-        title: "Interstellar",
+        title: "The Shawshank Redemption",
         year: "1994",
         genres: ["Drama", "Adventure"],
         rating: 9.3,
         description: "A story of hope and friendship with...",
-        image: "/assets/movie4.png",
+        image: "/assets/movie3.png",
     },
     {
         id: 5,
@@ -62,10 +61,10 @@ const dummyMovies = [
     },
     {
         title: "Interstellar",
-        year: "1994",
-        genres: ["Drama", "Adventure"],
-        rating: 9.3,
-        description: "A story of hope and friendship with...",
+        year: "2014",
+        genres: ["Adventure", "Drama", "Sci-Fi"],
+        rating: 8.6,
+        description: "A journey through space and time...",
         image: "/assets/movie4.png",
     },
 ];
@@ -73,11 +72,26 @@ const dummyMovies = [
 export function MovieGrid() {
     return (
         <div className="md:px-12 px-4">
-            <h3 className="text-white text-sm pt-6 pb-[30px]">Movie</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 2xl:grid-cols-8 md:grid-cols-4 xl:grid-cols-6 gap-6 pb-6">
-                {dummyMovies.map((movie, index) => (
-                    <MovieCard key={index} item={movie} type="movie" />
-                ))}
+            <h3 className="cards_section_title">Movie</h3>
+
+            {/* Responsive Container */}
+            <div className="pb-6">
+                <div
+                    className="cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide"
+                >
+                    {dummyMovies.map((movie, index, type) => (
+                        <div className="min-w-[207px] flex-shrink-0 md:flex-shrink md:min-w-0" key={index}>
+                            <MovieCard item={movie} type="movie" />
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Show More Button */}
+            <div className="item_center mb-12">
+                <button className="movie_show_more_btn">
+                    Show More
+                </button>
             </div>
         </div>
     );
