@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FaStar, FaTimes } from "react-icons/fa";
-import { FiThumbsUp } from "react-icons/fi";
+import { FaStar } from "react-icons/fa";
 import thumbs from "@/public/assets/thumbs-up.png";
 import pass from "@/public/assets/pass.png";
 
@@ -24,28 +23,26 @@ const getBookmarkIcon = (type) => {
 
 export default function Card({ item, type }) {
   const bookmarkIcon = getBookmarkIcon(type);
-  const shadowColor = {
-  movie: "hover:shadow-[0_4px_10px_rgba(138,56,245,1)]",
-  series: "hover:shadow-[0_4px_10px_rgba(243,22,176,1)]",
-  game: "hover:shadow-[0_4px_10px_rgba(246,80,9,1)]",
-  book: "hover:shadow-[0_4px_10px_rgba(12,140,233,1)]",
-};
 
+  const shadowColor = {
+    movie: "hover:shadow-[0_4px_10px_rgba(138,56,245,1)]",
+    series: "hover:shadow-[0_4px_10px_rgba(243,22,176,1)]",
+    game: "hover:shadow-[0_4px_10px_rgba(246,80,9,1)]",
+    book: "hover:shadow-[0_4px_10px_rgba(12,140,233,1)]",
+  };
 
   return (
-    <div
-      className={`card_div h-full ${shadowColor[type] || ""
-        }`}
-    >
+    <div className={`card_div h-full flex flex-col ${shadowColor[type] || ""}`}>
       {/* Image section */}
-      <div className="relative">
+      <div className="relative overflow-hidden max-h-[303px]">
         <Image
           src={item.image}
           alt={item.title}
-          width={300}
-          height={450}
+          width={210}
+          height={315}
           className="card_poster_img"
         />
+
         {/* Bookmark icon */}
         <Image
           src={bookmarkIcon}
@@ -62,43 +59,36 @@ export default function Card({ item, type }) {
       </div>
 
       {/* Content section */}
-      <div className="card_content_div">
-        <h3 className="card_title">
-          {item.title}
-        </h3>
+      <div className="card_content_div flex flex-col flex-grow">
+        <div className="text_section flex-grow">
+          {/* Title */}
+          <h3 className="card_title">{item.title}</h3>
 
-        {/* Year + Tags */}
-        <div className="card_tag_div">
-          <span>{item.year}</span>
-          {item.genres.map((genre, idx) => (
-            <span
-              key={idx}
-              className="card_year"
-            >
-              {genre}
-            </span>
-          ))}
+          {/* Year and Tags */}
+          <div className="card_tag_div">
+            <span>{item.year}</span>
+            {item.genres.map((genre, idx) => (
+              <span key={idx} className="card_year">
+                {genre}
+              </span>
+            ))}
+          </div>
+
+          {/* Description */}
+          <p className="card_description">
+            {item.description}{" "}
+            <span className="text-[#5799EF] cursor-pointer">More</span>
+          </p>
         </div>
 
-        {/* Description */}
-        <p className="card_description">
-          {item.description} <span className="text-[#5799EF]">More</span>
-        </p>
-
-        {/* Buttons */}
+        {/* Buttons pinned at bottom */}
         <div className="card_btn_div">
           <button className="card_like_btn">
-            <Image
-              src={thumbs}
-              alt="thumbs"
-            />
-             Like
+            <Image src={thumbs} alt="thumbs" />
+            Like
           </button>
           <button className="card_pass_btn">
-            <Image
-              src={pass}
-              alt="pass"
-            />
+            <Image src={pass} alt="pass" />
             Pass
           </button>
         </div>

@@ -157,7 +157,18 @@
 
   /* card style */
   .card_div {
-    @apply bg-[#1F2842] rounded-[20px] overflow-hidden text-white shadow-md max-w-[207px] flex flex-col;
+    @apply bg-[#1F2842] rounded-[20px] overflow-hidden text-white shadow-md max-w-[207px] flex flex-col cursor-pointer;
+  }
+
+  .card_div:hover img{
+    transform: scale(1.1);
+  }
+  .card_div .text_section{
+    position: relative;
+    transition: all 0.3s;
+  }
+  .card_div:hover .text_section{
+    top: -4px;
   }
 
   .card_poster_img {
@@ -173,7 +184,7 @@
   }
 
   .card_content_div {
-    @apply p-3 flex flex-col justify-between h-full;
+    @apply px-3 py-6 flex flex-col justify-between;
   }
 
   .card_title {
@@ -193,32 +204,32 @@
   }
 
   .card_btn_div {
-    @apply flex items-center justify-between mt-[34px] text-sm;
+    @apply flex items-center justify-between mt-[10px] text-sm;
   }
 
   .card_like_btn {
-    @apply flex items-center gap-2.5 bg-[#35436C] px-3 py-1.5 rounded-full;
+    @apply flex items-center gap-2.5 bg-[#35436C] px-3 py-1.5 rounded-full cursor-pointer;
   }
 
   .card_pass_btn {
-    @apply flex items-center gap-2.5 bg-[#394056] px-3 py-1.5 rounded-full;
+    @apply flex items-center gap-2.5 bg-[#394056] px-3 py-1.5 rounded-full cursor-pointer;
   }
 
   /* movie grid styles */
   .movie_show_more_btn {
-    @apply border border-[#394056] hover:border-[#652CA8] hover:bg-[#282031] text-white py-[14px] px-[34px] rounded-full transition-transform;
+    @apply border border-[#394056] hover:border-[#652CA8] hover:bg-[#282031] text-white py-[14px] px-[34px] rounded-full transition-transform cursor-pointer;
   }
 
   .series_show_more_btn {
-    @apply border border-[#394056] hover:border-[#96207A] hover:bg-[#31202D] text-white py-[14px] px-[34px] rounded-full transition-transform;
+    @apply border border-[#394056] hover:border-[#96207A] hover:bg-[#31202D] text-white py-[14px] px-[34px] rounded-full transition-transform cursor-pointer;
   }
 
   .game_show_more_btn {
-    @apply border border-[#394056] hover:border-[#B93F13] hover:bg-[#33241D] text-white py-[14px] px-[34px] rounded-full transition-transform;
+    @apply border border-[#394056] hover:border-[#B93F13] hover:bg-[#33241D] text-white py-[14px] px-[34px] rounded-full transition-transform cursor-pointer;
   }
 
   .book_show_more_btn {
-    @apply border border-[#394056] hover:border-[#105CAD] hover:bg-[#212636] text-white py-[14px] px-[34px] rounded-full transition-transform;
+    @apply border border-[#394056] hover:border-[#105CAD] hover:bg-[#212636] text-white py-[14px] px-[34px] rounded-full transition-transform cursor-pointer;
   }
 
   .cards_section_title {

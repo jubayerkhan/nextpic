@@ -75,7 +75,7 @@ export function GameGrid() {
             {/* Responsive Container */}
             <div className="pb-6">
                 <div
-                    className="cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide"
+                    className="cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr"
                 >
                     {dummyGames.map((game, index) => (
                         <div className="min-w-[207px] flex-shrink-0 md:flex-shrink md:min-w-0" key={index}>
