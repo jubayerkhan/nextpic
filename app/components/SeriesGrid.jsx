@@ -18,7 +18,7 @@ const dummySeries = [
         image: "/assets/series2.png",
     },
     {
-        title: "The Witcher 3: Wild Hunt",
+        title: "Game of Thrones",
         year: "2008",
         genres: ["Fantasy", "Drama"],
         rating: 9.2,
