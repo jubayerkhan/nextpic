@@ -4,12 +4,14 @@ import { MovieGrid } from "./components/MovieGrid";
 import { SeriesGrid } from "./components/SeriesGrid";
 import { GameGrid } from "./components/GameGrid";
 import { BookGrid } from "./components/BookGrid";
+import FilterSecondary from "./components/FilterSecendary";
 
 export default function Home() {
   return (
     <div className="container_fluid md:pb-20 pb-10">
       <Navbar/>
       <Filter/>
+      <FilterSecondary/>
       <MovieGrid/>
       <SeriesGrid/>
       <GameGrid/>
