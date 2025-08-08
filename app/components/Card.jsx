@@ -34,7 +34,7 @@ export default function Card({ item, type }) {
   return (
     <div className={`card_div h-full flex flex-col ${shadowColor[type] || ""}`}>
       {/* Image section */}
-      <div className="relative overflow-hidden max-h-[303px]">
+      <div className="relative overflow-hidden max-h-[303px] cursor-pointer">
         <Image
           src={item.image}
           alt={item.title}
@@ -49,7 +49,7 @@ export default function Card({ item, type }) {
           alt="bookmark"
           width={20}
           height={20}
-          className="card_bookmark_img"
+          className="card_bookmark_img hover:opacity-100 md:opacity-80"
         />
 
         {/* Rating */}

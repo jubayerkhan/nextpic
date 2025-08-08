@@ -88,7 +88,7 @@ export function MovieGrid() {
             </div>
 
             {/* Show More Button */}
-            <div className="item_center mb-12">
+            <div className="item_center md:mb-12 mb-2">
                 <button className="movie_show_more_btn">
                     Show More
                 </button>

@@ -157,11 +157,12 @@
 
   /* card style */
   .card_div {
-    @apply bg-[#1F2842] rounded-[20px] overflow-hidden text-white shadow-md max-w-[207px] flex flex-col cursor-pointer;
+    @apply bg-[#1F2842] rounded-[20px] overflow-hidden text-white shadow-md max-w-[207px] flex flex-col;
   }
 
   .card_div:hover img{
     transform: scale(1.1);
+    transition: all 0.3s;
   }
   .card_div .text_section{
     position: relative;
@@ -169,6 +170,7 @@
   }
   .card_div:hover .text_section{
     top: -4px;
+    transition: all 0.3s;
   }
 
   .card_poster_img {
@@ -188,7 +190,7 @@
   }
 
   .card_title {
-    @apply font-semibold mt-2 text-white leading-tight;
+    @apply font-semibold pb-2.5 text-white leading-tight;
   }
 
   .card_tag_div {
