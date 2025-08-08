@@ -194,15 +194,15 @@
   }
 
   .card_tag_div {
-    @apply text-xs text-[#7E8598] mt-1 flex flex-wrap gap-1;
+    @apply text-sm text-[#7E8598] mt-1 flex flex-wrap gap-2.5 items-center;
   }
 
   .card_year {
-    @apply text-white px-2.5 py-0.5 rounded-full text-[10px] border-1 border-[#394056];
+    @apply text-white px-2.5 py-0.5 rounded-full text-[14px] border-1 border-[#394056];
   }
 
   .card_description {
-    @apply text-xs text-[#7E8598] mt-2;
+    @apply text-sm text-[#7E8598] mt-2;
   }
 
   .card_btn_div {

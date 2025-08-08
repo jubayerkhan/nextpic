@@ -20,7 +20,7 @@ const dummyMovies = [
     {
         title: "Interstellar",
         year: "2014",
-        genres: ["Adventure", "Drama"],
+        genres: ["Sci-Fi"],
         rating: 8.6,
         description: "A journey through space and time...",
         image: "/assets/movie4.png",
