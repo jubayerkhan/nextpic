@@ -20,6 +20,10 @@
     @apply inline-block p-[1px] rounded-[10px] bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] hover:bg-none transition;
   }
 
+  .filter_btn_div {
+    @apply inline-block p-[1px] rounded-[10px] bg-[#7B808F] bg-gradient-to-r hover:from-[#FF4F6D] hover:to-[#6C3DF0];
+  }
+
   .navbar_btn {
     @apply hover:bg-[#FF4F6D] px-[30px] py-2.5 rounded-[10px] text-white cursor-pointer bg-[#10172A] transition;
   }
@@ -70,7 +74,7 @@
   }
 
   .filter_option_movies_div {
-    @apply max-w-[1280px] mx-auto grid md:grid-cols-4 grid-cols-2 gap-5;
+    @apply max-w-[1280px] mx-auto grid md:grid-cols-4 grid-cols-4 md:gap-5 gap-4;
   }
 
   .filter_option_movies_div input[type='checkbox'] {
@@ -144,7 +148,7 @@
 
   /* filter btn */
   .filter_btn {
-    @apply border-1 border-[#394056] py-3 px-6 rounded-[10px] flex gap-2.5 items-center text-white font-medium w-full md:w-auto mb-4 md:mb-0 justify-center cursor-pointer;
+    @apply py-3 px-6 rounded-[10px] flex gap-2.5 items-center text-white font-medium w-full md:w-auto md:mb-0 justify-center cursor-pointer;
   }
 
   .result_text_right {
@@ -160,15 +164,17 @@
     @apply bg-[#1F2842] rounded-[20px] overflow-hidden text-white shadow-md max-w-[207px] md:max-w-full flex flex-col;
   }
 
-  .card_div:hover img{
+  .card_div:hover img {
     transform: scale(1.1);
     transition: all 0.3s;
   }
-  .card_div .text_section{
+
+  .card_div .text_section {
     position: relative;
     transition: all 0.3s;
   }
-  .card_div:hover .text_section{
+
+  .card_div:hover .text_section {
     top: -4px;
     transition: all 0.3s;
   }
@@ -235,10 +241,157 @@
   }
 
   .cards_section_title {
-    @apply text-white text-sm pt-6 pb-[30px];
+    @apply text-white text-sm pt-8 md:pt-6 md:pb-[30px] pb-4;
   }
 
   .cards_grid_section {
-    @apply flex md:grid grid-cols-2 sm:grid-cols-3 2xl:grid-cols-8 lg:grid-cols-5 md:grid-cols-3 xl:grid-cols-6 gap-6 ;
+    @apply flex md:grid grid-cols-2 sm:grid-cols-3 2xl:grid-cols-8 lg:grid-cols-5 md:grid-cols-3 xl:grid-cols-6 gap-6;
+  }
+
+  /* secondary filter styles */
+  .filter2_option_movies_div {
+    @apply flex gap-1.5 flex-wrap pt-2.5;
+  }
+
+  .filter2_option_movies_div input[type='checkbox'] {
+    display: none;
+  }
+
+  .filter2_option_movies_div input[type='checkbox']+label {
+    text-align: center;
+    float: left;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Movies */
+  .filter2_option_movies_div input.movie-checkbox+label:hover {
+    border-color: #652CA8;
+    background-color: #282031;
+    transition: all 0.3s ease;
+  }
+
+  .filter2_option_movies_div input.movie-checkbox:checked+label {
+    border-color: #652CA8;
+    background-color: #473956;
+    transition: all 0.3s ease;
+  }
+
+  /* Series */
+  .filter2_option_movies_div input.series-checkbox+label:hover {
+    border-color: #96207A;
+    background-color: #31202D;
+    transition: all 0.3s ease;
+  }
+
+  .filter2_option_movies_div input.series-checkbox:checked+label {
+    border-color: #96207A;
+    background-color: #51344A;
+    transition: all 0.3s ease;
+  }
+
+  /* Games */
+  .filter2_option_movies_div input.game-checkbox+label:hover {
+    border-color: #B93F13;
+    background-color: #33241D;
+    transition: all 0.3s ease;
+  }
+
+  .filter2_option_movies_div input.game-checkbox:checked+label {
+    border-color: #B93F13;
+    background-color: #603A2A;
+    transition: all 0.3s ease;
+  }
+
+  /* Books */
+  .filter2_option_movies_div input.book-checkbox+label:hover {
+    border-color: #105CAD;
+    background-color: #212636;
+    transition: all 0.3s ease;
+  }
+
+  .filter2_option_movies_div input.book-checkbox:checked+label {
+    border-color: #105CAD;
+    background-color: #394360;
+    transition: all 0.3s ease;
+  }
+
+
+  .filter2_option_book_div {
+    @apply border-1 border-[#394056] hover:border-[#652CA8] hover:bg-[#473956] rounded-full py-[10px] px-5 cursor-pointer focus:bg-[#394360] transition;
+  }
+
+  .filter2_option_title {
+    @apply text-sm text-white text-center;
+  }
+
+  /* platform styles */
+  .filter2_movies_platform_div {
+    @apply md:flex grid grid-cols-3 md:gap-6 gap-3 flex-wrap pt-6;
+  }
+
+  .filter2_movies_platform_div input[type='checkbox'] {
+    display: none;
+  }
+
+  .filter2_movies_platform_div input[type='checkbox']+label {
+    text-align: center;
+    float: left;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Movies */
+  .filter2_movies_platform_div input.movie-platform-checkbox+label:hover {
+    border-color: #652CA8;
+    background-color: #282031;
+    transition: all 0.3s ease;
+  }
+
+  .filter2_movies_platform_div input.movie-platform-checkbox:checked+label {
+    border-color: #652CA8;
+    background-color: #473956;
+    transition: all 0.3s ease;
+  }
+  /* Series */
+  .filter2_movies_platform_div input.series-platform-checkbox+label:hover {
+    border-color: #96207A;
+    background-color: #31202D;
+    transition: all 0.3s ease;
+  }
+
+  .filter2_movies_platform_div input.series-platform-checkbox:checked+label {
+    border-color: #96207A;
+    background-color: #51344A;
+    transition: all 0.3s ease;
+  }
+
+   /* Games */
+  .filter2_movies_platform_div input.game-platform-checkbox+label:hover {
+    border-color: #B93F13;
+    background-color: #33241D;
+    transition: all 0.3s ease;
+  }
+
+  .filter2_movies_platform_div input.game-platform-checkbox:checked+label {
+    border-color: #B93F13;
+    background-color: #603A2A;
+    transition: all 0.3s ease;
+  }
+   /* book */
+  .filter2_movies_platform_div input.book-platform-checkbox+label:hover {
+    border-color: #105CAD;
+    background-color: #212636;
+    transition: all 0.3s ease;
+  }
+
+  .filter2_movies_platform_div input.book-platform-checkbox:checked+label {
+    border-color: #105CAD;
+    background-color: #394360;
+    transition: all 0.3s ease;
+  }
+
+  .filter2_platform_option_div {
+    @apply border-1 border-[#394056] hover:border-[#652CA8] hover:bg-[#473956] rounded-[10px] py-[30px] px-2.5 cursor-pointer focus:bg-[#394360] transition md:min-w-[150px] ;
   }
 }

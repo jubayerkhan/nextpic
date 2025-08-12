@@ -106,7 +106,7 @@ export default function Filter() {
                     />
                     <span>Random Pick</span>
                 </button>
-                <button className='filter_btn hover:bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] transition-transform'>
+                <button className='filter_btn mt-5 md:mt-0 border-1 border-[#444444] hover:bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] transition-transform'>
                     <Image
                         src={magic}
                         alt="magic"
