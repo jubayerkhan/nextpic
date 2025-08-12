@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import thumbs from "@/public/assets/thumbs-up.png";
 import pass from "@/public/assets/pass.png";
+import { useRef } from "react";
 
 // Helper function to get the correct bookmark icon path
 const getBookmarkIcon = (type) => {
@@ -23,6 +24,7 @@ const getBookmarkIcon = (type) => {
 
 export default function Card({ item, type }) {
   const bookmarkIcon = getBookmarkIcon(type);
+  const modalRef = useRef(null);
 
   const shadowColor = {
     movie: "hover:shadow-[0_4px_10px_rgba(138,56,245,1)]",
@@ -31,68 +33,164 @@ export default function Card({ item, type }) {
     book: "hover:shadow-[0_4px_10px_rgba(12,140,233,1)]",
   };
 
+  const openModal = () => {
+    modalRef.current?.showModal();
+  };
+
+  const closeModal = () => {
+    modalRef.current?.close();
+  };
+
   return (
-    <div className={`card_div h-full flex flex-col ${shadowColor[type] || ""}`}>
-      {/* Image section */}
-      <div className="relative overflow-hidden max-h-[303px] cursor-pointer">
-        <Image
-          src={item.image}
-          alt={item.title}
-          width={210}
-          height={315}
-          className="card_poster_img"
-        />
+    <div className="h-full">
+      <div className={`card_div h-full flex flex-col ${shadowColor[type] || ""}`}>
+        {/* Image section */}
+        <div
+          className="relative overflow-hidden max-h-[303px] cursor-pointer"
+          onClick={openModal}
+        >
+          <Image
+            src={item.image}
+            alt={item.title}
+            width={210}
+            height={315}
+            className="card_poster_img"
+          />
 
-        {/* Bookmark icon */}
-        <Image
-          src={bookmarkIcon}
-          alt="bookmark"
-          width={20}
-          height={20}
-          className="card_bookmark_img hover:opacity-100 md:opacity-80"
-        />
+          {/* Bookmark icon */}
+          <Image
+            src={bookmarkIcon}
+            alt="bookmark"
+            width={20}
+            height={20}
+            className="card_bookmark_img hover:opacity-100 md:opacity-80"
+          />
 
-        {/* Rating */}
-        <div className="card_rating_div">
-          <FaStar /> <span className="text-white">{item.rating}/10</span>
+          {/* Rating */}
+          <div className="card_rating_div">
+            <FaStar /> <span className="text-white">{item.rating}/10</span>
+          </div>
         </div>
-      </div>
 
-      {/* Content section */}
-      <div className="card_content_div flex flex-col flex-grow">
-        <div className="text_section flex-grow">
-          {/* Title */}
-          <h3 className="card_title">{item.title}</h3>
+        {/* Content section */}
+        <div className="card_content_div flex flex-col flex-grow">
+          <div className="text_section flex-grow">
+            {/* Title */}
+            <h3 className="card_title">{item.title}</h3>
 
-          {/* Year and Tags */}
-          <div className="card_tag_div">
-            <span>{item.year}</span>
-            {item.genres.map((genre, idx) => (
-              <span key={idx} className="card_year">
-                {genre}
+            {/* Year and Tags */}
+            <div className="card_tag_div">
+              <span>{item.year}</span>
+              {item.genres.map((genre, idx) => (
+                <span key={idx} className="card_year">
+                  {genre}
+                </span>
+              ))}
+            </div>
+
+            {/* Description */}
+            <p className="card_description">
+              {item.description}{" "}
+              <span
+                className="text-[#5799EF] cursor-pointer"
+                onClick={openModal}
+              >
+                More
               </span>
-            ))}
+            </p>
           </div>
 
-          {/* Description */}
-          <p className="card_description">
-            {item.description}{" "}
-            <span className="text-[#5799EF] cursor-pointer">More</span>
-          </p>
-        </div>
-
-        {/* Buttons pinned at bottom */}
-        <div className="card_btn_div">
-          <button className="card_like_btn">
-            <Image src={thumbs} alt="thumbs" />
-            Like
-          </button>
-          <button className="card_pass_btn">
-            <Image src={pass} alt="pass" />
-            Pass
-          </button>
+          {/* Buttons pinned at bottom */}
+          <div className="card_btn_div">
+            <button className="card_like_btn">
+              <Image src={thumbs} alt="thumbs" />
+              Like
+            </button>
+            <button className="card_pass_btn">
+              <Image src={pass} alt="pass" />
+              Pass
+            </button>
+          </div>
         </div>
       </div>
+
+      {/* popup section */}
+      <dialog
+        ref={modalRef}
+        className="modal modal-middle sm:modal-middle w-full px-5"
+        style={{ maxHeight: "100vh" }}  // limit dialog height to 90% viewport height
+        onClick={(e) => {
+          if (e.target === modalRef.current) {
+            closeModal(); // Close when clicking outside content
+          }
+        }}
+      >
+        <div
+          className="relative w-full max-w-[1440px] overflow-hidden bg-[#1F2842] md:rounded-[48px] rounded-[20px]"
+          style={{ maxHeight: "90vh", overflowY: "auto" }} // make content scrollable
+        >
+          {/* Blurred background image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center filter opacity-50"
+            style={{
+              backgroundImage: `url(${item.backgroundImage || item.image})`,
+              filter: "blur(50px)",
+              zIndex: 0,
+            }}
+          ></div>
+
+          {/* Content on top */}
+          <div className="relative z-10 md:py-20 pt-[68px] pb-4 md:px-12 px-[15px]">
+            {/* Close button in top right */}
+            <button
+              onClick={closeModal}
+              className="absolute md:right-12 right-3 top-4 text-white cursor-pointer md:border-1 border-white hover:border-transparent text-sm rounded-full px-5 py-2.5 z-20 flex gap-2 hover:bg-[#FF4F6D]"
+            >
+              <span className="hidden md:block">Close</span> ✕
+            </button>
+
+            <div className="flex flex-col md:flex-row gap-6">
+              <Image
+                src={item.image}
+                alt={item.title}
+                width={210}
+                height={315}
+                className="xl:w-[319px] xl:h-[479px] md:w-auto w-full rounded-[20px]"
+              />
+              <div className="bg-black/30 w-full p-6 rounded-[20px] text-white text-sm pt-2.5">
+                <div>
+                  <h1 className="font-bold text-[34px]">{item.title}</h1>
+                  <div className="flex gap-2.5 items-center pt-2.5">
+                    <p>{item.year}</p>
+                    <img src="/assets/white_dot.png" alt="dot" />
+                    <p>PG-13</p>
+                    <img src="/assets/white_dot.png" alt="dot" />
+                    <p>2h 28m</p>
+                  </div>
+                  {/* Rating */}
+                  <div className="flex items-center gap-2.5 text-yellow-400 py-6 text-2xl font-bold">
+                    <FaStar /> <span className="text-white">{item.rating}/10</span>
+                  </div>
+                  {/* Year and Tags */}
+                  <div className="text-sm text-[#7B808F] mt-1 flex flex-wrap gap-2.5 items-center">
+                    {item.genres.map((genre, idx) => (
+                      <span key={idx} className="text-white px-2.5 py-0.5 rounded-full text-[14px] border-1 border-[#7B808F]">
+                        {genre}
+                      </span>
+                    ))}
+                  </div>
+                  <h4 className="font-semibold pt-6 pb-2.5 text-base">Overview</h4>
+                  <p className="text-base">The epic conclusion to over a decade of storytelling in the Marvel Cinematic Universe, Avengers: Endgame picks up in the aftermath of the devastating events of Infinity War (2018). With half of all life across the universe erased by Thanos snap, the remaining Avengers must regroup, mourn, and find a way to undo the destruction.</p>
+                  <p className="text-base pt-6 pb-2.5"><span className="font-semibold">Directors: </span><span className="text-[#8A38F5]">Anthony Russo</span>, <span className="text-[#8A38F5]">Joe Russo</span></p>
+                  <p className="text-base"><span className="font-semibold">Writers: </span><span className="text-[#8A38F5]">Christopher Markus</span>, <span className="text-[#8A38F5]">Stephen McFeely</span>, <span className="text-[#8A38F5]">Stan Lee</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </dialog>
+
+
     </div>
   );
 }

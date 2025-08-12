@@ -12,10 +12,11 @@ const dummyMovies = [
     {
         title: "Avengers: Endgame",
         year: "2019",
-        genres: ["Action", "Sci-Fi"],
+        genres: ["Action", "Sci-Fi", "Space Sci-Fic", "Super Hero", "Time Travel", "Adventure"],
         rating: 8.6,
         description: "Earth's mightiest heroes unite to fight...",
         image: "/assets/movie2.png",
+        // backgroundImage: "/assets/moviebg2.png",
     },
     {
         title: "Interstellar",

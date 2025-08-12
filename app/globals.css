@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @tailwind utilities;
+@plugin "daisyui";
 
 @layer components {
   /* ==================== */
@@ -200,7 +201,7 @@
   }
 
   .card_tag_div {
-    @apply text-sm text-[#7E8598] mt-1 flex flex-wrap gap-2.5 items-center;
+    @apply text-sm text-[#7E8598] mt-1 flex flex-wrap gap-x-2.5 gap-y-1.5 items-center;
   }
 
   .card_year {
@@ -394,4 +395,7 @@
   .filter2_platform_option_div {
     @apply border-1 border-[#394056] hover:border-[#652CA8] hover:bg-[#473956] rounded-[10px] py-[30px] px-2.5 cursor-pointer focus:bg-[#394360] transition md:min-w-[150px] ;
   }
+
+  /* popup styles */
+  
 }
