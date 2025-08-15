@@ -98,7 +98,7 @@ export default function Filter() {
             </div>
             {/* btn div */}
             <div className='md:pt-12 pt-4 md:pb-[72px] pb-4 md:flex justify-center gap-6'>
-                <button className='filter_btn bg-gradient-to-t from-[#FEADFF] hover:from-[#FFEAEE] from-0% to-[#6C3DF0] to-100% transition-transform'>
+                <button className='filter_btn bg-gradient-to-t from-[#FEADFF] hover:from-[#000000]/10 from-0% to-[#6C3DF0] to-100% transition-transform'>
                     <Image
                         src={shuffle}
                         alt="shuffle"
