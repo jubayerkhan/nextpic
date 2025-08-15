@@ -41,6 +41,21 @@ export default function Card({ item, type }) {
     modalRef.current?.close();
   };
 
+  const avengers = [
+    { name: "Robert Downey Jr.", role: "Tony Stark", img: "/assets/robert.png" },
+    { name: "Chris Evans", role: "Steve Rogers", img: "/assets/evans.png" },
+    { name: "Mark Ruffalo", role: "Bruce Banner", img: "/assets/mark.png" },
+    { name: "Chris Hemsworth", role: "Thor", img: "/assets/chris.png" },
+    { name: "Scarlett Johansson", role: "Natasha Romanoff", img: "/assets/scarlett.png" },
+    { name: "Don Cheadle", role: "James Rhodes", img: "/assets/don.png" },
+    { name: "Paul Rudd", role: "Scott Lang", img: "/assets/paul.png" },
+    { name: "Benedict Cumberbatch", role: "Doctor Strange", img: "/assets/benedict.png" },
+    { name: "Chadwick Boseman", role: "T’Challa", img: "/assets/chadwick.png" },
+    { name: "Brie Larson", role: "Carlo Dancers", img: "/assets/brie.png" },
+    { name: "Tom Holland", role: "Peter Parker", img: "/assets/tom.png" },
+    { name: "Karen Gillan", role: "Nebula", img: "/assets/karen.png" }
+  ];
+
   return (
     <div className="h-full">
       <div className={`card_div h-full flex flex-col ${shadowColor[type] || ""}`}>
@@ -185,6 +200,34 @@ export default function Card({ item, type }) {
                   <p className="text-base"><span className="font-semibold">Writers: </span><span className="text-[#8A38F5]">Christopher Markus</span>, <span className="text-[#8A38F5]">Stephen McFeely</span>, <span className="text-[#8A38F5]">Stan Lee</span></p>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div className="md:px-12 px-[15px] pb-10">
+            {/* Cast section */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-[888px]">
+              {avengers.map((hero, idx) => (
+                <div
+                  key={idx}
+                  className="bg-gradient-to-b from-[#1b1b3a] to-[#3c3c64] rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300"
+                >
+                  {/* Image */}
+                  <div className="relative w-full h-48">
+                    <Image
+                      src={hero.img}
+                      alt={hero.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+
+                  {/* Text */}
+                  <div className="p-4 text-center text-white">
+                    <h4 className="font-bold text-sm">{hero.name}</h4>
+                    <p className="text-xs text-white">({hero.role})</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
