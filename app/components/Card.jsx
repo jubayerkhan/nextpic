@@ -209,7 +209,7 @@ export default function Card({ item, type }) {
               {avengers.map((hero, idx) => (
                 <div
                   key={idx}
-                  className="bg-gradient-to-b from-[#1b1b3a] to-[#3c3c64] rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300"
+                  className=" rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300"
                 >
                   {/* Image */}
                   <div className="relative w-full h-48">
@@ -222,7 +222,7 @@ export default function Card({ item, type }) {
                   </div>
 
                   {/* Text */}
-                  <div className="p-4 text-center text-white">
+                  <div className="p-4 text-center text-white bg-black/30">
                     <h4 className="font-bold text-sm">{hero.name}</h4>
                     <p className="text-xs text-white">({hero.role})</p>
                   </div>

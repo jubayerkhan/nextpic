@@ -13,12 +13,12 @@
   }
 
   /* navbar styles */
-  .navbar {
+  .navbar_div {
     @apply py-5 flex justify-between items-center md:px-12 px-4 bg-gradient-to-b from-[#6C3DF0]/20 from-0% to-[#10172A]/20 to-100% w-full;
   }
 
   .navbar_btn_div {
-    @apply inline-block p-[1px] rounded-[10px] bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] hover:bg-none transition;
+    @apply inline-block p-[1.5px] rounded-[10px] bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] hover:bg-none transition;
   }
 
   .filter_btn_div {
