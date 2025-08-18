@@ -4,6 +4,13 @@ import Image from "next/image";
 import { FaStar } from "react-icons/fa";
 import thumbs from "@/public/assets/thumbs-up.png";
 import pass from "@/public/assets/pass.png";
+import plus from "@/public/assets/plus.png";
+import eye from "@/public/assets/eye.png";
+import Insta from "@/public/assets/Insta.png";
+import x from "@/public/assets/x.png";
+import facebook from "@/public/assets/facebook.png";
+import links from "@/public/assets/links.png";
+import author from "@/public/assets/author.png";
 import { useRef } from "react";
 
 // Helper function to get the correct bookmark icon path
@@ -54,6 +61,14 @@ export default function Card({ item, type }) {
     { name: "Brie Larson", role: "Carlo Dancers", img: "/assets/brie.png" },
     { name: "Tom Holland", role: "Peter Parker", img: "/assets/tom.png" },
     { name: "Karen Gillan", role: "Nebula", img: "/assets/karen.png" }
+  ];
+
+  const moviePlatforms = [
+    { name: "Netflix", img: "/assets/netflix.png" },
+    { name: "Prime Video", img: "/assets/prime.png" },
+    { name: "Disney+", img: "/assets/disney.png" },
+    // { name: "Apple TV+", img: "/assets/apple.png" },
+    // { name: "HBO Max", img: "/assets/hbo.png" }
   ];
 
   return (
@@ -146,11 +161,11 @@ export default function Card({ item, type }) {
         >
           {/* Blurred background image */}
           <div
-            className="absolute inset-0 bg-cover bg-center filter opacity-50"
+            className="absolute z-0 inset-0 bg-cover bg-center filter opacity-50 blur-[50px]"
             style={{
               backgroundImage: `url(${item.backgroundImage || item.image})`,
-              filter: "blur(50px)",
-              zIndex: 0,
+              // filter: "blur(50px)",
+              // zIndex: 0,
             }}
           ></div>
 
@@ -203,31 +218,155 @@ export default function Card({ item, type }) {
             </div>
           </div>
 
+          {/* bottom popup section */}
           <div className="md:px-12 px-[15px] pb-10">
-            {/* Cast section */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-[888px]">
-              {avengers.map((hero, idx) => (
-                <div
-                  key={idx}
-                  className=" rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300"
-                >
-                  {/* Image */}
-                  <div className="relative w-full h-48">
-                    <Image
-                      src={hero.img}
-                      alt={hero.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-
-                  {/* Text */}
-                  <div className="p-4 text-center text-white bg-black/30">
-                    <h4 className="font-bold text-sm">{hero.name}</h4>
-                    <p className="text-xs text-white">({hero.role})</p>
+            {type === "book" ? (<h2 className="cards_popup_titles">Top Billed Cast</h2>) : (<h2 className="cards_popup_titles">Top Billed Cast</h2>)}
+            <div className="flex flex-col md:flex-row gap-5 pt-6">
+              {type === "book" ? (
+                /* Book details section */
+                <div className="w-full">
+                  <div>
+                    <div className="bg-black/30 p-6 rounded-[20px] text-white text-sm overflow-x-auto">
+                      <table className="w-full border-separate border-spacing-y-2">
+                        <tbody>
+                          <tr>
+                            <td className="book_popup_table">ISBN:</td>
+                            <td className="book_popup_table_info">9780063453982, 0063453983</td>
+                          </tr>
+                          <tr>
+                            <td className="book_popup_table">Published:</td>
+                            <td className="book_popup_table_info">2015-02-10</td>
+                          </tr>
+                          <tr>
+                            <td className="book_popup_table">Publisher:</td>
+                            <td className="book_popup_table_info">Harper Collins</td>
+                          </tr>
+                          <tr>
+                            <td className="book_popup_table">Author:</td>
+                            <td className="book_popup_table_info">Yuval Noah Harari</td>
+                          </tr>
+                          <tr>
+                            <td className="book_popup_table">Page count:</td>
+                            <td className="book_popup_table_info">464</td>
+                          </tr>
+                          <tr>
+                            <td className="book_popup_table">Format:</td>
+                            <td className="book_popup_table_info">April 26, 2019</td>
+                          </tr>
+                          <tr>
+                            <td className="book_popup_table">Language:</td>
+                            <td className="book_popup_table_info">English</td>
+                          </tr>
+                          <tr>
+                            <td className="book_popup_table">Country of Origin:</td>
+                            <td className="book_popup_table_info">USA</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <h3 className="cards_popup_titles pt-12 pb-6">Author</h3>
+                    <div
+                      className="rounded-[20px] h-full overflow-hidden transition-transform duration-300 min-w-[180px] md:min-w-auto max-w-[204px]"
+                    >
+                      <div className="relative w-full h-48">
+                        <Image src={author} alt='profile author' fill className="object-cover" />
+                      </div>
+                      <div className="p-4 text-center text-white bg-black/30 h-full">
+                        <h4 className="font-bold text-sm">Yuval Noah Harari</h4>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              ))}
+              ) : (
+                /* Cast section */
+                <div className="md:grid flex gap-4 overflow-x-auto grid-cols-2 lg:grid-cols-4 max-w-[888px] w-full">
+                  {avengers.map((hero, idx) => (
+                    <div
+                      key={idx}
+                      className="rounded-[20px] h-full overflow-hidden transition-transform duration-300 min-w-[180px] md:min-w-auto"
+                    >
+                      <div className="relative w-full h-48">
+                        <Image src={hero.img} alt={hero.name} fill className="object-cover" />
+                      </div>
+                      <div className="p-4 text-center text-white bg-black/30 h-full">
+                        <h4 className="font-bold text-sm">{hero.name}</h4>
+                        <p className="text-xs text-white">({hero.role})</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              <div className="bg-black/30 p-6 w-full xl:max-w-[432px] lg:max-w-[380px] md:max-w-[300px] rounded-[20px] text-white">
+                <button className="bg-[#FF4F6D] hover:bg-[#FF4F6D] w-full rounded-full text-white py-[15px] flex gap-2.5 cursor-pointer justify-center mb-2.5">
+                  <Image src={plus} alt="plus" />
+                  <span>Watchlist</span>
+                </button>
+                <button className="border-1 border-[#7B808F] w-full rounded-full text-white py-[15px] flex gap-2.5 cursor-pointer justify-center mb-6">
+                  <Image src={eye} alt="eye" />
+                  <span>Marked as Watched</span>
+                </button>
+                <p className="font-semibold">Watch Now</p>
+                <div className="filter2_movies_platform_div">
+                  {moviePlatforms.map((platform, index) => {
+                    const id = `popup_movie_platform_${index + 1}`;
+                    return (
+                      <div key={id}>
+                        <input
+                          id={id}
+                          type="checkbox"
+                          name={`popup_movie_platform`}
+                          value={platform.name}
+                          className="movie-platform-checkbox"
+                        />
+                        <label htmlFor={id} className="popup_platform_option_div">
+                          <div className="bg-white rounded-full p-3 h-[54px] w-[54px] mx-auto">
+                            <img
+                              src={platform.img}
+                              alt={platform.name}
+                              className="mx-auto w-[30px] h-[30px]"
+                            />
+                          </div>
+                          <h5 className="filter2_option_title pt-[14px]">
+                            {platform.name}
+                          </h5>
+                        </label>
+                      </div>
+                    );
+                  })}
+                </div>
+                {/* status div */}
+                <div>
+                  <div className="pb-6 pt-9">
+                    <h5 className="font-semibold pb-[5px]">Status</h5>
+                    <p className="font-light">Released</p>
+                  </div>
+                  <div className="pb-6">
+                    <h5 className="font-semibold pb-[5px]">Original Theatrical Release</h5>
+                    <p className="font-light">April 26, 2019</p>
+                  </div>
+                  <div className="pb-6">
+                    <h5 className="font-semibold pb-[5px]">Original Language</h5>
+                    <p className="font-light">English</p>
+                  </div>
+                  <div className="pb-6">
+                    <h5 className="font-semibold pb-[5px]">Budget</h5>
+                    <p className="font-light">$160,000,000.00</p>
+                  </div>
+                  <div className="pb-12">
+                    <h5 className="font-semibold pb-[5px]">Revenue</h5>
+                    <p className="font-light">$839,030,630.00</p>
+                  </div>
+                </div>
+                <div className="flex gap-6 justify-center items-center">
+                  <span>Share</span>
+                  <div className="flex gap-[15px] items-center">
+                    <Image className="cursor-pointer" src={Insta} alt="Insta" />
+                    <Image className="cursor-pointer" src={x} alt="x" />
+                    <Image className="cursor-pointer" src={facebook} alt="facebook" />
+                    <Image className="cursor-pointer" src={links} alt="links" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -18,7 +18,7 @@
   }
 
   .navbar_btn_div {
-    @apply inline-block p-[1.5px] rounded-[10px] bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] hover:bg-none transition;
+    @apply inline-block p-[1px] rounded-[10px] bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] hover:bg-none transition;
   }
 
   .filter_btn_div {
@@ -393,9 +393,48 @@
   }
 
   .filter2_platform_option_div {
-    @apply border-1 border-[#394056] hover:border-[#652CA8] hover:bg-[#473956] rounded-[10px] py-[30px] px-2.5 cursor-pointer focus:bg-[#394360] transition md:min-w-[150px] ;
+    @apply border-1 border-[#394056] hover:border-[#652CA8] hover:bg-[#473956] rounded-[15px] py-[30px] px-2.5 cursor-pointer focus:bg-[#394360] transition md:min-w-[150px] ;
   }
 
   /* popup styles */
-  
+  .popup_movies_platform_div {
+    @apply md:flex grid grid-cols-3 md:gap-6 gap-3 flex-wrap pt-6;
+  }
+
+  .popup_movies_platform_div input[type='checkbox'] {
+    display: none;
+  }
+
+  .popup_movies_platform_div input[type='checkbox']+label {
+    text-align: center;
+    float: left;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Movies */
+  .popup_movies_platform_div input.movie-platform-checkbox+label:hover {
+    border-color: #652CA8;
+    background-color: #282031;
+    transition: all 0.3s ease;
+  }
+
+  .popup_movies_platform_div input.movie-platform-checkbox:checked+label {
+    border-color: #652CA8;
+    background-color: #473956;
+    transition: all 0.3s ease;
+  }
+
+  .popup_platform_option_div {
+    @apply border-1 border-[#394056] hover:border-[#652CA8] hover:bg-[#473956] rounded-[15px] py-[12px] px-2.5 cursor-pointer focus:bg-[#394360] transition md:min-w-[112px] ;
+  }
+  .book_popup_table {
+    @apply pr-4 text-left align-top;
+  }
+  .book_popup_table_info {
+    @apply text-left font-semibold;
+  }
+  .cards_popup_titles {
+    @apply text-[34px] text-white font-bold;
+  }
 }

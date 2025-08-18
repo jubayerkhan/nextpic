@@ -62,13 +62,33 @@ export default function FilterSecondary() {
             </div>
 
             {/* Filter Content */}
-            {showFilter && (
-                <div className="mt-4 md:p-[25px] p-4 border-1 border-[#394056] rounded-[20px]">
+            <div
+                className={` transition-all duration-300 ease-in-out overflow-hidden transform
+    ${showFilter ? "opacity-100 max-h-[3000px] translate-y-0" : "opacity-0 max-h-0 -translate-y-2"}`}
+            >
+                <div
+                    className={`mt-6 md:p-[25px] p-4 border-1 border-[#394056] rounded-[20px]`}
+                >
                     <p className="text-white">Filter by Genres</p>
+
                     {/* Movies filter */}
                     <p className="text-white md:pt-6 pt-4">Movies</p>
                     <div className="filter2_option_movies_div">
-                        {["Action", "Comedy", "Drama", "Horror", "Romance", "Thriller", "Sci-Fi", "Adventure", "Mystery", "Fantasy", "Crime", "Animated", "Historical"].map((genre, index) => {
+                        {[
+                            "Action",
+                            "Comedy",
+                            "Drama",
+                            "Horror",
+                            "Romance",
+                            "Thriller",
+                            "Sci-Fi",
+                            "Adventure",
+                            "Mystery",
+                            "Fantasy",
+                            "Crime",
+                            "Animated",
+                            "Historical",
+                        ].map((genre, index) => {
                             const id = `movie${index + 1}`;
                             return (
                                 <div key={id}>
@@ -90,29 +110,41 @@ export default function FilterSecondary() {
                     {/* Series filter */}
                     <p className="text-white md:pt-6 pt-4">Series</p>
                     <div className="filter2_option_movies_div">
-                        {["Crime", "Comedy", "Drama", "Fantasy", "Reality", "Documentary", "Mystery"].map((genre, index) => {
-                            const id = `series${index + 1}`;
-                            return (
-                                <div key={id}>
-                                    <input
-                                        id={id}
-                                        type="checkbox"
-                                        name="series_options"
-                                        value={id}
-                                        className="series-checkbox"
-                                    />
-                                    <label htmlFor={id} className="filter2_option_book_div">
-                                        <h5 className="filter2_option_title">{genre}</h5>
-                                    </label>
-                                </div>
-                            );
-                        })}
+                        {["Crime", "Comedy", "Drama", "Fantasy", "Reality", "Documentary", "Mystery"].map(
+                            (genre, index) => {
+                                const id = `series${index + 1}`;
+                                return (
+                                    <div key={id}>
+                                        <input
+                                            id={id}
+                                            type="checkbox"
+                                            name="series_options"
+                                            value={id}
+                                            className="series-checkbox"
+                                        />
+                                        <label htmlFor={id} className="filter2_option_book_div">
+                                            <h5 className="filter2_option_title">{genre}</h5>
+                                        </label>
+                                    </div>
+                                );
+                            }
+                        )}
                     </div>
 
                     {/* Games filter */}
                     <p className="text-white md:pt-6 pt-4">Games</p>
                     <div className="filter2_option_movies_div">
-                        {["RPG", "FPS", "Adventure", "Strategy", "Tactical", "Battleground", "Racing", "Puzzle", "Sports"].map((genre, index) => {
+                        {[
+                            "RPG",
+                            "FPS",
+                            "Adventure",
+                            "Strategy",
+                            "Tactical",
+                            "Battleground",
+                            "Racing",
+                            "Puzzle",
+                            "Sports",
+                        ].map((genre, index) => {
                             const id = `game${index + 1}`;
                             return (
                                 <div key={id}>
@@ -134,7 +166,21 @@ export default function FilterSecondary() {
                     {/* Books filter */}
                     <p className="text-white md:pt-6 pt-4">Books</p>
                     <div className="filter2_option_movies_div">
-                        {["Fiction", "Non-fiction", "Mystery", "Romance", "Contemporary Fiction", "Sci-Fic", "Self-Help", "Business & Finance", "Psychology", "History", "Philosophy", "Science & Technology", "Travel & Adventure"].map((genre, index) => {
+                        {[
+                            "Fiction",
+                            "Non-fiction",
+                            "Mystery",
+                            "Romance",
+                            "Contemporary Fiction",
+                            "Sci-Fic",
+                            "Self-Help",
+                            "Business & Finance",
+                            "Psychology",
+                            "History",
+                            "Philosophy",
+                            "Science & Technology",
+                            "Travel & Adventure",
+                        ].map((genre, index) => {
                             const id = `book${index + 1}`;
                             return (
                                 <div key={id}>
@@ -153,9 +199,12 @@ export default function FilterSecondary() {
                         })}
                     </div>
 
-                    {/* platform filter section */}
-                    <p className="text-white pt-[46px] pb-6">Choose Your Preferred Platform</p>
-                    {/* movie platform */}
+                    {/* Platform filter section */}
+                    <p className="text-white pt-[46px] pb-6">
+                        Choose Your Preferred Platform
+                    </p>
+
+                    {/* Movie platform */}
                     <p className="text-white">Movies Platform</p>
                     <div className="filter2_movies_platform_div">
                         {moviePlatforms.map((platform, index) => {
@@ -171,15 +220,22 @@ export default function FilterSecondary() {
                                     />
                                     <label htmlFor={id} className="filter2_platform_option_div">
                                         <div className="bg-white rounded-full p-3 h-[54px] w-[54px] mx-auto">
-                                            <img src={platform.img} alt={platform.name} className="mx-auto w-[30px] h-[30px]" />
+                                            <img
+                                                src={platform.img}
+                                                alt={platform.name}
+                                                className="mx-auto w-[30px] h-[30px]"
+                                            />
                                         </div>
-                                        <h5 className="filter2_option_title pt-[14px]">{platform.name}</h5>
+                                        <h5 className="filter2_option_title pt-[14px]">
+                                            {platform.name}
+                                        </h5>
                                     </label>
                                 </div>
                             );
                         })}
                     </div>
-                    {/* series platform */}
+
+                    {/* Series platform */}
                     <p className="text-white md:pt-6 pt-4">Series</p>
                     <div className="filter2_movies_platform_div">
                         {moviePlatforms.map((platform, index) => {
@@ -195,15 +251,22 @@ export default function FilterSecondary() {
                                     />
                                     <label htmlFor={id} className="filter2_platform_option_div">
                                         <div className="bg-white rounded-full p-3 h-[54px] w-[54px] mx-auto">
-                                            <img src={platform.img} alt={platform.name} className="mx-auto w-[30px] h-[30px]" />
+                                            <img
+                                                src={platform.img}
+                                                alt={platform.name}
+                                                className="mx-auto w-[30px] h-[30px]"
+                                            />
                                         </div>
-                                        <h5 className="filter2_option_title pt-[14px]">{platform.name}</h5>
+                                        <h5 className="filter2_option_title pt-[14px]">
+                                            {platform.name}
+                                        </h5>
                                     </label>
                                 </div>
                             );
                         })}
                     </div>
-                    {/* game platform */}
+
+                    {/* Game platform */}
                     <p className="text-white md:pt-6 pt-4">Game</p>
                     <div className="filter2_movies_platform_div">
                         {gamePlatforms.map((platform, index) => {
@@ -219,20 +282,27 @@ export default function FilterSecondary() {
                                     />
                                     <label htmlFor={id} className="filter2_platform_option_div">
                                         <div className="bg-white rounded-full p-3 h-[54px] w-[54px] mx-auto">
-                                            <img src={platform.img} alt={platform.name} className="mx-auto w-[30px] h-[30px]" />
+                                            <img
+                                                src={platform.img}
+                                                alt={platform.name}
+                                                className="mx-auto w-[30px] h-[30px]"
+                                            />
                                         </div>
-                                        <h5 className="filter2_option_title pt-[14px]">{platform.name}</h5>
+                                        <h5 className="filter2_option_title pt-[14px]">
+                                            {platform.name}
+                                        </h5>
                                     </label>
                                 </div>
                             );
                         })}
                     </div>
-                    {/* book platform */}
+
+                    {/* Book platform */}
                     <p className="text-white md:pt-6 pt-4">Book</p>
                     <div className="filter2_movies_platform_div">
                         {bookPlatforms.map((platform, index) => {
                             const id = `book_platform${index + 1}`;
-                            return(
+                            return (
                                 <div key={id}>
                                     <input
                                         id={id}
@@ -243,16 +313,23 @@ export default function FilterSecondary() {
                                     />
                                     <label htmlFor={id} className="filter2_platform_option_div">
                                         <div className="bg-white rounded-full p-3 h-[54px] w-[54px] mx-auto">
-                                            <img src={platform.img} alt={platform.name} className="mx-auto w-[30px] h-[30px]" />
+                                            <img
+                                                src={platform.img}
+                                                alt={platform.name}
+                                                className="mx-auto w-[30px] h-[30px]"
+                                            />
                                         </div>
-                                        <h5 className="filter2_option_title pt-[14px]">{platform.name}</h5>
+                                        <h5 className="filter2_option_title pt-[14px]">
+                                            {platform.name}
+                                        </h5>
                                     </label>
                                 </div>
                             );
                         })}
                     </div>
                 </div>
-            )}
+            </div>
+
         </div>
     );
 }
