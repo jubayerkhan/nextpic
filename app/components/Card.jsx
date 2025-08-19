@@ -180,13 +180,15 @@ export default function Card({ item, type }) {
             </button>
 
             <div className="flex flex-col md:flex-row gap-6">
-              <Image
+              <div className="md:max-w-[319px] xl:h-[479px] md:w-auto w-full rounded-[20px]">
+                <Image
                 src={item.image}
                 alt={item.title}
                 width={210}
                 height={315}
-                className="xl:w-[319px] xl:h-[479px] md:w-auto w-full rounded-[20px]"
+                className="lg:min-w-[319px] w-full rounded-[20px]"
               />
+              </div>
               <div className="bg-black/30 w-full p-6 rounded-[20px] text-white text-sm pt-2.5">
                 <div>
                   <h1 className="font-bold text-[34px]">{item.title}</h1>

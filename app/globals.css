@@ -437,4 +437,70 @@
   .cards_popup_titles {
     @apply text-[34px] text-white font-bold;
   }
+
+  /* ============================ */
+  /* subscrive page styles */
+  /* ============================ */
+  .subscribe_page_icon_cards_div {
+    @apply md:pt-[30px] pt-2 pb-6 flex justify-center items-center md:gap-12 gap-4;
+  }
+  .subscribe_page_icon_cards {
+    @apply border-2 border-[#384056] max-w-[100px] p-[23px] rounded-[25px] bg-[#2d304c] flex justify-center items-center;
+  }
+  .subscribe_page_title {
+    @apply md:text-[100px] text-4xl text-white font-bold text-center md:leading-[120px];
+  }
+  .subscribe_page_title_nextpic {
+    @apply font-bold bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] bg-clip-text text-transparent;
+  }
+  .subscribe_page_subtitle {
+    @apply md:text-2xl text-lg text-[#7E8598] text-center md:pt-6 pt-5 md:pb-20 pb-6 font-medium;
+  }
+  .subscribe_page_subtitle_link {
+    @apply text-transparent bg-clip-text bg-gradient-to-b from-[#D3C3FF] to-[#6C3DF0];
+  }
+  .subscribe_page_monthly {
+    @apply text-transparent bg-clip-text bg-gradient-to-b from-[#D3C3FF] to-[#6C3DF0] text-2xl font-semibold;
+  }
+  .subscribe_page_yearly {
+    @apply text-2xl text-[#7E8598] font-semibold;
+  }
+  .subscribe_page_off {
+    @apply bg-[#6C3DF0] rounded-full py-1 px-2.5 text-white font-medium;
+  }
+  .pricing_section {
+    @apply max-w-[520px] mx-auto;
+  }
+  .pricing_section_top_div {
+    @apply flex gap-6 justify-center items-center;
+  }
+  .ul_li_span {
+    @apply flex h-6 w-6 items-center justify-center rounded-full;
+  }
+  .subscrive_page_ul_li {
+    @apply flex items-start gap-2.5 md:pb-6 pb-3;
+  }
+  .subscrive_page_trial_btn {
+    @apply bg-gradient-to-b from-[#D3C3FF] to-[#6C3DF0] rounded-full py-[15px] w-full text-2xl font-semibold mb-5 md:mb-6 cursor-pointer;
+  }
+  .subscrive_page_pricing_bottom_text {
+    @apply text-center font-medium text-[#7E8598];
+  }
+  .pricing_card_body {
+    @apply border-2 border-[#384056] bg-[#2f3150] md:mt-12 mt-6 md:mb-40 mb-8 md:pt-20 pt-6 md:pb-8 pb-6 md:px-6 px-5 rounded-[40px];
+  }
+  .pricing_card_title {
+    @apply text-white md:text-[42px] text-3xl font-semibold text-center;
+  }
+  .question_section_title {
+    @apply to-white font-bold md:text-[44px] text-4xl text-center md:pb-[74px] pb-8;
+  }
+  .pricing_card_price {
+    @apply text-transparent bg-clip-text bg-gradient-to-b from-[#D3C3FF] to-[#6C3DF0] md:text-[84px] text-4xl font-bold pt-2.5 md:pb-12 pb-5 text-center;
+  }
+  .collapse{
+    padding-inline-end: 24px !important;
+    border-radius: 20px !important;
+  }
+
 }
