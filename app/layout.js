@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "NextPic",
+  title: "NextPick",
   description: "A movie, game, series and book finder",
 };
 

@@ -20,7 +20,7 @@ export default function Filter() {
                             <Image
                                 src={header_img}
                                 alt="header_img"
-                                className="ml-2.5 inline-block"
+                                className="ml-2.5 inline-block w-5 md:w-auto"
                             />
                         </span>
                     </span>
@@ -97,7 +97,7 @@ export default function Filter() {
                 </div>
             </div>
             {/* btn div */}
-            <div className='md:pt-12 pt-4 md:pb-[72px] pb-4 md:flex justify-center gap-6'>
+            <div className='md:pt-12 pt-4 md:pb-[72px] pb-4 flex justify-center md:gap-6 gap-3'>
                 <button className='filter_btn bg-gradient-to-t from-[#FEADFF] from-0% to-[#6C3DF0] to-100% transition-transform hover:shadow-[0px_4px_10px_0px_#8A38F5]'>
                     <Image
                         src={shuffle}
@@ -106,7 +106,7 @@ export default function Filter() {
                     />
                     <span>Random Pick</span>
                 </button>
-                <button className='filter_btn mt-5 md:mt-0 border-1 border-[#444444] hover:bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] transition-transform'>
+                <button className='filter_btn border-1 border-[#444444] hover:bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] transition-transform'>
                     <Image
                         src={magic}
                         alt="magic"

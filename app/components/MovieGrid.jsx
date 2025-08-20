@@ -80,7 +80,7 @@ export function MovieGrid() {
                 <div
                     className="cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr"
                 >
-                    {dummyMovies.map((movie, index, type) => (
+                    {dummyMovies.map((movie, index) => (
                         <div className="min-w-[207px] flex-shrink-0 md:flex-shrink md:min-w-0" key={index}>
                             <MovieCard item={movie} type="movie" />
                         </div>

@@ -182,12 +182,12 @@ export default function Card({ item, type }) {
             <div className="flex flex-col md:flex-row gap-6">
               <div className="md:max-w-[319px] xl:h-[479px] md:w-auto w-full rounded-[20px]">
                 <Image
-                src={item.image}
-                alt={item.title}
-                width={210}
-                height={315}
-                className="lg:min-w-[319px] w-full rounded-[20px]"
-              />
+                  src={item.image}
+                  alt={item.title}
+                  width={210}
+                  height={315}
+                  className="lg:min-w-[319px] w-full rounded-[20px]"
+                />
               </div>
               <div className="bg-black/30 w-full p-6 rounded-[20px] text-white text-sm pt-2.5">
                 <div>
@@ -298,7 +298,7 @@ export default function Card({ item, type }) {
                   ))}
                 </div>
               )}
-              <div className="bg-black/30 p-6 w-full xl:max-w-[432px] lg:max-w-[380px] md:max-w-[300px] rounded-[20px] text-white">
+              <div className="bg-black/30 p-6 w-full xl:max-w-[432px] lg:max-w-[380px] md:max-w-[300px] rounded-[20px] text-white relative">
                 <button className="bg-[#FF4F6D] hover:bg-[#FF4F6D] w-full rounded-full text-white py-[15px] flex gap-2.5 cursor-pointer justify-center mb-2.5">
                   <Image src={plus} alt="plus" />
                   <span>Watchlist</span>
@@ -308,11 +308,11 @@ export default function Card({ item, type }) {
                   <span>Marked as Watched</span>
                 </button>
                 <p className="font-semibold">Watch Now</p>
-                <div className="filter2_movies_platform_div">
+                <div className="filter2_movies_platform_div flex-nowrap md:grid lg:grid-cols-3 grid-cols-2 md:gap-6 gap-3 flex md:flex-none overflow-x-auto md:overflow-visible pt-6">
                   {moviePlatforms.map((platform, index) => {
-                    const id = `popup_movie_platform_${index + 1}`;
+                    const id = `platform_new_${index + Math.random()}`;
                     return (
-                      <div key={id}>
+                      <div key={id} className="min-w-[120px] md:min-w-0"> {/* ensures horizontal scroll on mobile */}
                         <input
                           id={id}
                           type="checkbox"
@@ -336,6 +336,7 @@ export default function Card({ item, type }) {
                     );
                   })}
                 </div>
+
                 {/* status div */}
                 <div>
                   <div className="pb-6 pt-9">

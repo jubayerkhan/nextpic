@@ -39,7 +39,7 @@
   }
 
   .filter_heading {
-    @apply text-white font-semibold text-[34px] text-center;
+    @apply text-white font-semibold md:text-[34px] text-xl text-center;
   }
 
   .filter_subtitle {
@@ -51,19 +51,19 @@
   }
 
   .filter_option_movie_div {
-    @apply border-1 border-[#394056] hover:border-[#652CA8] hover:bg-radial from-[#8A38F5]/30 from-1% to-[#000]/0 md:max-w-[302px] rounded-[15px] py-[30px] cursor-pointer focus:bg-[#473956] transition;
+    @apply border-1 border-[#394056] hover:border-[#652CA8] hover:bg-radial from-[#8A38F5]/30 from-1% to-[#000]/0 md:max-w-[302px] rounded-[15px] sm:py-[30px] py-3 cursor-pointer focus:bg-[#473956] transition;
   }
 
   .filter_option_series_div {
-    @apply border-1 border-[#394056] hover:border-[#96207A] hover:bg-radial from-[#F316B0]/30 from-1% to-[#000]/0 md:max-w-[302px] rounded-[15px] py-[30px] cursor-pointer focus:bg-[#51344A] transition;
+    @apply border-1 border-[#394056] hover:border-[#96207A] hover:bg-radial from-[#F316B0]/30 from-1% to-[#000]/0 md:max-w-[302px] rounded-[15px] sm:py-[30px] py-3 cursor-pointer focus:bg-[#51344A] transition;
   }
 
   .filter_option_game_div {
-    @apply border-1 border-[#394056] hover:border-[#B93F13] hover:bg-radial from-[#F65009]/30 from-1% to-[#000]/0 md:max-w-[302px] rounded-[15px] py-[30px] cursor-pointer focus:bg-[#603A2A] transition;
+    @apply border-1 border-[#394056] hover:border-[#B93F13] hover:bg-radial from-[#F65009]/30 from-1% to-[#000]/0 md:max-w-[302px] rounded-[15px] sm:py-[30px] py-3 cursor-pointer focus:bg-[#603A2A] transition;
   }
 
   .filter_option_book_div {
-    @apply border-1 border-[#394056] hover:border-[#105CAD] hover:bg-radial from-[#0C8CE9]/30 from-1% to-[#000]/0 md:max-w-[302px] rounded-[15px] py-[30px] cursor-pointer focus:bg-[#394360] transition;
+    @apply border-1 border-[#394056] hover:border-[#105CAD] hover:bg-radial from-[#0C8CE9]/30 from-1% to-[#000]/0 md:max-w-[302px] rounded-[15px] sm:py-[30px] py-3 cursor-pointer focus:bg-[#394360] transition;
   }
 
   .filter_option_img_div {
@@ -71,11 +71,11 @@
   }
 
   .filter_option_title {
-    @apply text-sm text-white text-center pt-[14px];
+    @apply text-sm text-white text-center md:pt-[14px] pt-1;
   }
 
   .filter_option_movies_div {
-    @apply max-w-[1280px] mx-auto grid md:grid-cols-4 grid-cols-4 md:gap-5 gap-4;
+    @apply max-w-[1280px] mx-auto grid md:grid-cols-4 grid-cols-4 md:gap-5 gap-3;
   }
 
   .filter_option_movies_div input[type='checkbox'] {
@@ -149,7 +149,7 @@
 
   /* filter btn */
   .filter_btn {
-    @apply py-3 px-6 rounded-[10px] flex gap-2.5 items-center text-white font-medium w-full md:w-auto md:mb-0 justify-center cursor-pointer;
+    @apply py-3 md:px-6 px-3 rounded-[10px] flex gap-2.5 items-center text-white font-medium w-full md:w-auto md:mb-0 justify-center cursor-pointer;
   }
 
   .result_text_right {
@@ -349,7 +349,7 @@
     transition: all 0.3s ease;
   }
 
-  .filter2_movies_platform_div input.movie-platform-checkbox:checked+label {
+  .filter2_movies_platform_div input[type = 'checkbox']:checked+label {
     border-color: #652CA8;
     background-color: #473956;
     transition: all 0.3s ease;
@@ -501,6 +501,20 @@
   .collapse{
     padding-inline-end: 24px !important;
     border-radius: 20px !important;
+  }
+
+  /* profile page styles */
+  .profile_img_div1 {
+    @apply p-0.5 bg-gradient-to-b from-[#D3C3FF] to-[#6C3DF0] rounded-full;
+  }
+  .profile_img_main_div1 {
+    @apply p-1 bg-gradient-to-b from-[#D3C3FF] to-[#6C3DF0] rounded-full md:w-[172px];
+  }
+  .profile_img_div2 {
+    @apply bg-[#6C3DF0] p-[9px] rounded-full;
+  }
+  .profile_img_main_div2 {
+    @apply bg-[#6C3DF0] md:p-[29px] p-5 rounded-full;
   }
 
 }

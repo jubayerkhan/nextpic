@@ -49,7 +49,7 @@ export default function Home() {
         </div>
         <div className="pricing_card_body">
           <h3 className="pricing_card_title">NextPick Premium</h3>
-          <p className="pricing_card_price">$90.99<span className="text-2xl text-[#7E8598]">/year</span> </p>
+          <p className="pricing_card_price">$90.99<span className="md:text-2xl text-xl text-[#7E8598]">/year</span> </p>
           <ul>
             <li className="subscrive_page_ul_li">
               <span className="ul_li_span">
