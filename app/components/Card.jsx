@@ -48,6 +48,12 @@ export default function Card({ item, type }) {
     modalRef.current?.close();
   };
 
+  const handleClick = (e) => {
+    e.preventDefault();      // stop default action
+    e.stopPropagation();     // stop bubbling to parent
+    alert("bookmarked!")
+  };
+
   const avengers = [
     { name: "Robert Downey Jr.", role: "Tony Stark", img: "/assets/robert.png" },
     { name: "Chris Evans", role: "Steve Rogers", img: "/assets/evans.png" },
@@ -94,6 +100,7 @@ export default function Card({ item, type }) {
             width={20}
             height={20}
             className="card_bookmark_img hover:opacity-100 md:opacity-80"
+            onClick={handleClick}
           />
 
           {/* Rating */}

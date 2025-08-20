@@ -98,7 +98,8 @@ export default function Filter() {
             </div>
             {/* btn div */}
             <div className='md:pt-12 pt-4 md:pb-[72px] pb-4 flex justify-center md:gap-6 gap-3'>
-                <button className='filter_btn bg-gradient-to-t from-[#FEADFF] from-0% to-[#6C3DF0] to-100% transition-transform hover:shadow-[0px_4px_10px_0px_#8A38F5]'>
+                {/* filter_btn_inactive */}
+                <button className='filter_btn filter_random_btn_active'>
                     <Image
                         src={shuffle}
                         alt="shuffle"
@@ -106,7 +107,8 @@ export default function Filter() {
                     />
                     <span>Random Pick</span>
                 </button>
-                <button className='filter_btn border-1 border-[#444444] hover:bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] transition-transform'>
+                {/* filter_get_btn_active */}
+                <button className='filter_btn filter_btn_inactive'>
                     <Image
                         src={magic}
                         alt="magic"
