@@ -12,7 +12,7 @@ import Link from 'next/link';
 
 export default function Home() {
     return (
-        <div className="md:pb-20 pb-10 h-screen">
+        <div className="md:pb-20 pb-10">
             {/* navbar */}
             <div className='navbar_div'>
                 <Link href="/"><Image src={logo} alt='logo' /></Link>
@@ -82,6 +82,39 @@ export default function Home() {
             <div className='profile_page_section_container'>
                 <h2 className='profile_page_section_heading'>Profile Details</h2>
                 <h2 className='profile_page_section_subheading'>Manage your personal information</h2>
+                <div className='grid grid-cols-2 gap-y-12'>
+                    <div>
+                        <p className='pb-2.5'>Name</p>
+                        <p>Alex Rodriguez</p>
+                    </div>
+                    <div>
+                        <p className='pb-2.5'>User ID</p>
+                        <p>user-265315</p>
+                    </div>
+                    <div>
+                        <p className='pb-2.5'>Email</p>
+                        <p>alexrodriguez@mail.com</p>
+                    </div>
+                    <div>
+                        <p className='pb-2.5'>Phone</p>
+                        <p>+0123456789</p>
+                    </div>
+                </div>
+            </div>
+            {/* profile details section */}
+            <div className='profile_page_section_container'>
+                <h2 className='profile_page_section_heading'>Subscription Details</h2>
+                <h2 className='profile_page_section_subheading'>Manage your Nextpick subscription and billing</h2>
+            </div>
+            {/* profile details section */}
+            <div className='profile_page_section_container'>
+                <h2 className='profile_page_section_heading'>Your Content Library</h2>
+                <h2 className='profile_page_section_subheading'>Discover and manage your personalized recommendations</h2>
+            </div>
+            {/* profile details section */}
+            <div className='profile_page_section_container'>
+                <h2 className='profile_page_section_heading'>Account Management</h2>
+                <h2 className='profile_page_section_subheading'>Manage your account settings and data</h2>
             </div>
         </div>
     );

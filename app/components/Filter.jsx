@@ -97,7 +97,7 @@ export default function Filter() {
                 </div>
             </div>
             {/* btn div */}
-            <div className='md:pt-12 pt-4 md:pb-[72px] pb-4 flex justify-center md:gap-6 gap-3'>
+            <div className='filter_btn_div_flex'>
                 {/* filter_btn_inactive */}
                 <button className='filter_btn filter_random_btn_active'>
                     <Image

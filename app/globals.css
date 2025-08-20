@@ -160,6 +160,9 @@
   .filter_get_btn_active {
     @apply bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] transition-colors;
   }
+  .filter_btn_div_flex {
+    @apply md:pt-12 pt-4 md:pb-[72px] pb-4 flex justify-center md:gap-6 gap-3;
+  }
 
   .result_text_right {
     @apply text-[#7E8598] text-sm mt-auto pt-4 md:pt-0;
@@ -602,7 +605,7 @@
     @apply flex gap-[5px] items-center text-[#00DDA9];
   }
   .profile_page_section_container {
-    @apply bg-white/10 rounded-[40px] py-12 px-10 max-w-[1516px] mx-auto text-white;
+    @apply bg-white/10 rounded-[40px] py-12 px-10 max-w-[1516px] 2xl:mx-auto text-white mx-4 mb-12;
   }
   .profile_page_section_heading {
     @apply text-[34px] font-semibold pb-[5px];
