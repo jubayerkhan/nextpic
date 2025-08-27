@@ -11,7 +11,11 @@ const poppins = Poppins({
 export const metadata = {
   title: "NextPick",
   description: "A movie, game, series and book finder",
+  icons: {
+    icon: "/assets/logoIco.ico",  // or "/logo.png"
+  },
 };
+
 
 export default function RootLayout({ children }) {
   return (
