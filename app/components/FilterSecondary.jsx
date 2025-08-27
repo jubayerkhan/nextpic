@@ -49,7 +49,7 @@ export default function FilterSecondary() {
                 <div className="filter_btn_div mt-4 md:mt-0">
                     <button
                         onClick={() => setShowFilter((prev) => !prev)}
-                        className={`py-3 md:px-6 px-3 rounded-[10px] flex gap-2.5 items-center text-white font-medium w-full md:w-auto md:mb-0 justify-center hover:bg-gradient-to-r hover:from-[#FF4F6D]/10 hover:to-[#6C3DF0]/10 transition-transform relative cursor-pointer overflow-hidden hover:shadow-lg ${showFilter ? "waved-btn":""}`}
+                        className={`py-3 md:px-6 px-3 rounded-[10px] flex gap-2.5 items-center text-white font-medium w-full md:w-auto md:mb-0 justify-center hover:bg-gradient-to-r hover:from-[#FF4F6D]/10 hover:to-[#6C3DF0]/10 transition-transform relative cursor-pointer overflow-hidden hover:shadow-lg ${showFilter ? "waved-btn bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0]":"border-1 border-white bg-transparent"}`}
                     >
                         <Image
                             src={filter}
