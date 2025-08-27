@@ -151,17 +151,47 @@
   .filter_btn {
     @apply py-3 md:px-6 px-3 rounded-[10px] flex gap-2.5 items-center text-white font-medium w-full md:w-auto md:mb-0 justify-center cursor-pointer;
   }
-  .filter_random_btn_active {
+
+  /* .filter_random_btn_active {
     @apply bg-gradient-to-t from-[#FEADFF] from-0% to-[#6C3DF0] to-100% transition-transform hover:shadow-[0px_4px_10px_0px_#8A38F5];
-  }
-  .filter_btn_inactive {
+  } */
+
+  /* .filter_btn_inactive {
     @apply border-1 border-[#444444] hover:bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] transition-colors;
-  }
+  } */
+
   .filter_get_btn_active {
     @apply bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] transition-colors;
   }
+
   .filter_btn_div_flex {
     @apply md:pt-12 pt-4 md:pb-[72px] pb-4 flex justify-center md:gap-6 gap-3;
+  }
+
+  .filter_btn_div_flex input[type='checkbox'] {
+    display: none;
+  }
+
+  .filter_btn_div_flex input[type='checkbox']+label {
+    @apply border-1 border-white;
+  }
+
+  /* Checkbox 1 (ID: random) */
+  #random:hover+label {
+    @apply shadow-[0px_4px_10px_0px_#8A38F5] transition-colors;
+  }
+
+  #random:checked+label {
+    @apply bg-gradient-to-t from-[#FEADFF] from-0% to-[#6C3DF0] to-100% transition-transform hover:shadow-[0px_4px_10px_0px_#8A38F5];
+  }
+
+  /* Checkbox 2 (ID: mypicks) */
+  #mypicks:hover+label {
+    @apply hover:shadow-[0px_4px_10px_0px_#8A38F5] transition-colors;
+  }
+
+  #mypicks:checked+label {
+    @apply bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] transition-transform hover:shadow-[0px_4px_10px_0px_#8A38F5];
   }
 
   .result_text_right {
@@ -188,12 +218,14 @@
 
   .card_div .text_section {
     position: relative;
-    transition: top 0.3s ease;
-    /* transition on base */
+    top: 0;
+    transition: all 0.2s ease-in-out;
+    /* Transition property is defined here */
   }
 
   .card_div:hover .text_section {
     top: -4px;
+    /* The change you want to animate */
   }
 
 
@@ -550,68 +582,141 @@
   .profile_img_div1 {
     @apply p-0.5 bg-gradient-to-b from-[#D3C3FF] to-[#6C3DF0] rounded-full;
   }
+
   .profile_img_main_div1 {
     @apply p-1 bg-gradient-to-b from-[#D3C3FF] to-[#6C3DF0] rounded-full md:w-[172px];
   }
+
   .profile_img_div2 {
     @apply bg-[#6C3DF0] p-[9px] rounded-full;
   }
+
   .profile_img_main_div2 {
     @apply bg-[#6C3DF0] md:p-[29px] p-5 rounded-full;
   }
+
   .profile_heading_div {
-    @apply bg-white/10 md:py-12 py-5 px-4 2xl:px-0 md:mb-12 mb-6;
+    @apply bg-white/10 md:py-12 py-5 px-4 2xl:px-0 md:mb-12 mb-5;
   }
+
   .profile_heading_container {
     @apply max-w-[1516px] mx-auto;
   }
+
   .profile_heading_left_container {
     @apply flex gap-[32px] items-start flex-wrap;
   }
+
   .profile_heading_left_container_div1 {
-    @apply flex sm:gap-12 gap-5 items-center flex-wrap;
+    @apply flex sm:gap-12 gap-2 items-center flex-wrap;
   }
+
   .profile_img_heading_left {
     @apply w-[90px] h-[90px] md:w-auto md:h-auto;
   }
+
   .profile_img_heading_right {
     @apply flex flex-col sm:flex-row sm:gap-6 gap-4 pt-5;
   }
+
   .profile_img_heading_right_card_div {
-    @apply bg-[#393d52] rounded-[20px] py-8 px-6 text-white min-w-[233px] h-[173px];
+    @apply bg-[#393d52] rounded-[20px] md:py-8 py-6 md:px-6 px-5 text-white min-w-[233px] md:h-[173px];
   }
+
   .profile_img_heading_right_card_inner_div {
     @apply flex justify-between items-center;
   }
+
   .profile_img_heading_left_name {
     @apply text-white text-[34px] font-semibold;
   }
+
   .profile_img_heading_left_subtitle {
     @apply text-white pt-[5px] md:pb-6 pb-3;
   }
+
   .premium_member_btn {
     @apply text-white py-2.5 px-[30px] rounded-[10px] bg-gradient-to-b from-[#D3C3FF] to-[#6C3DF0] flex gap-2.5;
   }
+
   .profile_calender_div {
     @apply text-white flex gap-2.5 xl:pt-28 pt-4;
   }
+
   .profile_img_heading_right_card_inner_div_no {
     @apply text-[34px] py-1;
   }
+
   .profile_img_heading_right_card_inner_div_img {
     @apply bg-white/20 rounded-full p-3 w-12;
   }
+
   .profile_img_heading_right_card_inner_div_green_arrow {
     @apply flex gap-[5px] items-center text-[#00DDA9];
   }
+
   .profile_page_section_container {
-    @apply bg-white/10 rounded-[40px] py-12 px-10 max-w-[1516px] 2xl:mx-auto text-white mx-4 mb-12;
+    @apply bg-white/10 md:rounded-[40px] rounded-[20px] md:py-12 py-6 md:px-10 px-5 max-w-[1516px] 2xl:mx-auto text-white mx-4 md:mb-12 mb-5;
   }
+
   .profile_page_section_heading {
-    @apply text-[34px] font-semibold pb-[5px];
+    @apply md:text-[34px] text-[26px] font-semibold pb-[5px];
   }
+
   .profile_page_section_subheading {
-    @apply pb-12;
+    @apply md:pb-12 pb-4;
+  }
+
+  .profile_page_labels {
+    @apply md:pb-2.5 pb-1.5;
+  }
+
+  .profile_detail_section_grid {
+    @apply grid md:grid-cols-2 grid-cols-1 md:gap-y-12 gap-y-4;
+  }
+
+  .subscription_detail_card_div_inner {
+    @apply flex items-center md:gap-6 gap-4;
+  }
+
+  .subscription_detail_card_div {
+    @apply bg-[#393d52] rounded-[20px] md:py-[39px] py-5 md:px-12 px-5 text-white min-w-[233px];
+  }
+
+  .subscription_detail_card_img_div {
+    @apply rounded-full p-5 w-[64px];
+  }
+
+  .subscription_detail_card_title {
+    @apply text-2xl font-semibold py-[5px];
+  }
+
+  .transection_heading {
+    @apply text-2xl font-semibold md:pb-6 pb-4;
+  }
+
+  .subscription_detail_cards_div {
+    @apply grid md:grid-cols-2 grid-cols-1 lg:gap-12 gap-5 border-b-1 border-[#fff]/10 md:pb-12 pb-5 md:mb-12 mb-2;
+  }
+
+  .compleated_btn_subscribtion {
+    @apply text-[#00DDA9] font-semibold border-1 border-[#00DDA9] md:py-2.5 md:px-[15px] p-2 text-sm md:text-base rounded-[10px];
+  }
+  .cancelled_btn_subscribtion {
+    @apply text-[#E5396A] font-semibold border-1 border-[#E5396A] md:py-2.5 md:px-[15px] p-2 text-sm md:text-base rounded-[10px];
+  }
+
+  .subscription_price_profile {
+    @apply text-2xl font-semibold md:pb-2.5 pb-1 sm:text-right ;
+  }
+  .transaction_img_div {
+    @apply rounded-full p-[15px] w-[54px] flex items-center justify-center;
+  }
+  .transaction_card_div_inner {
+    @apply flex flex-row items-center justify-between md:gap-6 gap-4;
+  }
+  .transaction_card_plan_div {
+    @apply flex flex-col sm:flex-row justify-between w-full;
   }
 
 }

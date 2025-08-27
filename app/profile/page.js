@@ -7,6 +7,7 @@ import heart from "@/public/assets/heart.png";
 import arrow_grow from "@/public/assets/arrow-grow.png";
 import calender from "@/public/assets/calender.png";
 import eye_crossed from "@/public/assets/eye_crossed.png";
+import credit_card from "@/public/assets/credit_card.png";
 import Link from 'next/link';
 
 
@@ -64,7 +65,7 @@ export default function Home() {
                                     <span>+3 this week</span>
                                 </div>
                             </div>
-                            {/* card 1 */}
+                            {/* card 2 */}
                             <div className='profile_img_heading_right_card_div'>
                                 <p>Saved</p>
                                 <div className='profile_img_heading_right_card_inner_div'>
@@ -82,21 +83,21 @@ export default function Home() {
             <div className='profile_page_section_container'>
                 <h2 className='profile_page_section_heading'>Profile Details</h2>
                 <h2 className='profile_page_section_subheading'>Manage your personal information</h2>
-                <div className='grid grid-cols-2 gap-y-12'>
+                <div className='profile_detail_section_grid'>
                     <div>
-                        <p className='pb-2.5'>Name</p>
+                        <p className='profile_page_labels'>Name</p>
                         <p>Alex Rodriguez</p>
                     </div>
                     <div>
-                        <p className='pb-2.5'>User ID</p>
+                        <p className='profile_page_labels'>User ID</p>
                         <p>user-265315</p>
                     </div>
                     <div>
-                        <p className='pb-2.5'>Email</p>
+                        <p className='profile_page_labels'>Email</p>
                         <p>alexrodriguez@mail.com</p>
                     </div>
                     <div>
-                        <p className='pb-2.5'>Phone</p>
+                        <p className='profile_page_labels'>Phone</p>
                         <p>+0123456789</p>
                     </div>
                 </div>
@@ -105,11 +106,118 @@ export default function Home() {
             <div className='profile_page_section_container'>
                 <h2 className='profile_page_section_heading'>Subscription Details</h2>
                 <h2 className='profile_page_section_subheading'>Manage your Nextpick subscription and billing</h2>
+                <div className='subscription_detail_cards_div'>
+                    {/* card 1 */}
+                    <div className='subscription_detail_card_div'>
+                        <div className='subscription_detail_card_div_inner'>
+                            <div className='subscription_detail_card_img_div bg-gradient-to-b from-[#D3C3FF] to-[#6C3DF0]'>
+                                <Image src={crown} alt='crown' />
+                            </div>
+                            <div>
+                                <p>Current Plan</p>
+                                <h3 className='subscription_detail_card_title'>Premium</h3>
+                                <p>Unlimited recommendations</p>
+                            </div>
+                        </div>
+                    </div>
+                    {/* card 2 */}
+                    <div className='subscription_detail_card_div'>
+                        <div className='subscription_detail_card_div_inner'>
+                            <div className='subscription_detail_card_img_div bg-gradient-to-b from-[#97FFEA] to-[#00B187]'>
+                                <Image src={calender} alt='calender' />
+                            </div>
+                            <div>
+                                <p>Next Renewal</p>
+                                <h3 className='subscription_detail_card_title'>December 15, 2026</h3>
+                                <p className='text-[#00DDA9]'>Auto-renewed enabled</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h5 className='transection_heading'>Recent Transactions</h5>
+                <div className='flex flex-col md:gap-6 gap-4'>
+                    {/* card 1 */}
+                    <div className='subscription_detail_card_div'>
+                        <div className="transaction_card_div_inner">
+                            {/* Image Div */}
+                            <div className='transaction_img_div bg-gradient-to-b from-[#97FFEA] to-[#00B187]'>
+                                <Image src={credit_card} alt='credit_card' />
+                            </div>
+
+                            {/* Plan and Price Parent Div */}
+                            <div className="transaction_card_plan_div">
+                                {/* Plan Details Div */}
+                                <div>
+                                    <p>TxnID: 3XYZ1234AB</p>
+                                    <h3 className='subscription_detail_card_title py-0 md:py-1'>Premium Plan</h3>
+                                    <p>Jul 15, 2025</p>
+                                </div>
+                                <div>
+                                    <p className='subscription_price_profile'>$9.99</p>
+                                    <button className='compleated_btn_subscribtion'>
+                                        Completed
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* card 2 */}
+                    <div className='subscription_detail_card_div'>
+                        <div className="transaction_card_div_inner">
+                            {/* Image Div */}
+                            <div className='transaction_img_div bg-gradient-to-b from-[#FF97B8] to-[#E5396A]'>
+                                <Image src={credit_card} alt='credit_card' />
+                            </div>
+
+                            {/* Plan and Price Parent Div */}
+                            <div className="transaction_card_plan_div">
+                                {/* Plan Details Div */}
+                                <div>
+                                    <p>TxnID: 3XYZ1234AB</p>
+                                    <h3 className='subscription_detail_card_title py-0 md:py-1'>Premium Plan</h3>
+                                    <p>Jul 15, 2025</p>
+                                </div>
+                                <div>
+                                    <p className='subscription_price_profile'>$9.99</p>
+                                    <button className='cancelled_btn_subscribtion'>
+                                        Cancelled
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* card 3 */}
+                    <div className='subscription_detail_card_div'>
+                        <div className="transaction_card_div_inner">
+                            {/* Image Div */}
+                            <div className='transaction_img_div bg-gradient-to-b from-[#97FFEA] to-[#00B187]'>
+                                <Image src={credit_card} alt='credit_card' />
+                            </div>
+
+                            {/* Plan and Price Parent Div */}
+                            <div className="transaction_card_plan_div">
+                                {/* Plan Details Div */}
+                                <div>
+                                    <p>TxnID: 3XYZ1234AB</p>
+                                    <h3 className='subscription_detail_card_title py-0 md:py-1'>Premium Plan</h3>
+                                    <p>Jul 15, 2025</p>
+                                </div>
+                                <div>
+                                    <p className='subscription_price_profile'>$9.99</p>
+                                    <button className='compleated_btn_subscribtion'>
+                                        Completed
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             {/* profile details section */}
             <div className='profile_page_section_container'>
                 <h2 className='profile_page_section_heading'>Your Content Library</h2>
                 <h2 className='profile_page_section_subheading'>Discover and manage your personalized recommendations</h2>
+
             </div>
             {/* profile details section */}
             <div className='profile_page_section_container'>

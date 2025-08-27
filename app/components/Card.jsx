@@ -79,7 +79,7 @@ export default function Card({ item, type }) {
 
   return (
     <div className="h-full">
-      <div className={`card_div h-full flex flex-col ${shadowColor[type] || ""}`}>
+      <div className={`card_div transition-all duration-300 ease h-full flex flex-col ${shadowColor[type] || ""}`}>
         {/* Image section */}
         <div
           className="relative overflow-hidden max-h-[303px] cursor-pointer"

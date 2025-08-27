@@ -97,26 +97,45 @@ export default function Filter() {
                 </div>
             </div>
             {/* btn div */}
-            <div className='filter_btn_div_flex'>
-                {/* filter_btn_inactive */}
-                <button className='filter_btn filter_random_btn_active'>
-                    <Image
-                        src={shuffle}
-                        alt="shuffle"
-                        className="h-4 w-4"
+            <div className="filter_btn_div_flex">
+                {/* Random Pick */}
+                <div className=''>
+                    <input
+                        type="radio"
+                        id="random"
+                        name="filter"
+                        value="random"
+                        className="hidden peer"
+                        defaultChecked
                     />
-                    <span>Random Pick</span>
-                </button>
-                {/* filter_get_btn_active */}
-                <button className='filter_btn filter_btn_inactive'>
-                    <Image
-                        src={magic}
-                        alt="magic"
-                        className="h-4 w-4"
+                    <label
+                        htmlFor="random"
+                        className="py-3 md:px-6 px-3 rounded-[10px] flex gap-2.5 items-center text-white font-medium w-full md:w-auto md:mb-0 justify-center cursor-pointer border-1 border-[#444444] hover:bg-transparent"
+                    >
+                        <Image src={shuffle} alt="shuffle" className="h-4 w-4" />
+                        <span>Random Pick</span>
+                    </label>
+                </div>
+
+                {/* Get My Picks */}
+                <div>
+                    <input
+                        type="radio"
+                        id="mypicks"
+                        name="filter"
+                        value="mypicks"
+                        className="hidden peer"
                     />
-                    <span>Get My Picks</span>
-                </button>
+                    <label
+                        htmlFor="mypicks"
+                        className="py-3 md:px-6 px-3 rounded-[10px] flex gap-2.5 items-center text-white font-medium w-full md:w-auto md:mb-0 justify-center cursor-pointer border-1 border-[#444444] hover:bg-transparent"
+                    >
+                        <Image src={magic} alt="magic" className="h-4 w-4" />
+                        <span>Get My Picks</span>
+                    </label>
+                </div>
             </div>
+
             {/* result div */}
             <div className='md:flex justify-between'>
                 <div>
