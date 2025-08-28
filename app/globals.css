@@ -11,31 +11,30 @@
   .item_center {
     @apply flex justify-center;
   }
-  
-  .waved-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.4),
-                transparent
-            );
-            animation: wave 2s infinite;
-        }
 
-        @keyframes wave {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(200%);
-            }
-        }
+  .waved-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent);
+    animation: wave 2s infinite;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(200%);
+    }
+  }
 
   /* navbar styles */
   .navbar_div {
@@ -76,7 +75,7 @@
   }
 
   .filter_option_movie_div {
-    @apply border-1 border-[#394056] hover:border-[#652CA8] hover:bg-radial from-[#8A38F5]/30 from-1% to-[#000]/0 md:max-w-[302px] rounded-[15px] sm:py-[30px] py-3 cursor-pointer focus:bg-[#473956] transition;
+    @apply border-1 border-[#394056] hover:border-[#652CA8] hover:bg-radial from-[#8A38F5]/30 from-1% to-[#000]/0 md:max-w-[302px] rounded-[15px] sm:py-[30px] py-3 cursor-pointer focus:bg-[#473956] transition w-full;
   }
 
   .filter_option_series_div {
@@ -100,7 +99,10 @@
   }
 
   .filter_option_movies_div {
-    @apply max-w-[1280px] mx-auto grid md:grid-cols-4 grid-cols-4 md:gap-5 gap-3;
+    @apply max-w-[1280px] mx-auto flex justify-center md:gap-5 gap-3;
+  }
+  .filter_option_movies_div > div{
+    @apply w-[302px];
   }
 
   .filter_option_movies_div input[type='checkbox'] {
@@ -193,31 +195,34 @@
     @apply md:pt-12 pt-4 md:pb-[72px] pb-4 flex justify-center md:gap-6 gap-3;
   }
 
-  .filter_btn_div_flex input[type='checkbox'] {
-    display: none;
-  }
+.filter_btn_div_flex input[type='checkbox'] {
+  display: none;
+}
 
-  .filter_btn_div_flex input[type='checkbox']+label {
-    @apply py-3 md:px-6 px-3 rounded-[10px] flex gap-2.5 items-center text-white font-medium w-full md:w-auto md:mb-0 justify-center cursor-pointer border-1 border-[#444444] hover:bg-transparent;
-  }
+.filter_btn_div_flex input[type='checkbox']+label {
+  @apply py-3 md:px-6 px-3 rounded-[10px] flex gap-2.5 items-center text-white font-medium 
+         w-full md:w-auto md:mb-0 justify-center cursor-pointer border border-[#444444] 
+         transition-all duration-300 ease-in-out;
+}
 
-  /* Checkbox 1 (ID: random) */
-  #random:hover+label {
-    @apply shadow-[0px_4px_10px_0px_#8A38F5] transition-colors;
-  }
+/* Checkbox 1 (ID: random) */
+#random:hover+label {
+  @apply shadow-[0px_4px_10px_0px_#8A38F5];
+}
 
-  #random:checked+label {
-    @apply bg-gradient-to-t from-[#FEADFF] from-0% to-[#6C3DF0] to-100% transition-transform hover:shadow-[0px_4px_10px_0px_#8A38F5];
-  }
+#random:checked+label {
+  @apply bg-gradient-to-t from-[#FEADFF] to-[#6C3DF0] shadow-[0px_4px_10px_0px_#8A38F5];
+}
 
-  /* Checkbox 2 (ID: mypicks) */
-  #mypicks:hover+label {
-    @apply hover:shadow-[0px_4px_10px_0px_#8A38F5] transition-colors;
-  }
+/* Checkbox 2 (ID: mypicks) */
+#mypicks:hover+label {
+  @apply shadow-[0px_4px_10px_0px_#8A38F5];
+}
 
-  #mypicks:checked+label {
-    @apply bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] transition-transform hover:shadow-[0px_4px_10px_0px_#8A38F5];
-  }
+#mypicks:checked+label {
+  @apply bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] shadow-[0px_4px_10px_0px_#8A38F5];
+}
+
 
   .result_text_right {
     @apply text-[#7E8598] text-sm mt-auto pt-4 md:pt-0;
@@ -727,19 +732,23 @@
   .compleated_btn_subscribtion {
     @apply text-[#00DDA9] font-semibold border-1 border-[#00DDA9] md:py-2.5 md:px-[15px] p-2 text-sm md:text-base rounded-[10px] cursor-pointer;
   }
+
   .cancelled_btn_subscribtion {
     @apply text-[#E5396A] font-semibold border-1 border-[#E5396A] md:py-2.5 md:px-[15px] p-2 text-sm md:text-base rounded-[10px] cursor-pointer;
   }
 
   .subscription_price_profile {
-    @apply text-2xl font-semibold md:pb-2.5 pb-1 sm:text-right ;
+    @apply text-2xl font-semibold md:pb-2.5 pb-1 sm:text-right;
   }
+
   .transaction_img_div {
     @apply rounded-full p-[15px] w-[54px] flex items-center justify-center;
   }
+
   .transaction_card_div_inner {
     @apply flex flex-row items-center justify-between md:gap-6 gap-4;
   }
+
   .transaction_card_plan_div {
     @apply flex flex-col sm:flex-row justify-between w-full;
   }

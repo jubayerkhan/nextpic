@@ -135,7 +135,7 @@ export default function Home() {
                     </div>
                 </div>
                 <h5 className='transection_heading'>Recent Transactions</h5>
-                <div className='flex flex-col md:gap-6 gap-4'>
+                <div className='flex flex-col md:gap-6 gap-4 md:pb-12 pb-4'>
                     {/* card 1 */}
                     <div className='subscription_detail_card_div'>
                         <div className="transaction_card_div_inner">
@@ -211,6 +211,9 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className='item_center'>
+                    <button className='text-white px-[34px] py-[14px] rounded-full border-1 border-[#7B808F] cursor-pointer'>Load More</button>
                 </div>
             </div>
             {/* profile details section */}
