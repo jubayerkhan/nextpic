@@ -12,7 +12,9 @@ export const metadata = {
   title: "NextPick",
   description: "A movie, game, series and book finder",
   icons: {
-    icon: "/assets/logoIco.ico",  // or "/logo.png"
+    icon: "/assets/logoIco.ico",
+    shortcut: "/assets/logoIco.ico",
+    apple: "/assets/logoIco.ico",
   },
 };
 
