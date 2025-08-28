@@ -211,7 +211,7 @@
 }
 
 #random:checked+label {
-  @apply bg-gradient-to-t from-[#FEADFF] to-[#6C3DF0] shadow-[0px_4px_10px_0px_#8A38F5];
+  @apply bg-gradient-to-t from-[#FEADFF] to-[#6C3DF0];
 }
 
 /* Checkbox 2 (ID: mypicks) */
@@ -220,7 +220,7 @@
 }
 
 #mypicks:checked+label {
-  @apply bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] shadow-[0px_4px_10px_0px_#8A38F5];
+  @apply bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0];
 }
 
 
