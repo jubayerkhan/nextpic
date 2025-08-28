@@ -213,7 +213,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className='item_center'>
-                    <button className='text-white px-[34px] py-[14px] rounded-full border-1 border-[#7B808F] cursor-pointer'>Load More</button>
+                    <button className='profile_load_btn'>Load More</button>
                 </div>
             </div>
             {/* profile details section */}

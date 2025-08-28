@@ -69,6 +69,38 @@ export default function FilterSecondary() {
                 <div
                     className={`mt-6 md:p-[25px] p-4 border-1 border-[#394056] rounded-[20px]`}
                 >
+                    <p className="text-white">Filter by Mood</p>
+
+                    {/* Mood filter */}
+                    <div className="filter2_option_movies_div mb-6">
+                        {[
+                            "Feel-Good",
+                            "Thrilling",
+                            "Romantic",
+                            "Chill",
+                            "Mind-Bending",
+                            "Epic",
+                            "Funny",
+                            "Heartwarming",
+                            "Inspiring",
+                        ].map((genre, index) => {
+                            const id = `mood${index + 1}`;
+                            return (
+                                <div key={id}>
+                                    <input
+                                        id={id}
+                                        type="radio"
+                                        name="mood_options"
+                                        value={id}
+                                        className="movie-checkbox"
+                                    />
+                                    <label htmlFor={id} className="filter2_option_book_div">
+                                        <h5 className="filter2_option_title">{genre}</h5>
+                                    </label>
+                                </div>
+                            );
+                        })}
+                    </div>
                     <p className="text-white">Filter by Genres</p>
 
                     {/* Movies filter */}
