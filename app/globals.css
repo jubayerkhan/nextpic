@@ -766,7 +766,25 @@
     @apply flex flex-col sm:flex-row justify-between w-full;
   }
   .profile_load_btn {
-    @apply text-white px-[34px] py-[14px] rounded-full border-1 border-[#7B808F] cursor-pointer;
+    @apply text-white px-[34px] py-[14px] rounded-full border-1 border-[#7B808F] cursor-pointer text-sm;
   }
+  .switch_library .toggle {
+    border: none !important;
+    color: var(--input-color);
+    position: relative;
+    display: inline-grid
+;
+    flex-shrink: 0;
+    cursor: pointer;
+    appearance: none;
+    place-content: center;
+    vertical-align: middle;
+    webkit-user-select: none;
+    user-select: none;
+    grid-template-columns: 0fr 0fr 0fr !important;
+    --radius-selector-max: 18px !important;
+    padding: var(--toggle-p);
+    box-shadow: 0 1px currentColor inset;
+}
 
 }
