@@ -47,7 +47,7 @@
   }
 
   .filter_btn_div {
-    @apply inline-block p-[1px] rounded-[10px] bg-[#7B808F] bg-gradient-to-r hover:from-[#FF4F6D] hover:to-[#6C3DF0];
+    @apply inline-block p-[1px] rounded-[10px] bg-gradient-to-r hover:from-[#FF4F6D] hover:to-[#6C3DF0];
   }
 
   .navbar_btn {
