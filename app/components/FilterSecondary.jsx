@@ -46,10 +46,10 @@ export default function FilterSecondary() {
                 </div>
 
                 {/* Toggle Button */}
-                <div className="filter_btn_div mt-4 md:mt-0">
+                <div className={`mt-4 md:mt-0 ${showFilter ? "inline-block p-[1px] rounded-[10px] bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0]":"inline-block p-[1px] rounded-[10px] bg-gradient-to-r hover:from-[#FF4F6D] hover:to-[#6C3DF0]"}`}>
                     <button
                         onClick={() => setShowFilter((prev) => !prev)}
-                        className={`py-3 md:px-6 px-3 rounded-[10px] flex gap-2.5 items-center text-white font-medium w-full md:w-auto md:mb-0 justify-center transition-transform relative cursor-pointer overflow-hidden hover:shadow-lg ${showFilter ? "waved-btn bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0]":"border-1 border-[#7B808F] hover:border-transparent bg-gradient-to-r hover:from-[#FF4F6D]/10 hover:to-[#6C3DF0]/10 bg-[#10172A]"}`}
+                        className={`py-3 md:px-6 px-3 rounded-[10px] flex gap-2.5 items-center text-white font-medium w-full md:w-auto md:mb-0 justify-center transition-transform relative cursor-pointer overflow-hidden hover:shadow-lg ${showFilter ? "waved-btn bg-gradient-to-r from-[#FF4F6D]/10 to-[#6C3DF0]/10 bg-[#10172A] border-1 border-transparent":"border-1 border-[#7B808F] hover:border-transparent bg-gradient-to-r hover:from-[#FF4F6D]/10 hover:to-[#6C3DF0]/10 bg-[#10172A]"}`}
                     >
                         <Image
                             src={filter}
