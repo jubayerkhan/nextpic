@@ -11,6 +11,10 @@ import x from "@/public/assets/x.png";
 import facebook from "@/public/assets/facebook.png";
 import links from "@/public/assets/links.png";
 import author from "@/public/assets/author.png";
+import GamesBMd from "@/public/assets/GamesBMd.png";
+import MoviesBMd from "@/public/assets/MoviesBMd.png";
+import SeriesBMd from "@/public/assets/SeriesBMd.png";
+import BooksBMd from "@/public/assets/BooksBMd.png";
 import { useRef } from "react";
 
 // Helper function to get the correct bookmark icon path
@@ -199,28 +203,28 @@ export default function Card({ item, type }) {
               <div className="bg-black/30 w-full p-6 rounded-[20px] text-white text-sm pt-2.5 relative">
 
                 <div className="absolute right-6 top-7">
-  <div className="relative w-[90px] h-[90px] rounded-full flex items-center justify-center">
-    {/* Progress circle */}
-    <div
-      className="absolute inset-0 rounded-full"
-      style={{
-        background: `conic-gradient(#FFB900 ${75 * 3.6}deg, #423D0F 0deg)`,
-      }}
-    ></div>
+                  <div className="relative w-[90px] h-[90px] rounded-full flex items-center justify-center">
+                    {/* Progress circle */}
+                    <div
+                      className="absolute inset-0 rounded-full"
+                      style={{
+                        background: `conic-gradient(#FFB900 ${75 * 3.6}deg, #423D0F 0deg)`,
+                      }}
+                    ></div>
 
-    {/* Inner circle (5px smaller) */}
-    <div
-      className="absolute rounded-full flex items-center justify-center"
-      style={{
-        inset: "5px", // makes the border thickness = 5px
-        backgroundColor: "#211e07",
-        // opacity: "30%",
-      }}
-    >
-      <span className="text-xl font-bold text-white">75%</span>
-    </div>
-  </div>
-</div>
+                    {/* Inner circle (5px smaller) */}
+                    <div
+                      className="absolute rounded-full flex items-center justify-center"
+                      style={{
+                        inset: "5px", // makes the border thickness = 5px
+                        backgroundColor: "#211e07",
+                        // opacity: "30%",
+                      }}
+                    >
+                      <span className="text-xl font-bold text-white">75%</span>
+                    </div>
+                  </div>
+                </div>
 
 
                 <div>
