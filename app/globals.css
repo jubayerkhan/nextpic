@@ -487,7 +487,7 @@
   }
 
   .filter2_platform_option_div {
-    @apply border-1 border-[#394056] hover:border-[#652CA8] hover:bg-[#473956] rounded-[15px] py-[30px] px-2.5 cursor-pointer focus:bg-[#394360] transition md:min-w-[150px];
+    @apply border-1 border-[#394056] hover:border-[#652CA8] hover:bg-[#473956] rounded-[15px] py-[15px] px-2.5 cursor-pointer focus:bg-[#394360] transition md:min-w-[110px];
   }
 
   /* popup styles */
@@ -772,19 +772,25 @@
     border: none !important;
     color: var(--input-color);
     position: relative;
-    display: inline-grid
-;
+    display: inline-grid;
     flex-shrink: 0;
     cursor: pointer;
     appearance: none;
     place-content: center;
     vertical-align: middle;
-    webkit-user-select: none;
     user-select: none;
     grid-template-columns: 0fr 0fr 0fr !important;
     --radius-selector-max: 18px !important;
     padding: var(--toggle-p);
     box-shadow: 0 1px currentColor inset;
+}
+
+.modal_popup_filter{
+  margin-top: 200px !important;
+  margin-bottom: 200px !important;
+}
+.modal_popup_filter_secondary .modal-box{
+  max-height: 90vh !important;
 }
 
 }

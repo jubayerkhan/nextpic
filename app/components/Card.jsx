@@ -181,7 +181,7 @@ export default function Card({ item, type }) {
             {/* Close button in top right */}
             <button
               onClick={closeModal}
-              className="absolute md:right-12 right-3 top-4 text-white cursor-pointer md:border-1 border-white hover:border-transparent text-sm rounded-full px-5 py-2.5 z-20 flex gap-2 hover:bg-[#FF4F6D]"
+              className="absolute md:right-12 right-3 top-4 text-white cursor-pointer md:border-1 border-white hover:border-transparent rounded-full px-5 py-2.5 z-20 flex gap-2 hover:bg-[#FF4F6D]"
             >
               <span className="hidden md:block">Close</span> ✕
             </button>
@@ -196,7 +196,33 @@ export default function Card({ item, type }) {
                   className="lg:min-w-[319px] w-full rounded-[20px]"
                 />
               </div>
-              <div className="bg-black/30 w-full p-6 rounded-[20px] text-white text-sm pt-2.5">
+              <div className="bg-black/30 w-full p-6 rounded-[20px] text-white text-sm pt-2.5 relative">
+
+                <div className="absolute right-6 top-7">
+  <div className="relative w-[90px] h-[90px] rounded-full flex items-center justify-center">
+    {/* Progress circle */}
+    <div
+      className="absolute inset-0 rounded-full"
+      style={{
+        background: `conic-gradient(#FFB900 ${75 * 3.6}deg, #423D0F 0deg)`,
+      }}
+    ></div>
+
+    {/* Inner circle (5px smaller) */}
+    <div
+      className="absolute rounded-full flex items-center justify-center"
+      style={{
+        inset: "5px", // makes the border thickness = 5px
+        backgroundColor: "#211e07",
+        // opacity: "30%",
+      }}
+    >
+      <span className="text-xl font-bold text-white">75%</span>
+    </div>
+  </div>
+</div>
+
+
                 <div>
                   <h1 className="font-bold text-[34px]">{item.title}</h1>
                   <div className="flex gap-2.5 items-center pt-2.5">

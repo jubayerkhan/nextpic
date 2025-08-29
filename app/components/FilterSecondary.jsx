@@ -258,7 +258,7 @@ export default function FilterSecondary() {
                                                 className="mx-auto w-[30px] h-[30px]"
                                             />
                                         </div>
-                                        <h5 className="filter2_option_title pt-[14px]">
+                                        <h5 className="filter2_option_title pt-[6px]">
                                             {platform.name}
                                         </h5>
                                     </label>
@@ -289,7 +289,7 @@ export default function FilterSecondary() {
                                                 className="mx-auto w-[30px] h-[30px]"
                                             />
                                         </div>
-                                        <h5 className="filter2_option_title pt-[14px]">
+                                        <h5 className="filter2_option_title pt-[6px]">
                                             {platform.name}
                                         </h5>
                                     </label>
@@ -320,7 +320,7 @@ export default function FilterSecondary() {
                                                 className="mx-auto w-[30px] h-[30px]"
                                             />
                                         </div>
-                                        <h5 className="filter2_option_title pt-[14px]">
+                                        <h5 className="filter2_option_title pt-[6px]">
                                             {platform.name}
                                         </h5>
                                     </label>
@@ -351,7 +351,7 @@ export default function FilterSecondary() {
                                                 className="mx-auto w-[30px] h-[30px]"
                                             />
                                         </div>
-                                        <h5 className="filter2_option_title pt-[14px]">
+                                        <h5 className="filter2_option_title pt-[6px]">
                                             {platform.name}
                                         </h5>
                                     </label>
