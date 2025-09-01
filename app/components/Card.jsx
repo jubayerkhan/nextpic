@@ -167,7 +167,7 @@ export default function Card({ item, type }) {
         }}
       >
         <div
-          className="relative w-full max-w-[1440px] overflow-hidden bg-[#1F2842] md:rounded-[48px] rounded-[20px]"
+          className="relative w-full max-w-[1440px] overflow-hidden bg-[#1F2842] rounded-[15px]"
           style={{ maxHeight: "90vh", overflowY: "auto" }} // make content scrollable
         >
           {/* Blurred background image */}

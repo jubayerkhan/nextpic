@@ -101,7 +101,8 @@
   .filter_option_movies_div {
     @apply max-w-[1280px] mx-auto flex justify-center md:gap-5 gap-3;
   }
-  .filter_option_movies_div > div{
+
+  .filter_option_movies_div>div {
     @apply w-[302px];
   }
 
@@ -195,33 +196,31 @@
     @apply md:pt-12 pt-4 md:pb-[72px] pb-4 flex justify-center md:gap-6 gap-3;
   }
 
-.filter_btn_div_flex input[type='checkbox'] {
-  display: none;
-}
+  .filter_btn_div_flex input[type='checkbox'] {
+    display: none;
+  }
 
-.filter_btn_div_flex input[type='checkbox']+label {
-  @apply py-3 md:px-6 px-3 rounded-[10px] flex gap-2.5 items-center text-white font-medium 
-         w-full md:w-auto md:mb-0 justify-center cursor-pointer border border-[#444444] 
-         transition-all duration-300 ease-in-out;
-}
+  .filter_btn_div_flex input[type='checkbox']+label {
+    @apply py-3 md:px-6 px-3 rounded-[10px] flex gap-2.5 items-center text-white font-medium w-full md:w-auto md:mb-0 justify-center cursor-pointer border border-[#444444] transition-all duration-300 ease-in-out;
+  }
 
-/* Checkbox 1 (ID: random) */
-#random:hover+label {
-  @apply shadow-[0px_4px_10px_0px_#8A38F5];
-}
+  /* Checkbox 1 (ID: random) */
+  #random:hover+label {
+    @apply shadow-[0px_4px_10px_0px_#8A38F5];
+  }
 
-#random:checked+label {
-  @apply bg-gradient-to-t from-[#FEADFF] to-[#6C3DF0];
-}
+  #random:checked+label {
+    @apply bg-gradient-to-t from-[#FEADFF] to-[#6C3DF0];
+  }
 
-/* Checkbox 2 (ID: mypicks) */
-#mypicks:hover+label {
-  @apply shadow-[0px_4px_10px_0px_#8A38F5];
-}
+  /* Checkbox 2 (ID: mypicks) */
+  #mypicks:hover+label {
+    @apply shadow-[0px_4px_10px_0px_#8A38F5];
+  }
 
-#mypicks:checked+label {
-  @apply bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0];
-}
+  #mypicks:checked+label {
+    @apply bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0];
+  }
 
 
   .result_text_right {
@@ -341,6 +340,7 @@
     width: 100%;
     height: 100%;
   }
+
   /* for checkbox */
   .filter2_option_movies_div {
     @apply flex gap-2.5 flex-wrap pt-2.5;
@@ -765,9 +765,11 @@
   .transaction_card_plan_div {
     @apply flex flex-col sm:flex-row justify-between w-full;
   }
+
   .profile_load_btn {
     @apply text-white px-[34px] py-[14px] rounded-full border-1 border-[#7B808F] cursor-pointer text-sm;
   }
+
   .switch_library .toggle {
     border: none !important;
     color: var(--input-color);
@@ -783,14 +785,26 @@
     --radius-selector-max: 18px !important;
     padding: var(--toggle-p);
     box-shadow: 0 1px currentColor inset;
-}
+  }
 
-.modal_popup_filter{
-  margin-top: 200px !important;
-  margin-bottom: 200px !important;
-}
-.modal_popup_filter_secondary .modal-box{
-  max-height: 90vh !important;
-}
+  .modal_popup_filter {
+    margin-top: 200px !important;
+    margin-bottom: 200px !important;
+  }
 
+  .modal_popup_filter_secondary .modal-box {
+    max-height: 90vh !important;
+  }
+
+  .modal {
+
+    &.modal-open,
+    &[open],
+    &:target {
+      pointer-events: auto;
+      visibility: visible;
+      opacity: 100%;
+      background-color: oklch(0% 0 0 / 0.8) !important;
+    }
+  }
 }

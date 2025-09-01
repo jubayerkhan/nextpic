@@ -60,16 +60,16 @@ export default function FilterPopup() {
                 </div>
             </div>
             <dialog id="my_modal_4" className="modal modal_popup_filter_secondary">
-                <div className="modal-box w-11/12 max-w-[1700px] bg-[#10172A] md:rounded-[40px] rounded-[20px] modal_popup_filter">
+                <div className="modal-box w-11/12 max-w-[1700px] bg-[#10172A] md:rounded-[15px] rounded-[15px] modal_popup_filter">
                     {/* ❌ Close Button */}
                     <button
                         onClick={() => document.getElementById("my_modal_4").close()}
-                        className="absolute md:right-12 right-3 top-3 text-white cursor-pointer md:border-1 border-white hover:border-transparent text-sm rounded-full px-3 py-1 z-20 flex gap-2 hover:bg-[#FF4F6D]"
+                        className="absolute md:right-6 right-3 top-3 text-white cursor-pointer md:border-1 border-white hover:border-transparent text-sm rounded-full px-3 py-1 z-20 flex gap-2 hover:bg-[#FF4F6D]"
                     >
                         <span className="hidden md:block">Close</span> ✕
                     </button>
                     <div
-                        className={`md:p-[25px] p-4 border-1 border-[#394056] rounded-[20px] md:mt-7 mt-5`}
+                        className={`md:p-[25px] p-4 border-1 border-[#394056] rounded-[15px] md:mt-7 mt-5`}
                     >
                         <p className="text-white">Filter by Genres</p>
 
