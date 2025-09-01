@@ -158,7 +158,7 @@ export default function Card({ item, type }) {
       {/* popup section */}
       <dialog
         ref={modalRef}
-        className="modal modal-middle sm:modal-middle w-full px-5"
+        className="modal modal-middle w-full px-5"
         style={{ maxHeight: "100vh" }}  // limit dialog height to 90% viewport height
         onClick={(e) => {
           if (e.target === modalRef.current) {
@@ -167,7 +167,7 @@ export default function Card({ item, type }) {
         }}
       >
         <div
-          className="relative w-full max-w-[1440px] overflow-hidden bg-[#1F2842] rounded-[15px]"
+          className="modal-box relative w-full max-w-[1440px] overflow-hidden bg-[#1F2842] rounded-[15px]"
           style={{ maxHeight: "90vh", overflowY: "auto" }} // make content scrollable
         >
           {/* Blurred background image */}
