@@ -773,7 +773,7 @@
     @apply flex items-center gap-2.5 bg-[#35436C] px-3 py-1.5 rounded-full cursor-pointer w-full justify-center;
   }
   .profile_card_category_tag {
-    @apply absolute top-3 left-3 cursor-pointer text-[#8A38F5] bg-white rounded-full flex gap-2.5 items-center justify-center px-2.5 py-0.5 text-sm;
+    @apply absolute top-3 left-3 cursor-pointer text-[#8A38F5] bg-white rounded-full flex gap-2 items-center justify-center px-3 py-[4px] text-sm;
   }
 
   .switch_library .toggle {
@@ -820,9 +820,18 @@
     @apply grid xl:grid-cols-6 md:grid-cols-4 gap-6 md:pt-12 pt-5 md:mb-12 mb-5;
   }
   .profile_log_out {
-    @apply text-white flex py-3 px-6 rounded-[10px] gap-2.5 bg-gradient-to-b from-[#6C3DF0] to-[#FEADFF] items-center;
+    @apply text-white flex py-3 px-6 rounded-[10px] gap-2.5 bg-gradient-to-b from-[#6C3DF0] to-[#FEADFF] items-center justify-center cursor-pointer;
   }
   .profile_delete {
-    @apply text-white flex items-center py-3 px-6 rounded-[10px] gap-2.5 border-1 border-[#7B808F];
+    @apply text-white flex items-center py-3 px-6 rounded-[10px] gap-2.5 border-1 border-[#7B808F] cursor-pointer justify-center;
+  }
+  .profile_contact_btn {
+    @apply bg-[#525272] py-3 px-[30px] rounded-[10px] mt-6 cursor-pointer;
+  }
+  .account_profile_btn_div {
+    @apply flex flex-col sm:flex-row gap-5 md:pb-12 pb-5;
+  }
+  .contact_profile_div {
+    @apply bg-[#393d52] p-6 rounded-[20px];
   }
 }

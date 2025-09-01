@@ -14,7 +14,7 @@ import bookmark_white from "@/public/assets/bookmark_white.png";
 import movie_card_icon from "@/public/assets/movie_card_icon.png";
 import series_card_icon from "@/public/assets/series_card_icon.png";
 import book_card_icon from "@/public/assets/book_card_icon.png";
-import bookmarkIcon from "@/public/assets/bookmark.png";
+import undo from "@/public/assets/undo.png";
 import movie2 from "@/public/assets/movie2.png";
 import book3 from "@/public/assets/book3.png";
 import book1 from "@/public/assets/book1.png";
@@ -333,6 +333,7 @@ export default function Home() {
                                         alt="series_card_icon"
                                         width={14}
                                         height={14}
+                                        className='pb-0.5'
                                     />
                                     <span>Series</span>
                                 </div>
@@ -634,8 +635,8 @@ export default function Home() {
                                 {/* Buttons pinned at bottom */}
                                 <div className="card_btn_div">
                                     <button className="remove_btn_profile">
-                                        <Image src={bookmark_white} alt="bookmark_white" />
-                                        Remove
+                                        <Image src={undo} alt="undo" />
+                                        Undo
                                     </button>
                                 </div>
                             </div>
@@ -646,11 +647,11 @@ export default function Home() {
                     <button className='profile_load_btn'>Show All</button>
                 </div>
             </div>
-            {/* profile details section */}
+            {/* Account management section */}
             <div className='profile_page_section_container'>
                 <h2 className='profile_page_section_heading'>Account Management</h2>
                 <h2 className='profile_page_section_subheading'>Manage your account settings and data</h2>
-                <div className='flex gap-5'>
+                <div className='account_profile_btn_div'>
                     <button className='profile_log_out'>
                         <Image src={sigh_out} alt='crown'/>
                         <span>Log Out</span>
@@ -659,6 +660,10 @@ export default function Home() {
                         <Image src={trash} alt='crown'/>
                         <span>Delete My Account</span>
                     </button>
+                </div>
+                <div className='contact_profile_div'>
+                    <p>Need help? Our support team is available 24/7 to assist you. Consider reaching out before deleting your account - we might be able to resolve any issues you're experiencing.</p>
+                    <button className='profile_contact_btn'>Contact Support</button>
                 </div>
             </div>
         </div>
