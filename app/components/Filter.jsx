@@ -37,7 +37,7 @@ export default function Filter() {
                         id="movie"
                         type="checkbox"
                         name="options"
-                        className=""
+                        className="movie"
                         value="movie"
                     />
                     <label htmlFor="movie" className="filter_option_movie_div">
@@ -53,7 +53,7 @@ export default function Filter() {
                         id="series"
                         type="checkbox"
                         name="options"
-                        className=""
+                        className="series"
                         value="series"
                     />
                     <label htmlFor="series" className="filter_option_series_div">
@@ -69,7 +69,7 @@ export default function Filter() {
                         id="game"
                         type="checkbox"
                         name="options"
-                        className=""
+                        className="game"
                         value="game"
                     />
                     <label htmlFor="game" className="filter_option_game_div">
@@ -85,7 +85,7 @@ export default function Filter() {
                         id="book"
                         type="checkbox"
                         name="options"
-                        className=""
+                        className="book"
                         value="book"
                     />
                     <label htmlFor="book" className="filter_option_book_div">
