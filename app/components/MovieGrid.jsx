@@ -2,7 +2,7 @@ import MovieCard from "./Card";
 
 const dummyMovies = [
     {
-        title: "The Dark Knight",
+        title: "The Dark Knight The Dark Knight The Dark Knight The Dark Knight",
         year: "2008",
         genres: ["Action", "Crime", "Sci-Fi", "Adventure"],
         rating: 8.9,

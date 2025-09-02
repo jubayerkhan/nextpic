@@ -523,6 +523,9 @@
     @apply border-1 border-[#394056] hover:border-[#652CA8] hover:bg-[#473956] rounded-[15px] py-[12px] px-2.5 cursor-pointer focus:bg-[#394360] transition md:min-w-[112px];
   }
 
+  .cards_popup_titles {
+    @apply font-bold md:text-[34px] text-lg max-w-[calc(100%-110px)];
+  }
   .book_popup_table {
     @apply pr-4 text-left align-top;
   }

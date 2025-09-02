@@ -227,7 +227,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className='item_center'>
-                    <button className='profile_load_btn'>Load More</button>
+                    <button className='book_show_more_btn'>Load More</button>
                 </div>
             </div>
             {/* Your Content Library section */}
@@ -644,7 +644,7 @@ export default function Home() {
                     </div>
                 </div>
                 <div className='item_center'>
-                    <button className='profile_load_btn'>Show All</button>
+                    <button className='book_show_more_btn'>Show All</button>
                 </div>
             </div>
             {/* Account management section */}

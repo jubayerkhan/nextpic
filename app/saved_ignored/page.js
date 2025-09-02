@@ -224,7 +224,7 @@ export default function Home() {
                     </button>
                 </div>
             </div>
-            {/* series card grid */}
+            {/* Books card grid */}
             <div className='saved_page_container_sm'>
                 <h3 className="cards_section_title pt-6">Books</h3>
                 <div className='cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr pb-6'>

@@ -228,7 +228,7 @@ export default function Card({ item, type }) {
 
 
                 <div>
-                  <h1 className="font-bold text-[34px]">{item.title}</h1>
+                  <h1 className="font-bold md:text-[34px] text-xl max-w-[calc(100%-110px)]">{item.title}</h1>
                   <div className="flex gap-2.5 items-center pt-2.5">
                     <p>{item.year}</p>
                     <img src="/assets/white_dot.png" alt="dot" />
