@@ -116,7 +116,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            {/* profile details section */}
+            {/* Subscription details section */}
             <div className='profile_page_section_container'>
                 <h2 className='profile_page_section_heading'>Subscription Details</h2>
                 <h2 className='profile_page_section_subheading'>Manage your Nextpick subscription and billing</h2>
@@ -230,7 +230,7 @@ export default function Home() {
                     <button className='profile_load_btn'>Load More</button>
                 </div>
             </div>
-            {/* profile details section */}
+            {/* Your Content Library section */}
             <div className='profile_page_section_container'>
                 <h2 className='profile_page_section_heading'>Your Content Library</h2>
                 <h2 className='profile_page_section_subheading'>Discover and manage your personalized recommendations</h2>

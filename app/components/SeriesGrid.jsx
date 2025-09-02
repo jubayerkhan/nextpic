@@ -94,3 +94,5 @@ export function SeriesGrid() {
         </div>
     );
 }
+
+export default dummySeries;

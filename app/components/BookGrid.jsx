@@ -94,3 +94,5 @@ export function BookGrid() {
         </div>
     );
 }
+
+export default dummyBooks;

@@ -97,3 +97,5 @@ export function MovieGrid() {
         </div>
     );
 }
+
+export default dummyMovies;
