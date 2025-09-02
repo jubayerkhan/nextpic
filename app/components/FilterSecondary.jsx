@@ -92,7 +92,7 @@ export default function FilterSecondary() {
                                         type="radio"
                                         name="mood_options"
                                         value={id}
-                                        className="movie-checkbox"
+                                        className="game-checkbox"
                                     />
                                     <label htmlFor={id} className="filter2_option_book_div">
                                         <h5 className="filter2_option_title">{genre}</h5>
