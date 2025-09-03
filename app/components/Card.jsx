@@ -11,6 +11,7 @@ import x from "@/public/assets/x.png";
 import facebook from "@/public/assets/facebook.png";
 import links from "@/public/assets/links.png";
 import author from "@/public/assets/author.png";
+import cross_small from "@/public/assets/cross_small.png";
 import GamesBMd from "@/public/assets/GamesBMd.png";
 import MoviesBMd from "@/public/assets/MoviesBMd.png";
 import SeriesBMd from "@/public/assets/SeriesBMd.png";
@@ -185,9 +186,9 @@ export default function Card({ item, type }) {
             {/* Close button in top right */}
             <button
               onClick={closeModal}
-              className="absolute md:right-12 right-3 md:top-1 top-[-10px] text-white cursor-pointer md:border-1 border-white hover:border-transparent rounded-full px-5 py-2.5 z-20 flex gap-2 hover:bg-[#FF4F6D]"
+              className="absolute md:right-12 right-2 md:top-1 top-[-10px] text-white cursor-pointer md:border-1 border-white hover:border-transparent rounded-full md:px-5 px-3 py-2 z-20 flex gap-2 hover:bg-[#FF4F6D] items-center font-medium"
             >
-              <span className="hidden md:block">Close</span> ✕
+              <span className="hidden md:block pb-0.5">Close</span> <Image className="md:w-[14px] md:h-[14px] w-4 h-4" src={cross_small} alt="cross_small"/>
             </button>
 
             <div className="flex flex-col md:flex-row gap-6">
@@ -411,8 +412,6 @@ export default function Card({ item, type }) {
           </div>
         </div>
       </dialog>
-
-
     </div>
   );
 }
