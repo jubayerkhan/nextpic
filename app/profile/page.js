@@ -18,7 +18,7 @@ import undo from "@/public/assets/undo.png";
 import movie2 from "@/public/assets/movie2.png";
 import book3 from "@/public/assets/book3.png";
 import book1 from "@/public/assets/book1.png";
-import book6 from "@/public/assets/book6.png";
+import empty_poster from "@/public/assets/empty_poster.png";
 import movie4 from "@/public/assets/movie4.png";
 import series3 from "@/public/assets/series3.png";
 import sigh_out from "@/public/assets/sign_out.png";
@@ -584,8 +584,8 @@ export default function Home() {
                                 className="relative overflow-hidden max-h-[303px] cursor-pointer"
                             >
                                 <Image
-                                    src={book6}
-                                    alt="book3"
+                                    src={empty_poster}
+                                    alt="empty_poster"
                                     width={210}
                                     height={315}
                                     className="card_poster_img"

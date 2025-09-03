@@ -2,7 +2,7 @@ import MovieCard from "./Card";
 
 const dummyMovies = [
     {
-        title: "The Dark Knight The Dark Knight The Dark Knight The Dark Knight",
+        title: "The Dark Knight",
         year: "2008",
         genres: ["Action", "Crime", "Sci-Fi", "Adventure"],
         rating: 8.9,
@@ -10,13 +10,13 @@ const dummyMovies = [
         image: "/assets/movie1.png",
     },
     {
+        //  "Space Sci-Fic", "Super Hero", "Time Travel", "Adventure"
         title: "Avengers: Endgame",
         year: "2019",
-        genres: ["Action", "Sci-Fi", "Space Sci-Fic", "Super Hero", "Time Travel", "Adventure"],
+        genres: ["Action", "Sci-Fi",],
         rating: 8.6,
         description: "Earth's mightiest heroes unite to fight...",
         image: "/assets/movie2.png",
-        // backgroundImage: "/assets/moviebg2.png",
     },
     {
         title: "Interstellar",

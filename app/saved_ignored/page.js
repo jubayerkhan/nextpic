@@ -90,7 +90,7 @@ export default function Home() {
             {/* movie card grid */}
             <div className='saved_page_container_sm'>
                 <h3 className="cards_section_title pt-6">Movie</h3>
-                <div className='flex md:grid grid-cols-2 sm:grid-cols-3 2xl:grid-cols-8 lg:grid-cols-4 md:grid-cols-3 xl:grid-cols-6 gap-6 md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr pb-6 items-stretch'>
+                <div className='cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6'>
                     {/* card 1 */}
                     {dummyMovies.map((movie, index) => (
                         <div className="min-w-[207px] flex-shrink md:min-w-0" key={index}>
@@ -159,7 +159,7 @@ export default function Home() {
             {/* series card grid */}
             <div className='saved_page_container_sm'>
                 <h3 className="cards_section_title pt-6">Series</h3>
-                <div className='cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr pb-6'>
+                <div className='cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6'>
                     {/* card 1 */}
                     {dummySeries.map((series, index) => (
                         <div className="h-full min-w-[207px] flex-shrink-0 md:flex-shrink md:min-w-0" key={index}>
@@ -227,7 +227,7 @@ export default function Home() {
             {/* Books card grid */}
             <div className='saved_page_container_sm'>
                 <h3 className="cards_section_title pt-6">Books</h3>
-                <div className='cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr pb-6'>
+                <div className='cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6'>
                     {/* card 1 */}
                     {dummyBooks.map((book, index) => (
                         <div className="h-full min-w-[207px] flex-shrink-0 md:flex-shrink md:min-w-0" key={index}>
