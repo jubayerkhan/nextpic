@@ -526,6 +526,7 @@
   .cards_popup_titles {
     @apply font-bold md:text-[34px] text-lg max-w-[calc(100%-110px)];
   }
+
   .book_popup_table {
     @apply pr-4 text-left align-top;
   }
@@ -772,9 +773,11 @@
   .profile_load_btn {
     @apply text-white px-[34px] py-[14px] rounded-full border-1 border-[#7B808F] cursor-pointer text-sm;
   }
+
   .remove_btn_profile {
     @apply flex items-center gap-2.5 bg-[#35436C] px-3 py-1.5 rounded-full cursor-pointer w-full justify-center;
   }
+
   .profile_card_category_tag {
     @apply absolute top-3 left-3 cursor-pointer text-[#8A38F5] bg-white rounded-full flex gap-2 items-center justify-center px-3 py-[4px] text-sm;
   }
@@ -816,28 +819,35 @@
       background-color: oklch(0% 0 0 / 0.8) !important;
     }
   }
+
   .profile_card_description {
     @apply text-sm text-[#7E8598] mt-2;
   }
+
   .profile_contact_library {
     @apply grid xl:grid-cols-6 md:grid-cols-4 gap-6 md:pt-12 pt-5 md:mb-12 mb-5;
   }
+
   .profile_log_out {
     @apply text-white flex py-3 px-6 rounded-[10px] gap-2.5 bg-gradient-to-b from-[#6C3DF0] to-[#FEADFF] items-center justify-center cursor-pointer font-medium hover:shadow-[0px_4px_10px_0px_#8A38F5];
   }
+
   .profile_delete {
     @apply text-white flex items-center py-3 px-6 rounded-[10px] gap-2.5 border-1 border-[#7B808F] cursor-pointer justify-center font-medium hover:shadow-[0px_4px_10px_0px_#8A38F5];
   }
+
   .profile_contact_btn {
     @apply bg-[#525272] py-3 px-[30px] rounded-[10px] mt-6 cursor-pointer hover:shadow-[0px_4px_10px_0px_#8A38F5];
   }
+
   .account_profile_btn_div {
     @apply flex flex-col sm:flex-row gap-5 md:pb-12 pb-5;
   }
+
   .contact_profile_div {
     @apply bg-[#393d52] p-6 rounded-[20px];
   }
-  
+
   /* ================================= */
   /* saved and igonore page styles */
   /* ================================= */
@@ -845,10 +855,21 @@
   .saved_page_container {
     @apply md:px-12;
   }
+
   .saved_page_container_sm {
     @apply md:px-12 px-4;
   }
+
   .saved_page_heading_div {
     @apply bg-white/10 md:py-12 py-5 px-4 2xl:px-0 mb-6;
+  }
+
+
+
+}
+
+@media screen and (max-width: 767px) {
+  .cards_grid_section>.h-full {
+    height: auto;
   }
 }

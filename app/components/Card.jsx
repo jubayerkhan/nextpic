@@ -202,8 +202,8 @@ export default function Card({ item, type }) {
               </div>
               <div className="bg-black/30 w-full p-6 rounded-[20px] text-white text-sm pt-2.5 relative">
 
-                <div className="absolute right-6 top-7">
-                  <div className="relative w-[90px] h-[90px] rounded-full flex items-center justify-center">
+                <div className="absolute md:right-6 right-3 md:top-7 top-3">
+                  <div className="relative md:w-[90px] md:h-[90px] w-12 h-12 rounded-full flex items-center justify-center">
                     {/* Progress circle */}
                     <div
                       className="absolute inset-0 rounded-full"
@@ -221,14 +221,14 @@ export default function Card({ item, type }) {
                         // opacity: "30%",
                       }}
                     >
-                      <span className="text-xl font-bold text-white">75%</span>
+                      <span className="md:text-xl font-bold text-white">75%</span>
                     </div>
                   </div>
                 </div>
 
 
                 <div>
-                  <h1 className="font-bold md:text-[34px] text-xl max-w-[calc(100%-110px)]">{item.title}</h1>
+                  <h1 className="font-bold lg:text-[34px] text-xl md:max-w-[calc(100%-110px)] pt-[60px] md:pt-0">{item.title}</h1>
                   <div className="flex gap-2.5 items-center pt-2.5">
                     <p>{item.year}</p>
                     <img src="/assets/white_dot.png" alt="dot" />

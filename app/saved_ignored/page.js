@@ -90,11 +90,11 @@ export default function Home() {
             {/* movie card grid */}
             <div className='saved_page_container_sm'>
                 <h3 className="cards_section_title pt-6">Movie</h3>
-                <div className='cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr pb-6'>
+                <div className='flex md:grid grid-cols-2 sm:grid-cols-3 2xl:grid-cols-8 lg:grid-cols-4 md:grid-cols-3 xl:grid-cols-6 gap-6 md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr pb-6 items-stretch'>
                     {/* card 1 */}
                     {dummyMovies.map((movie, index) => (
-                        <div className="h-full min-w-[207px] flex-shrink-0 md:flex-shrink md:min-w-0" key={movie.id}>
-                            <div className="card_div transition-all duration-300 ease h-full flex flex-col">
+                        <div className="min-w-[207px] flex-shrink md:min-w-0" key={index}>
+                            <div className="card_div transition-all duration-300 ease h-full flex flex-col flex-grow">
                                 {/* Image section */}
                                 <div
                                     className="relative overflow-hidden max-h-[303px] cursor-pointer"
@@ -161,23 +161,23 @@ export default function Home() {
                 <h3 className="cards_section_title pt-6">Series</h3>
                 <div className='cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr pb-6'>
                     {/* card 1 */}
-                    {dummySeries.map((movie, index) => (
-                        <div className="h-full min-w-[207px] flex-shrink-0 md:flex-shrink md:min-w-0" key={movie.id}>
+                    {dummySeries.map((series, index) => (
+                        <div className="h-full min-w-[207px] flex-shrink-0 md:flex-shrink md:min-w-0" key={index}>
                             <div className="card_div transition-all duration-300 ease h-full flex flex-col">
                                 {/* Image section */}
                                 <div
                                     className="relative overflow-hidden max-h-[303px] cursor-pointer"
                                 >
                                     <Image
-                                        src={movie.image}
-                                        alt="movie2"
+                                        src={series.image}
+                                        alt="series2"
                                         width={210}
                                         height={315}
                                         className="card_poster_img"
                                     />
                                     {/* Rating */}
                                     <div className="card_rating_div">
-                                        <FaStar /> <span className="text-white">{movie.rating}/10</span>
+                                        <FaStar /> <span className="text-white">{series.rating}/10</span>
                                     </div>
                                 </div>
 
@@ -185,12 +185,12 @@ export default function Home() {
                                 <div className="card_content_div flex flex-col flex-grow">
                                     <div className="text_section flex-grow">
                                         {/* Title */}
-                                        <h3 className="card_title">{movie.title}</h3>
+                                        <h3 className="card_title">{series.title}</h3>
 
                                         {/* Year and Tags */}
                                         <div className="card_tag_div">
-                                            <span>{movie.year}</span>
-                                            {movie.genres.map((genre, index) => (
+                                            <span>{series.year}</span>
+                                            {series.genres.map((genre, index) => (
                                                 <span key={index} className="card_year">
                                                     {genre}
                                                 </span>
@@ -229,23 +229,23 @@ export default function Home() {
                 <h3 className="cards_section_title pt-6">Books</h3>
                 <div className='cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr pb-6'>
                     {/* card 1 */}
-                    {dummyBooks.map((movie, index) => (
-                        <div className="h-full min-w-[207px] flex-shrink-0 md:flex-shrink md:min-w-0" key={movie.id}>
+                    {dummyBooks.map((book, index) => (
+                        <div className="h-full min-w-[207px] flex-shrink-0 md:flex-shrink md:min-w-0" key={index}>
                             <div className="card_div transition-all duration-300 ease h-full flex flex-col">
                                 {/* Image section */}
                                 <div
                                     className="relative overflow-hidden max-h-[303px] cursor-pointer"
                                 >
                                     <Image
-                                        src={movie.image}
-                                        alt="movie2"
+                                        src={book.image}
+                                        alt="book2"
                                         width={210}
                                         height={315}
                                         className="card_poster_img"
                                     />
                                     {/* Rating */}
                                     <div className="card_rating_div">
-                                        <FaStar /> <span className="text-white">{movie.rating}/10</span>
+                                        <FaStar /> <span className="text-white">{book.rating}/10</span>
                                     </div>
                                 </div>
 
@@ -253,12 +253,12 @@ export default function Home() {
                                 <div className="card_content_div flex flex-col flex-grow">
                                     <div className="text_section flex-grow">
                                         {/* Title */}
-                                        <h3 className="card_title">{movie.title}</h3>
+                                        <h3 className="card_title">{book.title}</h3>
 
                                         {/* Year and Tags */}
                                         <div className="card_tag_div">
-                                            <span>{movie.year}</span>
-                                            {movie.genres.map((genre, index) => (
+                                            <span>{book.year}</span>
+                                            {book.genres.map((genre, index) => (
                                                 <span key={index} className="card_year">
                                                     {genre}
                                                 </span>
