@@ -524,7 +524,10 @@
   }
 
   .cards_popup_titles {
-    @apply font-bold md:text-[34px] text-lg max-w-[calc(100%-110px)];
+    @apply font-bold md:text-[34px] text-lg;
+  }
+  .cards_popup_titles_top_div {
+    @apply font-bold lg:text-[34px] text-xl md:max-w-[calc(100%-110px)] pt-[60px] md:pt-0;
   }
 
   .book_popup_table {
