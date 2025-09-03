@@ -181,11 +181,11 @@ export default function Card({ item, type }) {
           ></div>
 
           {/* Content on top */}
-          <div className="relative z-10 md:py-20 pt-[68px] pb-4 md:px-12 px-[15px]">
+          <div className="relative z-10 md:py-20 md:pt-[68px] pt-8 pb-4 md:px-12 px-[15px]">
             {/* Close button in top right */}
             <button
               onClick={closeModal}
-              className="absolute md:right-12 right-3 top-4 text-white cursor-pointer md:border-1 border-white hover:border-transparent rounded-full px-5 py-2.5 z-20 flex gap-2 hover:bg-[#FF4F6D]"
+              className="absolute md:right-12 right-3 md:top-1 top-[-10px] text-white cursor-pointer md:border-1 border-white hover:border-transparent rounded-full px-5 py-2.5 z-20 flex gap-2 hover:bg-[#FF4F6D]"
             >
               <span className="hidden md:block">Close</span> ✕
             </button>
