@@ -53,6 +53,16 @@
     @apply hover:bg-[#FF4F6D] px-[30px] py-2.5 rounded-[10px] text-white cursor-pointer bg-[#10172A] transition;
   }
 
+  /* navbar compact styles */
+  .filter_title_compact {
+    @apply text-white text-center md:py-5 py-3;
+  }
+  .filter_option_movies_div>.filter_option_movies_inner_div {
+    @apply w-[180px];
+  }
+  /* .filter_subtitle {
+    @apply text-sm text-[#7E8598] text-center pt-2.5;
+  } */
   /* filter styles */
   .filter_div {
     @apply md:pt-6 pt-1 md:px-12 px-4;
