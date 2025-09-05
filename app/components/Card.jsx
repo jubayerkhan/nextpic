@@ -102,8 +102,8 @@ export default function Card({ item, type }) {
           <Image
             src={bookmarkIcon}
             alt="bookmark"
-            width={20}
-            height={20}
+            width={34}
+            height={34}
             className="card_bookmark_img hover:opacity-100 md:opacity-80"
             onClick={handleClick}
           />
