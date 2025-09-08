@@ -334,7 +334,7 @@
   }
 
   .cards_grid_section {
-    @apply flex md:grid grid-cols-2 sm:grid-cols-3 2xl:grid-cols-8 lg:grid-cols-4 md:grid-cols-3 xl:grid-cols-6 gap-6;
+    @apply flex md:grid grid-cols-2 sm:grid-cols-3 2xl:grid-cols-8 lg:grid-cols-5 md:grid-cols-3 xl:grid-cols-6 2xl:gap-6 gap-4;
   }
 
   /* secondary filter styles */
@@ -875,6 +875,35 @@
 
   .saved_page_heading_div {
     @apply bg-white/10 md:py-12 py-5 px-4 2xl:px-0 mb-6;
+  }
+
+  /* filter compact 2 */
+  .cards_section_title_compact_2{
+    @apply text-2xl font-semibold text-white pt-6 md:pt-5 md:pb-[20px] pb-4;
+  }
+  .filter_btn_div_flex_compact_2 {
+    @apply md:pb-[20px] pb-4 flex md:gap-6 gap-3;
+  }
+  .movie_reset_2_div {
+    @apply flex gap-5 pb-2.5;
+  }
+  .movie_reset_2_text {
+    @apply text-white text-sm;
+  }
+  .movie_reset_2_btn {
+    @apply text-[#8A38F5] text-sm;
+  }
+  .series_reset_2_btn {
+    @apply text-[#F316B0] text-sm;
+  }
+  .books_reset_2_btn {
+    @apply text-[#0C8CE9] text-sm;
+  }
+  .card_pass_message {
+    @apply text-sm text-[#7E8598] pb-5;
+  }
+  .filter2_platform_option_div_2 {
+    @apply border-1 border-[#394056] hover:border-[#652CA8] hover:bg-[#473956] rounded-[6px] py-[10px] px-2.5 cursor-pointer focus:bg-[#394360] transition;
   }
 
 }
