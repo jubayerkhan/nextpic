@@ -7,7 +7,7 @@ import FilterPopup from "../components/FilterPopup";
 
 export default function HomeS() {
   return (
-    <div className="container_fluid md:pb-20 pb-10">
+    <div className="container_fluid pb-10">
       <NavbarCompact/>
       <FilterCompact_2/>
       <MovieGrid/>

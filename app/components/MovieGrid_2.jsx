@@ -93,14 +93,14 @@ export function MovieGrid() {
                     <div className=''>
                         <input
                             type="radio"
-                            id="random"
+                            id="random_movies"
                             name="filter"
                             value="random"
-                            className="hidden peer"
+                            className="hidden peer random"
                             defaultChecked
                         />
                         <label
-                            htmlFor="random"
+                            htmlFor="random_movies"
                             className="py-3 md:px-6 px-3 rounded-[10px] flex gap-2.5 items-center text-white font-medium w-full md:w-auto md:mb-0 justify-center cursor-pointer border-1 border-[#444444] hover:bg-transparent"
                         >
                             <Image src={shuffle} alt="shuffle" className="h-4 w-4" />
@@ -112,13 +112,13 @@ export function MovieGrid() {
                     <div>
                         <input
                             type="radio"
-                            id="mypicks"
+                            id="mypicks_movie"
                             name="filter"
-                            value="mypicks"
-                            className="hidden peer"
+                            value="mypick"
+                            className="hidden peer mypick"
                         />
                         <label
-                            htmlFor="mypicks"
+                            htmlFor="mypicks_movie"
                             className="py-3 md:px-6 px-3 rounded-[10px] flex gap-2.5 items-center text-white font-medium w-full md:w-auto md:mb-0 justify-center cursor-pointer border-1 border-[#444444] hover:bg-transparent"
                         >
                             <Image src={magic} alt="magic" className="h-4 w-4" />
@@ -131,7 +131,7 @@ export function MovieGrid() {
                     <button className="movie_reset_2_btn">Reset All</button>
                 </div>
                 {/* Mood filter */}
-                <div className="filter2_option_movies_div md:pb-5 pb-4 pt-0">
+                <div className="filter2_option_movies_div md:pb-5 pb-4 pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
                     {[
                         "Feel-Good",
                         "Thrilling",
@@ -145,7 +145,7 @@ export function MovieGrid() {
                     ].map((genre, index) => {
                         const id = `mood${index + 1}`;
                         return (
-                            <div key={id}>
+                            <div key={id} className="flex-shrink-0 min-[769px]:flex-shrink min-[769px]:min-w-0">
                                 <input
                                     id={id}
                                     type="radio"
@@ -165,7 +165,7 @@ export function MovieGrid() {
                     <button className="movie_reset_2_btn">Reset All</button>
                 </div>
                 {/* movie filter */}
-                <div className="filter2_option_movies_div md:pb-5 pb-4 pt-0">
+                <div className="filter2_option_movies_div md:pb-5 pb-4 pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
                     {[
                         "Action",
                         "Comedy",
@@ -183,7 +183,7 @@ export function MovieGrid() {
                     ].map((genre, index) => {
                         const id = `movie${index + 1}`;
                         return (
-                            <div key={id}>
+                            <div key={id} className="flex-shrink-0 min-[769px]:flex-shrink min-[769px]:min-w-0">
                                 <input
                                     id={id}
                                     type="checkbox"
@@ -203,11 +203,11 @@ export function MovieGrid() {
                     <button className="movie_reset_2_btn">Reset All</button>
                 </div>
                 {/* platform filter */}
-                <div className="filter2_movies_platform_div pb-6 gap-2.5 md:flex grid grid-cols-4 flex-wrap pt-0">
+                <div className="filter2_movies_platform_div pb-5 gap-2.5 flex min-[769px]:flex-wrap pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
                     {moviePlatforms.map((platform, index) => {
                         const id = `movie_platform${index + 1}`;
                         return (
-                            <div key={id}>
+                            <div key={id} className="flex-shrink-0 min-[769px]:flex-shrink min-[769px]:min-w-0">
                                 <input
                                     id={id}
                                     type="checkbox"
@@ -232,12 +232,12 @@ export function MovieGrid() {
             </div>
 
             {/* Responsive Container */}
-            <div className="pb-6">
+            <div className="pb-4">
                 <div
-                    className="cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr"
+                    className="cards_grid_section_compact min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr pb-2"
                 >
                     {dummyMovies.map((movie, index) => (
-                        <div className="min-w-[207px] flex-shrink-0 md:flex-shrink md:min-w-0" key={index}>
+                        <div className="min-w-[207px] flex-shrink-0 md:flex-shrink min-[769px]:min-w-0" key={index}>
                             <MovieCard item={movie} type="movie" />
                         </div>
                     ))}

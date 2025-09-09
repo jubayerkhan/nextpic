@@ -128,7 +128,7 @@ export function SeriesGrid() {
                     <button className="series_reset_2_btn">Reset All</button>
                 </div>
                 {/* Mood filter */}
-                <div className="filter2_option_movies_div md:pb-5 pb-4 pt-0">
+                <div className="filter2_option_movies_div md:pb-5 pb-4 pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
                     {[
                         "Feel-Good",
                         "Thrilling",
@@ -142,7 +142,7 @@ export function SeriesGrid() {
                     ].map((genre, index) => {
                         const id = `mood${index + 1}`;
                         return (
-                            <div key={id}>
+                            <div key={id} className="flex-shrink-0 min-[769px]:flex-shrink min-[769px]:min-w-0">
                                 <input
                                     id={id}
                                     type="radio"
@@ -161,13 +161,13 @@ export function SeriesGrid() {
                     <p className="movie_reset_2_text">Genres (Choose a Genre)</p>
                     <button className="series_reset_2_btn">Reset All</button>
                 </div>
-                {/* movie filter */}
-                <div className="filter2_option_movies_div md:pb-5 pb-4 pt-0">
+                {/* series filter */}
+                <div className="filter2_option_movies_div md:pb-5 pb-4 pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
                     {["Crime", "Comedy", "Drama", "Fantasy", "Reality", "Documentary", "Mystery"].map(
                         (genre, index) => {
                             const id = `series${index + 1}`;
                             return (
-                                <div key={id}>
+                                <div key={id} className="flex-shrink-0 min-[769px]:flex-shrink min-[769px]:min-w-0">
                                     <input
                                         id={id}
                                         type="checkbox"
@@ -188,11 +188,12 @@ export function SeriesGrid() {
                     <button className="series_reset_2_btn">Reset All</button>
                 </div>
                 {/* platform filter */}
-                <div className="filter2_movies_platform_div pb-6 gap-2.5 md:flex grid grid-cols-4 flex-wrap pt-0">
+                {/* platform filter */}
+                <div className="filter2_movies_platform_div pb-6 gap-2.5 flex min-[769px]:flex-wrap pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
                     {moviePlatforms.map((platform, index) => {
                         const id = `movie_platform${index + 1}`;
                         return (
-                            <div key={id}>
+                            <div key={id} className="flex-shrink-0 min-[769px]:flex-shrink min-[769px]:min-w-0">
                                 <input
                                     id={id}
                                     type="checkbox"
@@ -217,12 +218,12 @@ export function SeriesGrid() {
             </div>
 
             {/* Responsive Container */}
-            <div className="pb-6">
+            <div className="pb-4">
                 <div
-                    className="cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr"
+                    className="cards_grid_section_compact min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr pb-2"
                 >
                     {dummySeries.map((series, index) => (
-                        <div className="min-w-[207px] flex-shrink-0 md:flex-shrink md:min-w-0" key={index}>
+                        <div className="min-w-[207px] flex-shrink-0 md:flex-shrink min-[769px]:min-w-0" key={index}>
                             <SeriesCard item={series} type="series" />
                         </div>
                     ))}

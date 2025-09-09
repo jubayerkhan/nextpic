@@ -129,7 +129,7 @@ export function BookGrid() {
                     <button className="books_reset_2_btn">Reset All</button>
                 </div>
                 {/* Mood filter */}
-                <div className="filter2_option_movies_div md:pb-5 pb-4 pt-0">
+                <div className="filter2_option_movies_div md:pb-5 pb-4 pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
                     {[
                         "Feel-Good",
                         "Thrilling",
@@ -143,7 +143,7 @@ export function BookGrid() {
                     ].map((genre, index) => {
                         const id = `mood${index + 1}`;
                         return (
-                            <div key={id}>
+                            <div key={id} className="flex-shrink-0 min-[769px]:flex-shrink min-[769px]:min-w-0">
                                 <input
                                     id={id}
                                     type="radio"
@@ -162,8 +162,8 @@ export function BookGrid() {
                     <p className="movie_reset_2_text">Genres (Choose a Genre)</p>
                     <button className="books_reset_2_btn">Reset All</button>
                 </div>
-                {/* movie filter */}
-                <div className="filter2_option_movies_div md:pb-5 pb-4 pt-0">
+                {/* genres filter */}
+                <div className="filter2_option_movies_div md:pb-5 pb-4 pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
                     {[
                         "Fiction",
                         "Non-fiction",
@@ -181,7 +181,7 @@ export function BookGrid() {
                     ].map((genre, index) => {
                         const id = `book${index + 1}`;
                         return (
-                            <div key={id}>
+                            <div key={id} className="flex-shrink-0 min-[769px]:flex-shrink min-[769px]:min-w-0">
                                 <input
                                     id={id}
                                     type="checkbox"
@@ -201,17 +201,18 @@ export function BookGrid() {
                     <button className="books_reset_2_btn">Reset All</button>
                 </div>
                 {/* platform filter */}
-                <div className="filter2_movies_platform_div pb-6 gap-2.5 md:flex grid grid-cols-4 flex-wrap pt-0">
+                {/* platform filter */}
+                <div className="filter2_movies_platform_div pb-6 gap-2.5 flex min-[769px]:flex-wrap pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
                     {bookPlatforms.map((platform, index) => {
-                        const id = `book_platform${index + 1}`;
+                        const id = `movie_platform${index + 1}`;
                         return (
-                            <div key={id}>
+                            <div key={id} className="flex-shrink-0 md:flex-shrink min-[769px]:min-w-0">
                                 <input
                                     id={id}
                                     type="checkbox"
-                                    name="book_platform"
+                                    name="movie_platform"
                                     value={platform.name}
-                                    className="book-platform-checkbox"
+                                    className="movie-platform-checkbox"
                                 />
                                 <label htmlFor={id} className="filter2_platform_option_div_2">
                                     <div className="bg-white rounded-full p-2 h-[40px] w-[40px] mx-auto">
@@ -230,12 +231,12 @@ export function BookGrid() {
             </div>
 
             {/* Responsive Container */}
-            <div className="pb-6">
+            <div className="pb-4">
                 <div
-                    className="cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr"
+                    className="cards_grid_section_compact min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr pb-2"
                 >
                     {dummyBooks.map((book, index) => (
-                        <div className="min-w-[207px] flex-shrink-0 md:flex-shrink md:min-w-0" key={index}>
+                        <div className="min-w-[207px] flex-shrink-0 md:flex-shrink min-[769px]:min-w-0" key={index}>
                             <MovieCard item={book} type="book" />
                         </div>
                     ))}

@@ -57,9 +57,11 @@
   .filter_title_compact {
     @apply text-white text-center md:py-5 py-3;
   }
+
   .filter_option_movies_div>.filter_option_movies_inner_div {
     @apply w-[180px];
   }
+
   /* .filter_subtitle {
     @apply text-sm text-[#7E8598] text-center pt-2.5;
   } */
@@ -232,6 +234,24 @@
     @apply bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0];
   }
 
+  /* class format  */
+
+  .random:hover+label {
+    @apply shadow-[0px_4px_10px_0px_#8A38F5];
+  }
+
+  .random:checked+label {
+    @apply bg-gradient-to-t from-[#FEADFF] to-[#6C3DF0];
+  }
+
+  /* Checkbox 2 (ID: mypicks) */
+  .mypick:hover+label {
+    @apply shadow-[0px_4px_10px_0px_#8A38F5];
+  }
+
+  .mypick:checked+label {
+    @apply bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0];
+  }
 
   .result_text_right {
     @apply text-[#7E8598] text-sm mt-auto pt-4 md:pt-0;
@@ -337,6 +357,10 @@
     @apply flex md:grid grid-cols-2 sm:grid-cols-3 2xl:grid-cols-8 lg:grid-cols-5 md:grid-cols-3 xl:grid-cols-6 2xl:gap-6 gap-4;
   }
 
+  .cards_grid_section_compact {
+    @apply flex min-[769px]:grid grid-cols-2 sm:grid-cols-3 2xl:grid-cols-8 lg:grid-cols-5 min-[769px]:grid-cols-3 xl:grid-cols-6 2xl:gap-6 gap-4;
+  }
+
   /* secondary filter styles */
 
   /* for radio */
@@ -353,7 +377,7 @@
 
   /* for checkbox */
   .filter2_option_movies_div {
-    @apply flex gap-2.5 flex-wrap pt-2.5;
+    @apply flex gap-2.5 min-[769px]:flex-wrap pt-2.5;
   }
 
   .filter2_option_movies_div input[type='checkbox'] {
@@ -430,7 +454,7 @@
 
   /* platform styles */
   .filter2_movies_platform_div {
-    @apply md:flex grid grid-cols-3 md:gap-6 gap-3 flex-wrap pt-6;
+    @apply md:flex grid grid-cols-3 md:gap-6 gap-3 min-[769px]:flex-wrap pt-6;
   }
 
   .filter2_movies_platform_div input[type='checkbox'] {
@@ -536,6 +560,7 @@
   .cards_popup_titles {
     @apply font-bold md:text-[34px] text-lg;
   }
+
   .cards_popup_titles_top_div {
     @apply font-bold lg:text-[34px] text-xl md:max-w-[calc(100%-110px)] pt-[60px] md:pt-0;
   }
@@ -878,30 +903,38 @@
   }
 
   /* filter compact 2 */
-  .cards_section_title_compact_2{
+  .cards_section_title_compact_2 {
     @apply text-2xl font-semibold text-white pt-6 md:pt-5 md:pb-[20px] pb-4;
   }
+
   .filter_btn_div_flex_compact_2 {
     @apply md:pb-[20px] pb-4 flex md:gap-6 gap-3;
   }
+
   .movie_reset_2_div {
     @apply flex gap-5 pb-2.5;
   }
+
   .movie_reset_2_text {
     @apply text-white text-sm;
   }
+
   .movie_reset_2_btn {
     @apply text-[#8A38F5] text-sm;
   }
+
   .series_reset_2_btn {
     @apply text-[#F316B0] text-sm;
   }
+
   .books_reset_2_btn {
     @apply text-[#0C8CE9] text-sm;
   }
+
   .card_pass_message {
     @apply text-sm text-[#7E8598] pb-5;
   }
+
   .filter2_platform_option_div_2 {
     @apply border-1 border-[#394056] hover:border-[#652CA8] hover:bg-[#473956] rounded-[6px] py-[10px] px-2.5 cursor-pointer focus:bg-[#394360] transition;
   }
