@@ -42,7 +42,7 @@
   }
 
   .navbar_btn_div {
-    @apply inline-block p-[1px] rounded-[10px] bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] hover:bg-none transition;
+    @apply inline-block p-[1px] rounded-[10px] bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0] transition;
   }
 
   .filter_btn_div {
@@ -50,7 +50,7 @@
   }
 
   .navbar_btn {
-    @apply hover:bg-[#FF4F6D] px-[30px] py-2.5 rounded-[10px] text-white cursor-pointer bg-[#10172A] transition;
+    @apply px-[30px] py-2.5 rounded-[10px] text-white cursor-pointer bg-[#10172A] transition;
   }
 
   /* navbar compact styles */
@@ -67,7 +67,7 @@
   } */
   /* filter styles */
   .filter_div {
-    @apply md:pt-6 pt-1 md:px-12 px-4;
+    @apply md:pt-6 pt-1 min-[769px]:px-12 px-4;
   }
 
   .filter_heading_div {

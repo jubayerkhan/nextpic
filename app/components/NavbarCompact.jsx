@@ -22,7 +22,7 @@ export default function Navbar() {
                 </span>
             </h2>
             <div className="navbar_btn_div">
-                <button className='navbar_btn'>Sign Up</button>
+                <button className='navbar_btn hover:shadow-[0px_4px_10px_0px_#8A38F5]'>Sign Up</button>
             </div>
         </div>
     )
