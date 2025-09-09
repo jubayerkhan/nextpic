@@ -72,7 +72,7 @@ export default function FilterSecondary() {
                     <p className="text-white">Filter by Mood</p>
 
                     {/* Mood filter */}
-                    <div className="filter2_option_movies_div mb-6">
+                    <div className="filter2_option_movies_div mb-6 flex-wrap">
                         {[
                             "Feel-Good",
                             "Thrilling",
@@ -105,7 +105,7 @@ export default function FilterSecondary() {
 
                     {/* Movies filter */}
                     <p className="text-white md:pt-6 pt-4">Movies</p>
-                    <div className="filter2_option_movies_div">
+                    <div className="filter2_option_movies_div flex-wrap">
                         {[
                             "Action",
                             "Comedy",
@@ -141,7 +141,7 @@ export default function FilterSecondary() {
 
                     {/* Series filter */}
                     <p className="text-white md:pt-6 pt-4">Series</p>
-                    <div className="filter2_option_movies_div">
+                    <div className="filter2_option_movies_div flex-wrap">
                         {["Crime", "Comedy", "Drama", "Fantasy", "Reality", "Documentary", "Mystery"].map(
                             (genre, index) => {
                                 const id = `series${index + 1}`;
@@ -165,7 +165,7 @@ export default function FilterSecondary() {
 
                     {/* Games filter */}
                     <p className="text-white md:pt-6 pt-4">Games</p>
-                    <div className="filter2_option_movies_div">
+                    <div className="filter2_option_movies_div flex-wrap">
                         {[
                             "RPG",
                             "FPS",
@@ -197,7 +197,7 @@ export default function FilterSecondary() {
 
                     {/* Books filter */}
                     <p className="text-white md:pt-6 pt-4">Books</p>
-                    <div className="filter2_option_movies_div">
+                    <div className="filter2_option_movies_div flex-wrap">
                         {[
                             "Fiction",
                             "Non-fiction",
