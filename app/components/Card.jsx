@@ -182,11 +182,11 @@ export default function Card({ item, type }) {
           ></div>
 
           {/* Content on top */}
-          <div className="relative z-10 md:py-20 md:pt-[68px] pt-8 pb-4 md:px-12 px-[15px]">
+          <div className="relative z-10 md:pt-14 md:pb-12 pt-8 pb-4 md:px-6 px-[0px]">
             {/* Close button in top right */}
             <button
               onClick={closeModal}
-              className="absolute md:right-12 right-2 md:top-1 top-[-10px] text-white cursor-pointer md:border-1 border-white hover:border-transparent rounded-full md:px-5 px-3 py-2 z-20 flex gap-2 hover:bg-[#FF4F6D] items-center font-medium"
+              className="absolute md:right-6 right-[-8px] md:top-[-2px] top-[-10px] text-white cursor-pointer md:border-1 border-white hover:border-transparent rounded-full md:px-5 px-3 py-2 z-20 flex gap-2 hover:bg-[#FF4F6D] items-center font-medium"
             >
               <span className="hidden md:block pb-0.5">Close</span> <Image className="md:w-[14px] md:h-[14px] w-4 h-4" src={cross_small} alt="cross_small"/>
             </button>
@@ -202,7 +202,6 @@ export default function Card({ item, type }) {
                 />
               </div>
               <div className="bg-black/30 w-full p-6 rounded-[20px] text-white text-sm pt-2.5 relative">
-
                 <div className="absolute md:right-6 right-3 md:top-7 top-3">
                   <div className="relative md:w-[90px] md:h-[90px] w-12 h-12 rounded-full flex items-center justify-center">
                     {/* Progress circle */}
@@ -259,7 +258,7 @@ export default function Card({ item, type }) {
           </div>
 
           {/* bottom popup section */}
-          <div className="md:px-12 px-[15px] pb-10">
+          <div className="md:px-6 px-[0px] md:pb-10 pb-0">
             {type === "book" ? (<h2 className="cards_popup_titles">Top Billed Cast</h2>) : (<h2 className="cards_popup_titles">Top Billed Cast</h2>)}
             <div className="flex flex-col md:flex-row gap-5 pt-6">
               {type === "book" ? (
