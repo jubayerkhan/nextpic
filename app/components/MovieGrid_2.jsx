@@ -83,7 +83,7 @@ const moviePlatforms = [
 
 export function MovieGrid() {
     return (
-        <div className="md:px-12 px-4">
+        <div className="min-[769px]:px-12 px-4">
             <h3 className="cards_section_title_compact_2">Movie</h3>
             {/* compact filter */}
             <div>

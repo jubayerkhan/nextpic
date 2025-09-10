@@ -38,7 +38,7 @@
 
   /* navbar styles */
   .navbar_div {
-    @apply py-5 flex justify-between items-center md:px-12 px-4 bg-gradient-to-b from-[#6C3DF0]/20 from-0% to-[#10172A]/20 to-100% w-full;
+    @apply py-5 flex justify-between items-center min-[769px]:px-12 px-4 bg-gradient-to-b from-[#6C3DF0]/20 from-0% to-[#10172A]/20 to-100% w-full;
   }
 
   .navbar_btn_div {

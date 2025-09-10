@@ -81,7 +81,7 @@ const bookPlatforms = [
 
 export function BookGrid() {
     return (
-        <div className="md:px-12 px-4">
+        <div className="min-[769px]:px-12 px-4">
             <h3 className="cards_section_title_compact_2 pt-0">Series</h3>
             {/* compact filter */}
             <div>
