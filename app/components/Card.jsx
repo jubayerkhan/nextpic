@@ -260,7 +260,7 @@ export default function Card({ item, type }) {
           {/* bottom popup section */}
           <div className="md:px-6 px-[0px] md:pb-10 pb-0">
             {type === "book" ? (<h2 className="cards_popup_titles">Top Billed Cast</h2>) : (<h2 className="cards_popup_titles">Top Billed Cast</h2>)}
-            <div className="flex flex-col md:flex-row gap-5 pt-6">
+            <div className="flex flex-col md:flex-row md:gap-6 gap-4 pt-6">
               {type === "book" ? (
                 /* Book details section */
                 <div className="w-full">
@@ -318,7 +318,7 @@ export default function Card({ item, type }) {
                 </div>
               ) : (
                 /* Cast section */
-                <div className="md:grid flex gap-4 overflow-x-auto grid-cols-2 lg:grid-cols-4 max-w-[888px] w-full">
+                <div className="md:grid flex xl:gap-6 gap-4 overflow-x-auto grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 max-w-[888px] w-full">
                   {avengers.map((hero, idx) => (
                     <div
                       key={idx}
@@ -328,8 +328,8 @@ export default function Card({ item, type }) {
                         <Image src={hero.img} alt={hero.name} fill className="object-cover" />
                       </div>
                       <div className="p-4 text-center text-white bg-black/30 h-full">
-                        <h4 className="font-bold text-sm">{hero.name}</h4>
-                        <p className="text-xs text-white">({hero.role})</p>
+                        <h4 className="font-bold">{hero.name}</h4>
+                        <p className="text-white">({hero.role})</p>
                       </div>
                     </div>
                   ))}
