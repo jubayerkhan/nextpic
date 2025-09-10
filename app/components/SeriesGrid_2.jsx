@@ -2,6 +2,7 @@ import SeriesCard from "./Card";
 import Image from "next/image";
 import shuffle from "@/public/assets/shuffle.png";
 import magic from "@/public/assets/magic.png";
+import not_found_series from "@/public/assets/not_found_series.svg";
 
 const dummySeries = [
     {
@@ -235,6 +236,14 @@ export function SeriesGrid() {
                 <button className="series_show_more_btn">
                     Show More
                 </button>
+            </div>
+            {/* not found div */}
+            <div className="not_found_div hidden">
+                <div className="item_center">
+                    <Image src={not_found_series} alt="not_found_series" />
+                </div>
+                <h2 className="not_found_text">Ups!... no results found!</h2>
+                <p className="not_found_text_sm">Please try a different mood or genre</p>
             </div>
         </div>
     );

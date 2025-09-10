@@ -2,6 +2,7 @@ import Image from "next/image";
 import MovieCard from "./Card";
 import shuffle from "@/public/assets/shuffle.png";
 import magic from "@/public/assets/magic.png";
+import not_found_movie from "@/public/assets/not_found_movie.svg";
 
 const dummyMovies = [
     {
@@ -203,7 +204,7 @@ export function MovieGrid() {
                     <button className="movie_reset_2_btn">Reset All</button>
                 </div>
                 {/* platform filter */}
-                <div className="filter2_movies_platform_div pb-5 gap-2.5 flex min-[769px]:flex-wrap pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
+                <div className="filter2_movies_platform_div md:pb-5 pb-2 gap-2.5 flex min-[769px]:flex-wrap pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
                     {moviePlatforms.map((platform, index) => {
                         const id = `movie_platform${index + 1}`;
                         return (
@@ -228,11 +229,11 @@ export function MovieGrid() {
                         );
                     })}
                 </div>
-                <p className="card_pass_message">Click pass to remove already watched/unwanted items</p>
+                <p className="card_pass_message hidden">Click pass to remove already watched/unwanted items</p>
             </div>
 
             {/* Responsive Container */}
-            <div className="pb-4">
+            <div className="pb-4 hidden">
                 <div
                     className="cards_grid_section_compact min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr pb-2"
                 >
@@ -245,10 +246,18 @@ export function MovieGrid() {
             </div>
 
             {/* Show More Button */}
-            <div className="item_center md:mb-12 mb-2">
+            <div className="item_center md:mb-12 mb-2 hidden">
                 <button className="movie_show_more_btn">
                     Show More
                 </button>
+            </div>
+            {/* not found div */}
+            <div className="not_found_div">
+                <div className="item_center">
+                    <Image src={not_found_movie} alt="not_found_movie"/>
+                </div>
+                <h2 className="not_found_text">Ups!... no results found!</h2>
+                <p className="not_found_text_sm">Please try a different mood or genre</p>
             </div>
         </div>
     );
