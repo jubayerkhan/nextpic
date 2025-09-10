@@ -39,10 +39,10 @@ export default function Card({ item, type }) {
   const modalRef = useRef(null);
 
   const shadowColor = {
-    movie: "hover:shadow-[0_4px_10px_rgba(138,56,245,1)]",
-    series: "hover:shadow-[0_4px_10px_rgba(243,22,176,1)]",
-    game: "hover:shadow-[0_4px_10px_rgba(246,80,9,1)]",
-    book: "hover:shadow-[0_4px_10px_rgba(12,140,233,1)]",
+    movie: "hover:shadow-[0_5px_10px_rgba(138,56,245,1)]",
+    series: "hover:shadow-[0_5px_10px_rgba(243,22,176,1)]",
+    game: "hover:shadow-[0_5px_10px_rgba(246,80,9,1)]",
+    book: "hover:shadow-[0_5px_10px_rgba(12,140,233,1)]",
   };
 
   const openModal = () => {

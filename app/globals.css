@@ -266,12 +266,12 @@
     @apply bg-[#1F2842] rounded-[20px] overflow-hidden text-white shadow-md max-w-[207px] md:max-w-full flex flex-col;
   }
 
-  .card_div img {
+  .card_div .card_poster_img {
     transition: transform 0.3s ease;
     /* transition on base */
   }
 
-  .card_div:hover img {
+  .card_div:hover .card_poster_img {
     transform: scale(1.1);
   }
 
