@@ -132,7 +132,7 @@ export function MovieGrid() {
                     <button className="movie_reset_2_btn">Reset All</button>
                 </div>
                 {/* Mood filter */}
-                <div className="filter2_option_movies_div md:pb-5 pb-4 pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
+                <div className="filter2_option_movies_div pb-2 md:mb-3 mb-2 pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
                     {[
                         "Feel-Good",
                         "Thrilling",
@@ -166,7 +166,7 @@ export function MovieGrid() {
                     <button className="movie_reset_2_btn">Reset All</button>
                 </div>
                 {/* movie filter */}
-                <div className="filter2_option_movies_div md:pb-5 pb-4 pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
+                <div className="filter2_option_movies_div pb-2 md:mb-3 mb-2 pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
                     {[
                         "Action",
                         "Comedy",
@@ -204,7 +204,7 @@ export function MovieGrid() {
                     <button className="movie_reset_2_btn">Reset All</button>
                 </div>
                 {/* platform filter */}
-                <div className="filter2_movies_platform_div md:pb-5 pb-2 gap-2.5 flex min-[769px]:flex-wrap pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
+                <div className="filter2_movies_platform_div pb-2 mb-4 gap-2.5 flex min-[769px]:flex-wrap pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
                     {moviePlatforms.map((platform, index) => {
                         const id = `movie_platform${index + 1}`;
                         return (

@@ -3,6 +3,18 @@
 @plugin "daisyui";
 
 @layer components {
+
+  [disabled],
+  .disabled,
+  button[disabled],
+  input[disabled],
+  textarea[disabled],
+  select[disabled] {
+    pointer-events: none !important;
+    opacity: 0.6 !important;
+    cursor: not-allowed !important;
+  }
+
   /* ==================== */
   /* home page styles */
   /* ==================== */
@@ -938,12 +950,15 @@
   .filter2_platform_option_div_2 {
     @apply border-1 border-[#394056] hover:border-[#652CA8] hover:bg-[#473956] rounded-[6px] py-[10px] px-2.5 cursor-pointer focus:bg-[#394360] transition;
   }
+
   .not_found_text {
     @apply text-2xl font-semibold text-white pb-2.5;
   }
+
   .not_found_text_sm {
     @apply text-sm text-white;
   }
+
   .not_found_div {
     @apply text-center xl:pb-12 lg:pb-8 md:pb-6 xl:pt-[48px] md:pt-8 pt-6;
   }
