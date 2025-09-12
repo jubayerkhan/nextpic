@@ -326,6 +326,9 @@
   .card_bookmark_img {
     @apply absolute top-2 right-2 cursor-pointer;
   }
+  .card_bookmark_img {
+    z-index: 9999 !important;
+  }
 
   .card_rating_div {
     @apply flex items-center gap-1 text-sm text-yellow-400 absolute bottom-3 left-3 bg-black/50 rounded-full px-1.5 py-[3px];
@@ -982,6 +985,38 @@
     @apply text-center xl:pb-12 lg:pb-8 md:pb-6 xl:pt-[48px] md:pt-8 pt-6;
   }
 
+  /* card bookmark popup styles */
+  .bookmark_modal_box_title{
+    @apply font-semibold text-2xl pt-6 pb-[5px];
+  }
+  .bookmark_modal_box_btn_div{
+    @apply grid grid-cols-2 gap-4 pt-6;
+  }
+  .bookmark_modal_box_cancel_btn{
+    @apply border-1 border-[#7B808F] py-3 w-full rounded-[10px] font-medium cursor-pointer;
+  }
+  .bookmark_modal_box_log_btn{
+    @apply text-white flex gap-2.5 items-center justify-center mx-auto py-3 w-full rounded-[10px] cursor-pointer hover:opacity-90 transition duration-300 ease-in-out;
+  }
+
+  /* sign in page styles */
+  .sigh_in_page_pricing_bottom_text {
+    @apply text-center font-medium text-[#7E8598] md:pt-6 pt-0;
+  }
+
+  /* saved compact page styles */
+  .saved_compact_page_card_container {
+    @apply bg-[#1F2842] rounded-[20px] overflow-hidden text-white shadow-md max-w-[207px] md:max-w-full h-full;
+  }
+  .saved_compact_page_card_title_gradient {
+    @apply gap-1 text-sm absolute bottom-0 left-0 bg-gradient-to-b from-0% from-black/0 to-100% to-black/100 w-full h-1/2 flex items-end;
+  }
+  .saved_compact_page_card_overlay {
+    @apply absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+  }
+  .saved_compact_page_card_undo_btn {
+    @apply px-4 py-1.5 bg-[#8A38F5] text-white rounded-full shadow-lg hover:bg-[#702bc9] transition flex items-center gap-2 cursor-pointer;
+  }
 }
 
 @media screen and (max-width: 767px) {

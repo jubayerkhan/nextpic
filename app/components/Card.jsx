@@ -16,6 +16,8 @@ import GamesBMd from "@/public/assets/GamesBMd.png";
 import MoviesBMd from "@/public/assets/MoviesBMd.png";
 import SeriesBMd from "@/public/assets/SeriesBMd.png";
 import BooksBMd from "@/public/assets/BooksBMd.png";
+import bookmark_white_2 from "@/public/assets/bookmark_white_2.png";
+import sign_in from "@/public/assets/sign_in.png";
 import { useRef } from "react";
 
 // Helper function to get the correct bookmark icon path
@@ -45,19 +47,23 @@ export default function Card({ item, type }) {
     book: "hover:shadow-[0_5px_10px_rgba(12,140,233,1)]",
   };
 
+  // Reference for bookmark modal
+  const bookmarkModalRef = useRef(null);
+
   const openModal = () => {
-    modalRef.current?.showModal();
+    modalRef.current?.showModal(); // open main card modal
   };
 
   const closeModal = () => {
-    modalRef.current?.close();
+    modalRef.current?.close(); // close main card modal
   };
 
   const handleClick = (e) => {
-    e.preventDefault();      // stop default action
-    e.stopPropagation();     // stop bubbling to parent
-    alert("bookmarked!")
+    e.preventDefault();     // stop default behavior
+    e.stopPropagation();    // stop bubbling to parent (card onClick)
+    bookmarkModalRef.current?.showModal(); // open bookmark modal
   };
+
 
   const avengers = [
     { name: "Robert Downey Jr.", role: "Tony Stark", img: "/assets/robert.png" },
@@ -88,7 +94,7 @@ export default function Card({ item, type }) {
         {/* Image section */}
         <div
           className="relative overflow-hidden max-h-[303px] cursor-pointer"
-          onClick={openModal}
+          onClick={openModal} // opens main modal
         >
           <Image
             src={item.image}
@@ -99,20 +105,72 @@ export default function Card({ item, type }) {
           />
 
           {/* Bookmark icon */}
-          <Image
-            src={bookmarkIcon}
-            alt="bookmark"
-            width={34}
-            height={34}
+          <label
             className="card_bookmark_img hover:opacity-100 md:opacity-80"
-            onClick={handleClick}
-          />
+            onClick={handleClick} // calls handleClick with stopPropagation
+          >
+            <Image src={bookmarkIcon} alt="bookmark" width={34} height={34} />
+          </label>
 
-          {/* Rating */}
-          <div className="card_rating_div">
-            <FaStar /> <span className="text-white">{item.rating}/10</span>
-          </div>
+          {/* Bookmark Modal */}
+          <dialog
+            ref={bookmarkModalRef}
+            className="modal"
+            onClick={e => e.stopPropagation()} // Prevents bubbling to parent
+          >
+            <div className="modal-box relative bg-white/20 backdrop-blur-[10px] rounded-[40px] py-12 px-6 text-center border-2 border-[#7B808F]">
+              <div className={`filter_option_img_div ${type === "movie"
+                ? "bg-[#8A38F5]"   // purple for movie
+                : type === "series"
+                  ? "bg-[#F316B0]"   // pink for series
+                  : type === "book"
+                    ? "bg-[#0C8CE9]"   // blue for book
+                    : "bg-gray-500"    // fallback
+                }`}>
+                <Image src={bookmark_white_2} alt='bookmark_white_2' />
+              </div>
+              <h3 className="bookmark_modal_box_title">Please log in to save bookmarks</h3>
+              <p>Log in to save and access your favorite content anytime</p>
+              <div className="bookmark_modal_box_btn_div">
+                <button className="bookmark_modal_box_cancel_btn" onClick={() => bookmarkModalRef.current?.close()}>
+                  Cancel
+                </button>
+                <button className={`bookmark_modal_box_log_btn ${type === "movie"
+                  ? "bg-[#8A38F5]"   // purple for movie
+                  : type === "series"
+                    ? "bg-[#F316B0]"   // pink for series
+                    : type === "book"
+                      ? "bg-[#0C8CE9]"   // blue for book
+                      : "bg-gray-500"    // fallback
+                  }`}>
+                  <Image src={sign_in} alt="sign_in" />
+                  <span>Log in</span>
+                </button>
+              </div>
+            </div>
+            <form method="dialog" className="modal-backdrop">
+              <button>close</button>
+            </form>
+          </dialog>
+
+          {/* Main Card Modal */}
+          {/* <dialog ref={modalRef} className="modal">
+            <div className="modal-box relative">
+              <h3 className="font-bold text-lg">{item.title}</h3>
+              <p className="py-4">{item.description}</p>
+              <button
+                onClick={closeModal}
+                className="absolute top-2 right-2"
+              >
+                ✖
+              </button>
+            </div>
+            <form method="dialog" className="modal-backdrop">
+              <button>close</button>
+            </form>
+          </dialog> */}
         </div>
+
 
         {/* Content section */}
         <div className="card_content_div flex flex-col flex-grow">
@@ -163,7 +221,8 @@ export default function Card({ item, type }) {
         style={{ maxHeight: "100vh" }}  // limit dialog height to 90% viewport height
         onClick={(e) => {
           if (e.target === modalRef.current) {
-            closeModal(); // Close when clicking outside content
+            closeModal(); // ✅ closes only when clicking backdrop
+            e.stopPropagation(); // ✅ prevents reopening from card click
           }
         }}
       >
@@ -185,10 +244,13 @@ export default function Card({ item, type }) {
           <div className="relative z-10 md:pt-14 md:pb-12 pt-8 pb-4 md:px-6 px-[0px]">
             {/* Close button in top right */}
             <button
-              onClick={closeModal}
+              onClick={(e) => {
+                e.stopPropagation(); // ✅ stops bubbling to card
+                closeModal();
+              }}
               className="absolute md:right-6 right-[-8px] md:top-[-2px] top-[-10px] text-white cursor-pointer md:border-1 border-white hover:border-transparent rounded-full md:px-5 px-3 py-2 z-20 flex gap-2 hover:bg-[#FF4F6D] items-center font-medium"
             >
-              <span className="hidden md:block pb-0.5">Close</span> <Image className="md:w-[14px] md:h-[14px] w-4 h-4" src={cross_small} alt="cross_small"/>
+              <span className="hidden md:block pb-0.5">Close</span> <Image className="md:w-[14px] md:h-[14px] w-4 h-4" src={cross_small} alt="cross_small" />
             </button>
 
             <div className="flex flex-col md:flex-row gap-6">
