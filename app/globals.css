@@ -34,6 +34,7 @@
       transform: rotate(360deg);
     }
   }
+
   /* ==================== */
   /* home page styles */
   /* ==================== */
@@ -326,6 +327,7 @@
   .card_bookmark_img {
     @apply absolute top-2 right-2 cursor-pointer;
   }
+
   .card_bookmark_img {
     z-index: 9999 !important;
   }
@@ -986,16 +988,19 @@
   }
 
   /* card bookmark popup styles */
-  .bookmark_modal_box_title{
+  .bookmark_modal_box_title {
     @apply font-semibold text-2xl pt-6 pb-[5px];
   }
-  .bookmark_modal_box_btn_div{
+
+  .bookmark_modal_box_btn_div {
     @apply grid grid-cols-2 gap-4 pt-6;
   }
-  .bookmark_modal_box_cancel_btn{
+
+  .bookmark_modal_box_cancel_btn {
     @apply border-1 border-[#7B808F] py-3 w-full rounded-[10px] font-medium cursor-pointer;
   }
-  .bookmark_modal_box_log_btn{
+
+  .bookmark_modal_box_log_btn {
     @apply text-white flex gap-2.5 items-center justify-center mx-auto py-3 w-full rounded-[10px] cursor-pointer hover:opacity-90 transition duration-300 ease-in-out;
   }
 
@@ -1003,24 +1008,31 @@
   .sigh_in_page_pricing_bottom_text {
     @apply text-center font-medium text-[#7E8598] md:pt-6 pt-0;
   }
+
   .sign_up_page_bg {
     @apply bg-no-repeat 2xl:py-[125px] py-20 h-screen md:h-auto;
   }
+
   .sign_up_page_bg_2 {
     @apply absolute inset-0 bg-black/60;
   }
+
   .get_started_text {
     @apply text-center text-2xl font-semibold pb-[5px];
   }
+
   .get_started_text_line {
     @apply text-center md:pb-6 pb-4;
   }
+
   .signup_page_logo {
     @apply md:w-[280px] w-[200px] mx-auto md:pb-12 pb-5;
   }
+
   .signup_page_box {
     @apply border-2 border-[#384056] bg-white/10 backdrop-blur-[10px] md:py-12 py-6 md:px-6 px-5 rounded-[40px];
   }
+
   .subscrive_page_signin_btn {
     @apply text-white bg-gradient-to-l from-[#6C3DF0] to-[#FF4F6D] flex gap-2.5 items-center justify-center mx-auto md:mb-12 mb-5 py-3 w-full rounded-[10px] cursor-pointer hover:opacity-90 transition duration-300 ease-in-out;
   }
@@ -1029,14 +1041,20 @@
   .saved_compact_page_card_container {
     @apply bg-[#1F2842] rounded-[20px] overflow-hidden text-white shadow-md max-w-[207px] md:max-w-full h-full;
   }
+
   .saved_compact_page_card_title_gradient {
     @apply gap-1 text-sm absolute bottom-0 left-0 bg-gradient-to-b from-0% from-black/0 to-100% to-black/100 w-full h-1/2 flex items-end;
   }
+
   .saved_compact_page_card_overlay {
     @apply absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300;
   }
+
   .saved_compact_page_card_undo_btn {
     @apply px-[15px] py-1.5 bg-[#8A38F5] text-white rounded-full shadow-lg hover:bg-[#702bc9] transition flex items-center gap-2 cursor-pointer text-sm;
+  }
+  .mobile_menu_dot {
+    @apply absolute top-3 right-3 z-10 md:hidden block p-1.5 rounded-[6px];
   }
 }
 

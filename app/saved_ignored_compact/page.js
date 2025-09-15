@@ -9,7 +9,7 @@ import calender from "@/public/assets/calender.png";
 import Link from 'next/link';
 import { FaStar } from "react-icons/fa";
 import bookmark_white from "@/public/assets/bookmark_white.png";
-import undo from "@/public/assets/undo.png";
+import menu_dots from "@/public/assets/menu_dots.png";
 import undo_btn from "@/public/assets/undo_btn.png";
 import FilterPopup from '@/app/components/FilterPopup';
 import dummyMovies from "@/app/components/MovieGrid";
@@ -89,7 +89,7 @@ export default function Home() {
             {/* movie card grid */}
             <div className='saved_page_container_sm'>
                 <h3 className="cards_section_title pt-6 pb-5 text-2xl font-semibold">Movie</h3>
-                <div className='cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6'>
+                <div className='cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6 pb-1.5'>
                     {/* card 1 */}
                     {dummyMovies.map((movie, index) => (
                         <div className="min-w-[207px] flex-shrink md:min-w-0" key={index}>
@@ -103,6 +103,10 @@ export default function Home() {
                                         height={311}
                                         className="card_poster_img h-full"
                                     />
+                                    {/* mobile menu dots */}
+                                    <div className="mobile_menu_dot bg-[#8A38F5]">
+                                        <Image src={menu_dots} alt='menu_dots' />
+                                    </div>
 
                                     {/* Title gradient at bottom */}
                                     <div className="saved_compact_page_card_title_gradient">
@@ -131,7 +135,7 @@ export default function Home() {
             {/* series card grid */}
             <div className='saved_page_container_sm'>
                 <h3 className="cards_section_title pt-6 pb-5 text-2xl font-semibold">Movie</h3>
-                <div className='cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6'>
+                <div className='cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6 pb-1.5'>
                     {/* card 1 */}
                     {dummySeries.map((movie, index) => (
                         <div className="min-w-[207px] flex-shrink md:min-w-0" key={index}>
@@ -145,6 +149,11 @@ export default function Home() {
                                         height={311}
                                         className="card_poster_img h-full"
                                     />
+
+                                    {/* mobile menu dots */}
+                                    <div className="mobile_menu_dot bg-[#F316B0]">
+                                        <Image src={menu_dots} alt='menu_dots' />
+                                    </div>
 
                                     {/* Title gradient at bottom */}
                                     <div className="saved_compact_page_card_title_gradient">
@@ -173,7 +182,7 @@ export default function Home() {
             {/* Books card grid */}
             <div className='saved_page_container_sm'>
                 <h3 className="cards_section_title pt-6 pb-5 text-2xl font-semibold">Movie</h3>
-                <div className='cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6'>
+                <div className='cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6 pb-1.5'>
                     {/* card 1 */}
                     {dummyBooks.map((movie, index) => (
                         <div className="min-w-[207px] flex-shrink md:min-w-0" key={index}>
@@ -187,6 +196,11 @@ export default function Home() {
                                         height={311}
                                         className="card_poster_img h-full"
                                     />
+
+                                    {/* mobile menu dots */}
+                                    <div className="mobile_menu_dot bg-[#0C8CE9]">
+                                        <Image src={menu_dots} alt='menu_dots' />
+                                    </div>
 
                                     {/* Title gradient at bottom */}
                                     <div className="saved_compact_page_card_title_gradient">
