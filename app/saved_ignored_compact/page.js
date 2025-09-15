@@ -89,10 +89,10 @@ export default function Home() {
             {/* movie card grid */}
             <div className='saved_page_container_sm'>
                 <h3 className="cards_section_title pt-6 pb-5 text-2xl font-semibold">Movie</h3>
-                <div className='cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6 pb-1.5'>
+                <div className='cards_grid_section min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6 pb-1.5'>
                     {/* card 1 */}
                     {dummyMovies.map((movie, index) => (
-                        <div className="min-w-[207px] flex-shrink md:min-w-0" key={index}>
+                        <div className="min-w-[207px] flex-shrink min-[769px]:min-w-0" key={index}>
                             <div className="saved_compact_page_card_container">
                                 {/* Image section */}
                                 <div className="relative overflow-hidden max-h-[303px] cursor-pointer h-full group">
@@ -135,10 +135,10 @@ export default function Home() {
             {/* series card grid */}
             <div className='saved_page_container_sm'>
                 <h3 className="cards_section_title pt-6 pb-5 text-2xl font-semibold">Movie</h3>
-                <div className='cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6 pb-1.5'>
+                <div className='cards_grid_section min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6 pb-1.5'>
                     {/* card 1 */}
                     {dummySeries.map((movie, index) => (
-                        <div className="min-w-[207px] flex-shrink md:min-w-0" key={index}>
+                        <div className="min-w-[207px] flex-shrink min-[769px]:min-w-0" key={index}>
                             <div className="saved_compact_page_card_container">
                                 {/* Image section */}
                                 <div className="relative overflow-hidden max-h-[303px] cursor-pointer h-full group">
@@ -182,10 +182,10 @@ export default function Home() {
             {/* Books card grid */}
             <div className='saved_page_container_sm'>
                 <h3 className="cards_section_title pt-6 pb-5 text-2xl font-semibold">Movie</h3>
-                <div className='cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6 pb-1.5'>
+                <div className='cards_grid_section min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6 pb-1.5'>
                     {/* card 1 */}
                     {dummyBooks.map((movie, index) => (
-                        <div className="min-w-[207px] flex-shrink md:min-w-0" key={index}>
+                        <div className="min-w-[207px] flex-shrink min-[769px]:min-w-0" key={index}>
                             <div className="saved_compact_page_card_container">
                                 {/* Image section */}
                                 <div className="relative overflow-hidden max-h-[303px] cursor-pointer h-full group">
