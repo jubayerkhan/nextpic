@@ -254,7 +254,7 @@ export function MovieGrid() {
             {/* not found div */}
             <div className="not_found_div">
                 <div className="item_center">
-                    <Image src={not_found_movie} alt="not_found_movie"/>
+                    <Image src={not_found_movie} alt="not_found_movie" />
                 </div>
                 <h2 className="not_found_text">Ups!... no results found!</h2>
                 <p className="not_found_text_sm">Please try a different mood or genre</p>

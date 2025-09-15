@@ -717,7 +717,7 @@
   }
 
   .profile_heading_div {
-    @apply bg-white/10 md:py-12 py-5 px-4 2xl:px-0 md:mb-12 mb-5;
+    @apply bg-white/10 min-[769px]:py-12 py-5 px-4 2xl:px-0 min-[769px]:mb-12 mb-5;
   }
 
   .profile_heading_container {
@@ -777,19 +777,19 @@
   }
 
   .profile_page_section_container {
-    @apply bg-white/10 md:rounded-[40px] rounded-[20px] md:py-12 py-6 md:px-10 px-5 max-w-[1516px] 2xl:mx-auto text-white mx-4 md:mb-12 mb-5;
+    @apply bg-white/10 min-[769px]:rounded-[40px] rounded-[20px] min-[769px]:py-12 py-6 min-[769px]:px-10 px-5 max-w-[1516px] 2xl:mx-auto text-white mx-4 min-[769px]:mb-12 mb-5;
   }
 
   .profile_page_section_heading {
-    @apply md:text-[34px] text-[26px] font-semibold pb-[5px];
+    @apply min-[769px]:text-[34px] text-[26px] font-semibold pb-[5px];
   }
 
   .profile_page_section_subheading {
-    @apply md:pb-12 pb-4;
+    @apply min-[769px]:pb-12 pb-4;
   }
 
   .profile_page_labels {
-    @apply md:pb-2.5 pb-1.5;
+    @apply min-[769px]:pb-2.5 pb-1.5;
   }
 
   .profile_detail_section_grid {
@@ -797,11 +797,11 @@
   }
 
   .subscription_detail_card_div_inner {
-    @apply flex items-center md:gap-6 gap-4;
+    @apply flex items-center min-[769px]:gap-6 gap-4;
   }
 
   .subscription_detail_card_div {
-    @apply bg-[#393d52] rounded-[20px] md:py-[39px] py-5 md:px-12 px-5 text-white min-w-[233px];
+    @apply bg-[#393d52] rounded-[20px] min-[769px]:py-[39px] py-5 min-[769px]:px-12 px-5 text-white min-w-[233px];
   }
 
   .subscription_detail_card_img_div {
@@ -817,7 +817,7 @@
   }
 
   .subscription_detail_cards_div {
-    @apply grid md:grid-cols-2 grid-cols-1 lg:gap-12 gap-5 border-b-1 border-[#fff]/10 md:pb-12 pb-5 md:mb-12 mb-2;
+    @apply grid min-[769px]:grid-cols-2 grid-cols-1 lg:gap-12 gap-5 border-b-1 border-[#fff]/10 min-[769px]:pb-12 pb-5 min-[769px]:mb-12 mb-2;
   }
 
   .compleated_btn_subscribtion {
@@ -899,7 +899,7 @@
   }
 
   .profile_contact_library {
-    @apply grid xl:grid-cols-6 md:grid-cols-4 gap-6 md:pt-12 pt-5 md:mb-12 mb-5;
+    @apply grid xl:grid-cols-6 min-[769px]:grid-cols-4 gap-6 min-[769px]:pt-12 pt-5 min-[769px]:mb-12 mb-5;
   }
 
   .profile_log_out {
@@ -915,7 +915,7 @@
   }
 
   .account_profile_btn_div {
-    @apply flex flex-col sm:flex-row gap-5 md:pb-12 pb-5;
+    @apply flex flex-col sm:flex-row gap-5 min-[769px]:pb-12 pb-5;
   }
 
   .contact_profile_div {
@@ -935,7 +935,7 @@
   }
 
   .saved_page_heading_div {
-    @apply bg-white/10 md:py-12 py-5 px-4 2xl:px-0 mb-6;
+    @apply bg-white/10 min-[769px]:py-12 py-5 px-4 2xl:px-0 mb-6;
   }
 
   /* filter compact 2 */

@@ -19,7 +19,7 @@ import dummySeries from "@/app/components/SeriesGrid";
 
 export default function Home() {
     return (
-        <div className="md:pb-20 pb-10">
+        <div className="min-[769px]:pb-20 pb-10">
             {/* navbar */}
             <div className='navbar_div'>
                 <Link href="/"><Image src={logo} alt='logo' /></Link>
@@ -32,7 +32,7 @@ export default function Home() {
             {/* profile heading section */}
             <div className='saved_page_heading_div'>
                 <div className='saved_page_container'>
-                    <div className='md:flex justify-between items-center flex-wrap'>
+                    <div className='min-[769px]:flex justify-between items-center flex-wrap'>
                         <div className='profile_heading_left_container'>
                             <div className='profile_heading_left_container_div1'>
                                 <div className='profile_img_main_div1'>

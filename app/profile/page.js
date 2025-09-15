@@ -27,7 +27,7 @@ import trash from "@/public/assets/trash.png";
 
 export default function Home() {
     return (
-        <div className="md:pb-20 pb-10">
+        <div className="min-[769px]:pb-20 pb-10">
             {/* navbar */}
             <div className='navbar_div'>
                 <Link href="/"><Image src={logo} alt='logo' /></Link>
@@ -40,7 +40,7 @@ export default function Home() {
             {/* profile heading section */}
             <div className='profile_heading_div'>
                 <div className='profile_heading_container'>
-                    <div className='md:flex justify-between items-center flex-wrap'>
+                    <div className='min-[769px]:flex justify-between items-center flex-wrap'>
                         <div className='profile_heading_left_container'>
                             <div className='profile_heading_left_container_div1'>
                                 <div className='profile_img_main_div1'>
@@ -149,7 +149,7 @@ export default function Home() {
                     </div>
                 </div>
                 <h5 className='transection_heading'>Recent Transactions</h5>
-                <div className='flex flex-col md:gap-6 gap-4 md:pb-12 pb-4'>
+                <div className='flex flex-col min-[769px]:gap-6 gap-4 min-[769px]:pb-12 pb-4'>
                     {/* card 1 */}
                     <div className='subscription_detail_card_div'>
                         <div className="transaction_card_div_inner">
@@ -163,7 +163,7 @@ export default function Home() {
                                 {/* Plan Details Div */}
                                 <div>
                                     <p>TxnID: 3XYZ1234AB</p>
-                                    <h3 className='subscription_detail_card_title py-0 md:py-1'>Premium Plan</h3>
+                                    <h3 className='subscription_detail_card_title py-0 min-[769px]:py-1'>Premium Plan</h3>
                                     <p>Jul 15, 2025</p>
                                 </div>
                                 <div>
@@ -188,7 +188,7 @@ export default function Home() {
                                 {/* Plan Details Div */}
                                 <div>
                                     <p>TxnID: 3XYZ1234AB</p>
-                                    <h3 className='subscription_detail_card_title py-0 md:py-1'>Premium Plan</h3>
+                                    <h3 className='subscription_detail_card_title py-0 min-[769px]:py-1'>Premium Plan</h3>
                                     <p>Jul 15, 2025</p>
                                 </div>
                                 <div>
@@ -213,7 +213,7 @@ export default function Home() {
                                 {/* Plan Details Div */}
                                 <div>
                                     <p>TxnID: 3XYZ1234AB</p>
-                                    <h3 className='subscription_detail_card_title py-0 md:py-1'>Premium Plan</h3>
+                                    <h3 className='subscription_detail_card_title py-0 min-[769px]:py-1'>Premium Plan</h3>
                                     <p>Jul 15, 2025</p>
                                 </div>
                                 <div>
@@ -235,16 +235,16 @@ export default function Home() {
                 <h2 className='profile_page_section_heading'>Your Content Library</h2>
                 <h2 className='profile_page_section_subheading'>Discover and manage your personalized recommendations</h2>
                 <div className='switch_library'>
-                    <label for="switcher" class="flex justify-center cursor-pointer bg-[#393d52] p-[5px] rounded-[15px] md:text-2xl text-base">
-                        <div class="relative flex justify-between max-w-[1428px] w-full md:h-[72px] h-[50px]">
+                    <label for="switcher" class="flex justify-center cursor-pointer bg-[#393d52] p-[5px] rounded-[15px] min-[769px]:text-2xl text-base">
+                        <div class="relative flex justify-between max-w-[1428px] w-full min-[769px]:h-[72px] h-[50px]">
                             <input id="switcher" type="checkbox" class="hidden peer" />
                             <span class="text-center flex-grow relative z-20 self-center transition text-white peer-checked:text-white flex items-center justify-center gap-2.5"> <Image src={heart} alt='heart' /> <p>Saved (6)</p></span>
                             <span class="text-center flex-grow relative z-20 self-center transition peer-checked:text-white flex items-center justify-center gap-2.5"><Image src={eye_crossed} alt='heart' /> <p>Ignored (3)</p></span>
-                            <span class="absolute toggle z-10 bg-[#6C3DF0] md:h-[72px] h-[50px] max-w-[709px] w-1/2 transition-all top-0 left-0 peer-checked:left-[calc(100%-50%)]"></span>
+                            <span class="absolute toggle z-10 bg-[#6C3DF0] min-[769px]:h-[72px] h-[50px] max-w-[709px] w-1/2 transition-all top-0 left-0 peer-checked:left-[calc(100%-50%)]"></span>
                         </div>
                     </label>
                 </div>
-                <div className='profile_contact_library overflow-x-auto md:overflow-x-hidden scrollbar-hide [grid-auto-flow:column] md:[grid-auto-flow:row] auto-cols-[210px] md:auto-cols-auto'>
+                <div className='profile_contact_library overflow-x-auto min-[769px]:overflow-x-hidden scrollbar-hide [grid-auto-flow:column] min-[769px]:[grid-auto-flow:row] auto-cols-[210px] min-[769px]:auto-cols-auto'>
                     {/* card 1 */}
                     <div className="h-full">
                         <div className="card_div transition-all duration-300 ease h-full flex flex-col">

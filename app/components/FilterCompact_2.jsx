@@ -20,7 +20,7 @@ export default function Filter() {
                             <Image
                                 src={header_img}
                                 alt="header_img"
-                                className="ml-2.5 inline-block w-5 md:w-auto"
+                                className="ml-2.5 inline-block w-5 min-[769px]:w-auto"
                             />
                         </span>
                     </span>
@@ -30,7 +30,7 @@ export default function Filter() {
             <p className='filter_subtitle pt-0'>Discover your next favorite movie, series, game, or book with AI-powered recommendations</p>
             <h4 className='filter_title_compact'>Start Exploring</h4>
             {/* filter options div */}
-            <div className='filter_option_movies_div md:gap-[24px] gap-4 pb-4'>
+            <div className='filter_option_movies_div min-[769px]:gap-[24px] gap-4 pb-4'>
                 {/* card 1 */}
                 <div className='filter_option_movies_inner_div'>
                     <input
@@ -83,7 +83,7 @@ export default function Filter() {
 
 
             {/* result div */}
-            <div className='md:flex justify-between'>
+            <div className='min-[769px]:flex justify-between'>
                 <div>
                     <h5 className='text-white pb-2'>Top Suggest</h5>
                     <p className='result_text'>Showing results for: Movies, Series, Games, Books</p>
