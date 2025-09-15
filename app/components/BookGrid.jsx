@@ -69,16 +69,16 @@ const dummyBooks = [
 
 export function BookGrid() {
     return (
-        <div className="md:px-12 px-4">
+        <div className="min-[769px]:px-12 px-4">
             <h3 className="cards_section_title pt-0">Book</h3>
 
             {/* Responsive Container */}
             <div className="pb-6">
                 <div
-                    className="cards_grid_section md:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr"
+                    className="cards_grid_section min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr"
                 >
                     {dummyBooks.map((book, index) => (
-                        <div className="min-w-[207px] flex-shrink-0 md:flex-shrink md:min-w-0" key={index}>
+                        <div className="min-w-[207px] flex-shrink-0 md:flex-shrink min-[769px]:min-w-0" key={index}>
                             <MovieCard item={book} type="book" />
                         </div>
                     ))}
@@ -86,7 +86,7 @@ export function BookGrid() {
             </div>
 
             {/* Show More Button */}
-            <div className="item_center md:mb-12 mb-2">
+            <div className="item_center min-[769px]:mb-12 mb-2">
                 <button className="book_show_more_btn">
                     Show More
                 </button>
