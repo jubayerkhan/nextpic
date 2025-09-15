@@ -6,15 +6,15 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="relative bg-[url('/assets/bg_sign_in.svg')] bg-no-repeat 2xl:py-[125px] py-20 h-screen md:h-auto">
-      <div className="absolute inset-0 bg-black/60"></div>
-      {/* pricing section */}
+    <div className="relative bg-[url('/assets/bg_sign_in.svg')] sign_up_page_bg">
+      <div className="sign_up_page_bg_2"></div>
+      {/* sign up section */}
       <div className="relative pricing_section px-4 md:px-0">
-        <div className="border-2 border-[#384056] bg-white/10 backdrop-blur-[10px] md:py-12 py-6 md:px-6 px-5 rounded-[40px]">
-          <Image src={logo} alt="logo" className="md:w-[280px] w-[200px] mx-auto md:pb-12 pb-5"/>
-          <h4 className="text-center text-2xl font-semibold pb-[5px]">Get Started</h4>
-          <p className="text-center md:pb-6 pb-4">Sign in or create your account to continue</p>
-          <button className="subscrive_page_signin_btn text-white bg-gradient-to-l from-[#6C3DF0] to-[#FF4F6D] flex gap-2.5 items-center justify-center mx-auto md:mb-12 mb-5 py-3 w-full rounded-[10px] cursor-pointer hover:opacity-90 transition duration-300 ease-in-out">
+        <div className="signup_page_box">
+          <Image src={logo} alt="logo" className="signup_page_logo"/>
+          <h4 className="get_started_text">Get Started</h4>
+          <p className="get_started_text_line">Sign in or create your account to continue</p>
+          <button className="subscrive_page_signin_btn">
             <Image src={sign_in} alt="sign_in"/>
             <span>Join NextPick</span>
           </button>

@@ -111,7 +111,7 @@ export default function Home() {
 
                                     {/* Hover overlay with Undo button */}
                                     <div className="saved_compact_page_card_overlay">
-                                        <button className="saved_compact_page_card_undo_btn">
+                                        <button className={`saved_compact_page_card_undo_btn bg-[#8A38F5]`}>
                                             <Image src={undo_btn} alt='undo_btn'/>
                                             <span>Undo</span>
                                         </button>
@@ -153,7 +153,7 @@ export default function Home() {
 
                                     {/* Hover overlay with Undo button */}
                                     <div className="saved_compact_page_card_overlay">
-                                        <button className="saved_compact_page_card_undo_btn">
+                                        <button className="saved_compact_page_card_undo_btn bg-[#F316B0]">
                                             <Image src={undo_btn} alt='undo_btn'/>
                                             <span>Undo</span>
                                         </button>
@@ -195,7 +195,7 @@ export default function Home() {
 
                                     {/* Hover overlay with Undo button */}
                                     <div className="saved_compact_page_card_overlay">
-                                        <button className="saved_compact_page_card_undo_btn">
+                                        <button className="saved_compact_page_card_undo_btn bg-[#0C8CE9]">
                                             <Image src={undo_btn} alt='undo_btn'/>
                                             <span>Undo</span>
                                         </button>

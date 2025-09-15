@@ -152,23 +152,6 @@ export default function Card({ item, type }) {
               <button>close</button>
             </form>
           </dialog>
-
-          {/* Main Card Modal */}
-          {/* <dialog ref={modalRef} className="modal">
-            <div className="modal-box relative">
-              <h3 className="font-bold text-lg">{item.title}</h3>
-              <p className="py-4">{item.description}</p>
-              <button
-                onClick={closeModal}
-                className="absolute top-2 right-2"
-              >
-                ✖
-              </button>
-            </div>
-            <form method="dialog" className="modal-backdrop">
-              <button>close</button>
-            </form>
-          </dialog> */}
         </div>
 
 

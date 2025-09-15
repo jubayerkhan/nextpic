@@ -999,9 +999,30 @@
     @apply text-white flex gap-2.5 items-center justify-center mx-auto py-3 w-full rounded-[10px] cursor-pointer hover:opacity-90 transition duration-300 ease-in-out;
   }
 
-  /* sign in page styles */
+  /* sign up page styles */
   .sigh_in_page_pricing_bottom_text {
     @apply text-center font-medium text-[#7E8598] md:pt-6 pt-0;
+  }
+  .sign_up_page_bg {
+    @apply bg-no-repeat 2xl:py-[125px] py-20 h-screen md:h-auto;
+  }
+  .sign_up_page_bg_2 {
+    @apply absolute inset-0 bg-black/60;
+  }
+  .get_started_text {
+    @apply text-center text-2xl font-semibold pb-[5px];
+  }
+  .get_started_text_line {
+    @apply text-center md:pb-6 pb-4;
+  }
+  .signup_page_logo {
+    @apply md:w-[280px] w-[200px] mx-auto md:pb-12 pb-5;
+  }
+  .signup_page_box {
+    @apply border-2 border-[#384056] bg-white/10 backdrop-blur-[10px] md:py-12 py-6 md:px-6 px-5 rounded-[40px];
+  }
+  .subscrive_page_signin_btn {
+    @apply text-white bg-gradient-to-l from-[#6C3DF0] to-[#FF4F6D] flex gap-2.5 items-center justify-center mx-auto md:mb-12 mb-5 py-3 w-full rounded-[10px] cursor-pointer hover:opacity-90 transition duration-300 ease-in-out;
   }
 
   /* saved compact page styles */
@@ -1015,7 +1036,7 @@
     @apply absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300;
   }
   .saved_compact_page_card_undo_btn {
-    @apply px-4 py-1.5 bg-[#8A38F5] text-white rounded-full shadow-lg hover:bg-[#702bc9] transition flex items-center gap-2 cursor-pointer;
+    @apply px-[15px] py-1.5 bg-[#8A38F5] text-white rounded-full shadow-lg hover:bg-[#702bc9] transition flex items-center gap-2 cursor-pointer text-sm;
   }
 }
 

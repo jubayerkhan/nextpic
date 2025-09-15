@@ -189,7 +189,6 @@ export function SeriesGrid() {
                     <button className="series_reset_2_btn">Reset All</button>
                 </div>
                 {/* platform filter */}
-                {/* platform filter */}
                 <div className="filter2_movies_platform_div pb-2 mb-4 gap-2.5 flex min-[769px]:flex-wrap pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
                     {moviePlatforms.map((platform, index) => {
                         const id = `movie_platform${index + 1}`;
