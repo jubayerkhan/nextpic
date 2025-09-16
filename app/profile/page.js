@@ -235,11 +235,11 @@ export default function Home() {
                 <h2 className='profile_page_section_heading'>Your Content Library</h2>
                 <h2 className='profile_page_section_subheading'>Discover and manage your personalized recommendations</h2>
                 <div className='switch_library'>
-                    <label for="switcher" class="flex justify-center cursor-pointer bg-[#393d52] p-[5px] rounded-[15px] min-[769px]:text-2xl text-base">
+                    <label for="switcher" class="flex justify-center cursor-pointer bg-[#393d52] p-[5px] rounded-[15px] min-[769px]:text-2xl text-sm">
                         <div class="relative flex justify-between max-w-[1428px] w-full min-[769px]:h-[72px] h-[50px]">
                             <input id="switcher" type="checkbox" class="hidden peer" />
-                            <span class="text-center flex-grow relative z-20 self-center transition text-white peer-checked:text-white flex items-center justify-center gap-2.5"> <Image src={heart} alt='heart' /> <p>Saved (6)</p></span>
-                            <span class="text-center flex-grow relative z-20 self-center transition peer-checked:text-white flex items-center justify-center gap-2.5"><Image src={eye_crossed} alt='heart' /> <p>Ignored (3)</p></span>
+                            <span class="text-center flex-grow relative z-20 self-center transition text-white peer-checked:text-white flex items-center justify-center gap-1"> <Image src={heart} alt='heart' /> <p>Bookmarked (6)</p></span>
+                            <span class="text-center flex-grow relative z-20 self-center transition peer-checked:text-white flex items-center justify-center gap-2.5"><Image src={eye_crossed} alt='heart' /> <p>Passed (3)</p></span>
                             <span class="absolute toggle z-10 bg-[#6C3DF0] min-[769px]:h-[72px] h-[50px] max-w-[709px] w-1/2 transition-all top-0 left-0 peer-checked:left-[calc(100%-50%)]"></span>
                         </div>
                     </label>
