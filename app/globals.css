@@ -764,7 +764,7 @@
   }
 
   .profile_calender_div {
-    @apply text-white flex gap-2.5 xl:pt-28 pt-4;
+    @apply text-white flex gap-2.5;
   }
 
   .profile_img_heading_right_card_inner_div_no {
