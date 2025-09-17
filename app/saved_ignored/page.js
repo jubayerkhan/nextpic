@@ -208,7 +208,7 @@ export default function Home() {
                                     {/* Buttons pinned at bottom */}
                                     <div className="card_btn_div">
                                         <button className="remove_btn_profile">
-                                            <Image src={undo} alt="undo" />
+                                            <Image src={undo} alt="undo" className='h-[15px] w-[15px]'/>
                                             Undo
                                         </button>
                                     </div>
@@ -276,7 +276,7 @@ export default function Home() {
                                     {/* Buttons pinned at bottom */}
                                     <div className="card_btn_div">
                                         <button className="remove_btn_profile">
-                                            <Image src={undo} alt="undo" />
+                                            <Image src={undo} alt="undo" className='h-[15px] w-[15px]'/>
                                             Undo
                                         </button>
                                     </div>
