@@ -57,7 +57,7 @@ export default function Home() {
                                     <div>
                                         <h3 className='profile_img_heading_left_name'>Alex Rodriguez</h3>
                                         <p className='profile_img_heading_left_subtitle'>@user-265315</p>
-                                        <div className='flex min-[769px]:gap-10 gap-5 min-[769px]:items-center min-[769px]:flex-row flex-col'>
+                                        <div className='profile_page_btns_div'>
                                             <button className='premium_member_btn'>
                                                 <Image src={crown} alt='crown' className='' />
                                                 <span>Premium Member</span>

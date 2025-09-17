@@ -758,6 +758,9 @@
   .profile_img_heading_left_subtitle {
     @apply text-white pt-[5px] md:pb-6 pb-3;
   }
+  .profile_page_btns_div {
+    @apply flex min-[769px]:gap-10 gap-5 min-[769px]:items-center min-[769px]:flex-row flex-col;
+  }
 
   .premium_member_btn {
     @apply text-white py-2.5 px-[30px] rounded-[10px] bg-gradient-to-b from-[#D3C3FF] to-[#6C3DF0] flex gap-2.5;
