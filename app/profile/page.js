@@ -1,7 +1,8 @@
-import React from 'react'
+"use client"
+import { useState } from 'react'
 import Image from "next/image";
 import logo from "@/public/assets/logo.svg";
-import user from "@/public/assets/user.png";
+import user from "@/public/assets/evans.png";
 import crown from "@/public/assets/crown.png";
 import heart from "@/public/assets/heart.png";
 import arrow_grow from "@/public/assets/arrow-grow.png";
@@ -31,6 +32,7 @@ import view_black from "@/public/assets/view_black.png";
 
 
 export default function Home() {
+    const [selected, setSelected] = useState('bookmarked');
     return (
         <div className="min-[769px]:pb-20 pb-10">
             {/* navbar */}
@@ -49,9 +51,7 @@ export default function Home() {
                         <div className='profile_heading_left_container'>
                             <div className='profile_heading_left_container_div1'>
                                 <div className='profile_img_main_div1'>
-                                    <div className="profile_img_main_div2">
-                                        <Image src={user} alt='user' className='profile_img_heading_left' />
-                                    </div>
+                                    <Image src={user} alt='user' className='profile_img_heading_left' height={164} width={164}/>
                                 </div>
                                 <div className='xl:flex gap-8 items-start flex-wrap'>
                                     <div>
@@ -242,46 +242,77 @@ export default function Home() {
                 <h2 className='profile_page_section_heading'>Your Content Library</h2>
                 <h2 className='profile_page_section_subheading'>Discover and manage your personalized recommendations</h2>
                 <div className='switch_library'>
-                    <label for="switcher" class="flex justify-center cursor-pointer bg-[#393d52] p-[5px] rounded-[15px] min-[769px]:text-2xl text-sm">
-                        <div class="relative flex justify-between max-w-[1428px] w-full min-[769px]:h-[72px] h-[50px]">
-                            <input id="switcher" type="checkbox" class="hidden peer" />
-                            <span class="text-center flex-grow relative z-20 self-center transition text-white peer-checked:text-white flex items-center justify-center gap-1"> <Image src={heart} alt='heart' className='h-5 w-5 md:h-auto md:w-auto' /> <p>Bookmarked (6)</p></span>
-                            <span class="text-center flex-grow relative z-20 self-center transition peer-checked:text-white flex items-center justify-center gap-2.5"><Image src={eye_crossed} alt='heart' className='h-5 w-5 md:h-auto md:w-auto' /> <p>Passed (3)</p></span>
-                            <span class="absolute toggle z-10 bg-[#6C3DF0] min-[769px]:h-[72px] h-[50px] max-w-[709px] w-1/2 transition-all top-0 left-0 peer-checked:left-[calc(100%-50%)]"></span>
-                        </div>
-                    </label>
+                    <div className="flex justify-center bg-[#393d52] p-[5px] rounded-[15px] min-[769px]:text-2xl text-sm relative max-w-[1428px] mx-auto">
+
+                        {/* Bookmarked Radio */}
+                        <label
+                            className={`flex-1 cursor-pointer flex items-center justify-center gap-1 py-2 rounded-[15px] transition ${selected === 'bookmarked' ? 'bg-[#6C3DF0] text-white' : 'text-white'
+                                }`}
+                        >
+                            <input
+                                type="radio"
+                                name="librarySwitch"
+                                value="bookmarked"
+                                className="hidden"
+                                checked={selected === 'bookmarked'}
+                                onChange={() => setSelected('bookmarked')}
+                            />
+                            <Image src={heart} alt='heart' className='h-5 w-5 md:h-auto md:w-auto' />
+                            <p>Bookmarked ({dummyBooks.filter(b => b.bookmarked).length})</p>
+                        </label>
+
+                        {/* Passed Radio */}
+                        <label
+                            className={`flex-1 cursor-pointer flex items-center justify-center gap-1 py-2 rounded-[15px] transition ${selected === 'passed' ? 'bg-[#6C3DF0] text-white' : 'text-white'
+                                }`}
+                        >
+                            <input
+                                type="radio"
+                                name="librarySwitch"
+                                value="passed"
+                                className="hidden"
+                                checked={selected === 'passed'}
+                                onChange={() => setSelected('passed')}
+                            />
+                            <Image src={eye_crossed} alt='eye' className='h-5 w-5 md:h-auto md:w-auto' />
+                            <p>Passed ({dummyBooks.filter(b => b.passed).length})</p>
+                        </label>
+                    </div>
                 </div>
 
-                {/* profile page card grid */}
-                <div className='saved_page_container_sm px-0'>
-                    <h3 className="cards_section_title pt-6 pb-5 text-2xl font-semibold">Books</h3>
-                    <div className='profile_cards_grid_section min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6 pb-1.5'>
-                        {/* card 1 */}
-                        {dummyBooks.slice(0, 6).map((movie, index) => (
-                            <div className="min-w-[207px] flex-shrink min-[769px]:min-w-0" key={index}>
-                                <div className="saved_compact_page_card_container">
-                                    {/* Image section */}
-                                    <div className="relative overflow-hidden max-h-[303px] cursor-pointer h-full group">
-                                        <Image
-                                            src={movie.image}
-                                            alt="movie2"
-                                            width={207}
-                                            height={311}
-                                            className="card_poster_img h-full"
-                                        />
+                {/* Book Grid */}
+                {selected === 'bookmarked' && (
+                    <div className=''>
+                        {/* profile page card grid */}
+                        <div className='saved_page_container_sm px-0'>
+                            <h3 className="cards_section_title pt-6 pb-5 text-2xl font-semibold">Books</h3>
+                            <div className='profile_cards_grid_section min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6 pb-1.5'>
+                                {/* card 1 */}
+                                {dummyBooks.slice(0, 6).map((movie, index) => (
+                                    <div className="min-w-[207px] flex-shrink min-[769px]:min-w-0" key={index}>
+                                        <div className="saved_compact_page_card_container">
+                                            {/* Image section */}
+                                            <div className="relative overflow-hidden max-h-[303px] cursor-pointer h-full group">
+                                                <Image
+                                                    src={movie.image}
+                                                    alt="movie2"
+                                                    width={207}
+                                                    height={311}
+                                                    className="card_poster_img h-full"
+                                                />
 
-                                        {/* Movie tag */}
-                                        <div className="profile_card_category_tag">
-                                            <Image
-                                                src={movie_card_icon}
-                                                alt="movie_card_icon"
-                                                width={14}
-                                                height={14}
-                                            />
-                                            <span>Movies</span>
-                                        </div>
-                                        {/* Series tag */}
-                                        {/* <div className="profile_card_category_tag text-[#F316B0]">
+                                                {/* Movie tag */}
+                                                <div className="profile_card_category_tag">
+                                                    <Image
+                                                        src={movie_card_icon}
+                                                        alt="movie_card_icon"
+                                                        width={14}
+                                                        height={14}
+                                                    />
+                                                    <span>Movies</span>
+                                                </div>
+                                                {/* Series tag */}
+                                                {/* <div className="profile_card_category_tag text-[#F316B0]">
                                             <Image
                                                 src={series_card_icon}
                                                 alt="series_card_icon"
@@ -291,8 +322,8 @@ export default function Home() {
                                             />
                                             <span>Series</span>
                                         </div> */}
-                                        {/* Book tag */}
-                                        {/* <div className="profile_card_category_tag text-[#0C8CE9]">
+                                                {/* Book tag */}
+                                                {/* <div className="profile_card_category_tag text-[#0C8CE9]">
                                             <Image
                                                 src={book_card_icon}
                                                 alt="book_card_icon"
@@ -302,39 +333,131 @@ export default function Home() {
                                             <span>Books</span>
                                         </div> */}
 
-                                        {/* mobile menu dots */}
-                                        <div className="dropdown dropdown-end absolute top-3 right-3 z-10 min-[769px]:hidden block">
-                                            <div tabIndex={0} role="button" className="mobile_menu_dots bg-[#0C8CE9]">
-                                                <Image src={menu_dots} alt='menu_dots' />
+                                                {/* mobile menu dots */}
+                                                <div className="dropdown dropdown-end absolute top-3 right-3 z-10 min-[769px]:hidden block">
+                                                    <div tabIndex={0} role="button" className="mobile_menu_dots bg-[#0C8CE9]">
+                                                        <Image src={menu_dots} alt='menu_dots' />
+                                                    </div>
+                                                    <ul tabIndex={0} className="dropdown-content menu bg-white rounded-box z-1 w-[183px] p-2 text-[#10172A] mt-1">
+                                                        <li><a className='flex justify-end'> <Image src={view_black} alt='View' /> <span>View Details</span></a></li>
+                                                        <li><a className='flex justify-end'><Image src={undo_black} alt='View' /> <span>Undo</span></a></li>
+                                                    </ul>
+                                                </div>
+
+                                                {/* Title gradient at bottom */}
+                                                <div className="saved_compact_page_card_title_gradient">
+                                                    <h3 className="card_title pl-3 pb-3">{movie.title}</h3>
+                                                </div>
+
+                                                {/* Hover overlay with Undo button */}
+                                                <div className="saved_compact_page_card_overlay">
+                                                    <button className="view_compact_page_card_undo_btn bg-[#0C8CE9] hover:bg-[#0D7DCF]">
+                                                        <Image src={undo_btn} alt='undo_btn' />
+                                                        <span>View Details</span>
+                                                    </button>
+                                                    <button className={`saved_compact_page_card_undo_btn`}>
+                                                        <Image src={undo} alt='undo_btn' />
+                                                        <span>Undo</span>
+                                                    </button>
+                                                </div>
                                             </div>
-                                            <ul tabIndex={0} className="dropdown-content menu bg-white rounded-box z-1 w-[183px] p-2 text-[#10172A] mt-1">
-                                                <li><a className='flex justify-end'> <Image src={view_black} alt='View' /> <span>View Details</span></a></li>
-                                                <li><a className='flex justify-end'><Image src={undo_black} alt='View' /> <span>Undo</span></a></li>
-                                            </ul>
-                                        </div>
-
-                                        {/* Title gradient at bottom */}
-                                        <div className="saved_compact_page_card_title_gradient">
-                                            <h3 className="card_title pl-3 pb-3">{movie.title}</h3>
-                                        </div>
-
-                                        {/* Hover overlay with Undo button */}
-                                        <div className="saved_compact_page_card_overlay">
-                                            <button className="view_compact_page_card_undo_btn bg-[#0C8CE9] hover:bg-[#0D7DCF]">
-                                                <Image src={undo_btn} alt='undo_btn' />
-                                                <span>View Details</span>
-                                            </button>
-                                            <button className={`saved_compact_page_card_undo_btn`}>
-                                                <Image src={undo} alt='undo_btn' />
-                                                <span>Undo</span>
-                                            </button>
                                         </div>
                                     </div>
-                                </div>
+                                ))}
                             </div>
-                        ))}
+                        </div>
                     </div>
-                </div>
+                )}
+
+                {/* Passed Grid */}
+                {selected === 'passed' && (
+                    <div className=''>
+                        {/* profile page card grid */}
+                        <div className='saved_page_container_sm px-0'>
+                            <h3 className="cards_section_title pt-6 pb-5 text-2xl font-semibold">Books</h3>
+                            <div className='profile_cards_grid_section min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6 pb-1.5'>
+                                {/* card 1 */}
+                                {dummyBooks.slice(0, 5).map((movie, index) => (
+                                    <div className="min-w-[207px] flex-shrink min-[769px]:min-w-0" key={index}>
+                                        <div className="saved_compact_page_card_container">
+                                            {/* Image section */}
+                                            <div className="relative overflow-hidden max-h-[303px] cursor-pointer h-full group">
+                                                <Image
+                                                    src={movie.image}
+                                                    alt="movie2"
+                                                    width={207}
+                                                    height={311}
+                                                    className="card_poster_img h-full"
+                                                />
+
+                                                {/* Movie tag */}
+                                                {/* <div className="profile_card_category_tag">
+                                                    <Image
+                                                        src={movie_card_icon}
+                                                        alt="movie_card_icon"
+                                                        width={14}
+                                                        height={14}
+                                                    />
+                                                    <span>Movies</span>
+                                                </div> */}
+                                                {/* Series tag */}
+                                                <div className="profile_card_category_tag text-[#F316B0]">
+                                                    <Image
+                                                        src={series_card_icon}
+                                                        alt="series_card_icon"
+                                                        width={14}
+                                                        height={14}
+                                                        className='pb-0.5'
+                                                    />
+                                                    <span>Series</span>
+                                                </div>
+                                                {/* Book tag */}
+                                                {/* <div className="profile_card_category_tag text-[#0C8CE9]">
+                                            <Image
+                                                src={book_card_icon}
+                                                alt="book_card_icon"
+                                                width={14}
+                                                height={14}
+                                            />
+                                            <span>Books</span>
+                                        </div> */}
+
+                                                {/* mobile menu dots */}
+                                                <div className="dropdown dropdown-end absolute top-3 right-3 z-10 min-[769px]:hidden block">
+                                                    <div tabIndex={0} role="button" className="mobile_menu_dots bg-[#0C8CE9]">
+                                                        <Image src={menu_dots} alt='menu_dots' />
+                                                    </div>
+                                                    <ul tabIndex={0} className="dropdown-content menu bg-white rounded-box z-1 w-[183px] p-2 text-[#10172A] mt-1">
+                                                        <li><a className='flex justify-end'> <Image src={view_black} alt='View' /> <span>View Details</span></a></li>
+                                                        <li><a className='flex justify-end'><Image src={undo_black} alt='View' /> <span>Undo</span></a></li>
+                                                    </ul>
+                                                </div>
+
+                                                {/* Title gradient at bottom */}
+                                                <div className="saved_compact_page_card_title_gradient">
+                                                    <h3 className="card_title pl-3 pb-3">{movie.title}</h3>
+                                                </div>
+
+                                                {/* Hover overlay with Undo button */}
+                                                <div className="saved_compact_page_card_overlay">
+                                                    <button className="view_compact_page_card_undo_btn bg-[#0C8CE9] hover:bg-[#0D7DCF]">
+                                                        <Image src={undo_btn} alt='undo_btn' />
+                                                        <span>View Details</span>
+                                                    </button>
+                                                    <button className={`saved_compact_page_card_undo_btn`}>
+                                                        <Image src={undo} alt='undo_btn' />
+                                                        <span>Undo</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                )}
+
                 <div className='item_center'>
                     <button className='book_show_more_btn'>Show All</button>
                 </div>

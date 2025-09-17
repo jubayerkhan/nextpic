@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from "next/image";
 import logo from "@/public/assets/logo.svg";
-import user from "@/public/assets/user.png";
+import user from "@/public/assets/evans.png";
 import crown from "@/public/assets/crown.png";
 import heart from "@/public/assets/heart.png";
 import arrow_grow from "@/public/assets/arrow-grow.png";
@@ -39,9 +39,7 @@ export default function Home() {
                         <div className='profile_heading_left_container'>
                             <div className='profile_heading_left_container_div1'>
                                 <div className='profile_img_main_div1'>
-                                    <div className="profile_img_main_div2">
-                                        <Image src={user} alt='user' className='profile_img_heading_left' />
-                                    </div>
+                                    <Image src={user} alt='user' className='profile_img_heading_left' height={164} width={164}/>
                                 </div>
                                 <div className='xl:flex gap-8 items-start flex-wrap'>
                                     <div>

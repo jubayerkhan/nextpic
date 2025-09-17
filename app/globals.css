@@ -704,7 +704,7 @@
   /* profile page styles */
   /* ===================== */
   .profile_img_div1 {
-    @apply p-0.5 bg-gradient-to-b from-[#D3C3FF] to-[#6C3DF0] rounded-full;
+    @apply p-0.5 bg-gradient-to-b from-[#D3C3FF] to-[#6C3DF0] rounded-full overflow-hidden;
   }
 
   .profile_img_main_div1 {
@@ -712,11 +712,11 @@
   }
 
   .profile_img_div2 {
-    @apply bg-[#6C3DF0] p-[9px] rounded-full;
+    @apply bg-[#6C3DF0] rounded-full;
   }
 
   .profile_img_main_div2 {
-    @apply bg-[#6C3DF0] md:p-[29px] p-5 rounded-full;
+    @apply rounded-full overflow-hidden md:w-[164px] md:h-[168px] w-[90px] h-[90px] flex justify-center items-center;
   }
 
   .profile_heading_div {
@@ -736,7 +736,7 @@
   }
 
   .profile_img_heading_left {
-    @apply w-[90px] h-[90px] md:w-auto md:h-auto;
+    @apply w-[120px] h-[120px] md:w-auto md:h-auto object-cover overflow-hidden rounded-full;
   }
 
   .profile_img_heading_right {
