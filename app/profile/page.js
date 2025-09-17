@@ -14,7 +14,6 @@ import bookmark_white from "@/public/assets/bookmark_white.png";
 import movie_card_icon from "@/public/assets/movie_card_icon.png";
 import series_card_icon from "@/public/assets/series_card_icon.png";
 import book_card_icon from "@/public/assets/book_card_icon.png";
-import undo from "@/public/assets/undo.png";
 import movie2 from "@/public/assets/movie2.png";
 import book3 from "@/public/assets/book3.png";
 import book1 from "@/public/assets/book1.png";
@@ -23,6 +22,12 @@ import movie4 from "@/public/assets/movie4.png";
 import series3 from "@/public/assets/series3.png";
 import sigh_out from "@/public/assets/sign_out.png";
 import trash from "@/public/assets/trash.png";
+import dummyBooks from "@/app/components/BookGrid";
+import menu_dots from "@/public/assets/menu_dots.png";
+import undo_btn from "@/public/assets/view_white.png";
+import undo from "@/public/assets/undo.png";
+import undo_black from "@/public/assets/undo_black.png";
+import view_black from "@/public/assets/view_black.png";
 
 
 export default function Home() {
@@ -238,409 +243,94 @@ export default function Home() {
                     <label for="switcher" class="flex justify-center cursor-pointer bg-[#393d52] p-[5px] rounded-[15px] min-[769px]:text-2xl text-sm">
                         <div class="relative flex justify-between max-w-[1428px] w-full min-[769px]:h-[72px] h-[50px]">
                             <input id="switcher" type="checkbox" class="hidden peer" />
-                            <span class="text-center flex-grow relative z-20 self-center transition text-white peer-checked:text-white flex items-center justify-center gap-1"> <Image src={heart} alt='heart' /> <p>Bookmarked (6)</p></span>
-                            <span class="text-center flex-grow relative z-20 self-center transition peer-checked:text-white flex items-center justify-center gap-2.5"><Image src={eye_crossed} alt='heart' /> <p>Passed (3)</p></span>
+                            <span class="text-center flex-grow relative z-20 self-center transition text-white peer-checked:text-white flex items-center justify-center gap-1"> <Image src={heart} alt='heart' className='h-5 w-5 md:h-auto md:w-auto' /> <p>Bookmarked (6)</p></span>
+                            <span class="text-center flex-grow relative z-20 self-center transition peer-checked:text-white flex items-center justify-center gap-2.5"><Image src={eye_crossed} alt='heart' className='h-5 w-5 md:h-auto md:w-auto' /> <p>Passed (3)</p></span>
                             <span class="absolute toggle z-10 bg-[#6C3DF0] min-[769px]:h-[72px] h-[50px] max-w-[709px] w-1/2 transition-all top-0 left-0 peer-checked:left-[calc(100%-50%)]"></span>
                         </div>
                     </label>
                 </div>
-                <div className='profile_contact_library overflow-x-auto min-[769px]:overflow-x-hidden scrollbar-hide [grid-auto-flow:column] min-[769px]:[grid-auto-flow:row] auto-cols-[210px] min-[769px]:auto-cols-auto'>
-                    {/* card 1 */}
-                    <div className="h-full">
-                        <div className="card_div transition-all duration-300 ease h-full flex flex-col">
-                            {/* Image section */}
-                            <div
-                                className="relative overflow-hidden max-h-[303px] cursor-pointer"
-                            >
-                                <Image
-                                    src={movie2}
-                                    alt="movie2"
-                                    width={210}
-                                    height={315}
-                                    className="card_poster_img"
-                                />
 
-                                {/* Bookmark icon */}
-                                <div className="profile_card_category_tag">
-                                    <Image
-                                        src={movie_card_icon}
-                                        alt="movie_card_icon"
-                                        width={14}
-                                        height={14}
-                                    />
-                                    <span>Movies</span>
-                                </div>
-                                {/* Rating */}
-                                <div className="card_rating_div">
-                                    <FaStar /> <span className="text-white">9/10</span>
-                                </div>
-                            </div>
+                {/* profile page card grid */}
+                <div className='saved_page_container_sm px-0'>
+                    <h3 className="cards_section_title pt-6 pb-5 text-2xl font-semibold">Books</h3>
+                    <div className='profile_cards_grid_section min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6 pb-1.5'>
+                        {/* card 1 */}
+                        {dummyBooks.slice(0, 6).map((movie, index) => (
+                            <div className="min-w-[207px] flex-shrink min-[769px]:min-w-0" key={index}>
+                                <div className="saved_compact_page_card_container">
+                                    {/* Image section */}
+                                    <div className="relative overflow-hidden max-h-[303px] cursor-pointer h-full group">
+                                        <Image
+                                            src={movie.image}
+                                            alt="movie2"
+                                            width={207}
+                                            height={311}
+                                            className="card_poster_img h-full"
+                                        />
 
-                            {/* Content section */}
-                            <div className="card_content_div flex flex-col flex-grow">
-                                <div className="text_section flex-grow">
-                                    {/* Title */}
-                                    <h3 className="card_title">Avengers: Endgame</h3>
+                                        {/* Movie tag */}
+                                        <div className="profile_card_category_tag">
+                                            <Image
+                                                src={movie_card_icon}
+                                                alt="movie_card_icon"
+                                                width={14}
+                                                height={14}
+                                            />
+                                            <span>Movies</span>
+                                        </div>
+                                        {/* Series tag */}
+                                        {/* <div className="profile_card_category_tag text-[#F316B0]">
+                                            <Image
+                                                src={series_card_icon}
+                                                alt="series_card_icon"
+                                                width={14}
+                                                height={14}
+                                                className='pb-0.5'
+                                            />
+                                            <span>Series</span>
+                                        </div> */}
+                                        {/* Book tag */}
+                                        {/* <div className="profile_card_category_tag text-[#0C8CE9]">
+                                            <Image
+                                                src={book_card_icon}
+                                                alt="book_card_icon"
+                                                width={14}
+                                                height={14}
+                                            />
+                                            <span>Books</span>
+                                        </div> */}
 
-                                    {/* Year and Tags */}
-                                    <div className="card_tag_div">
-                                        <span>2000</span>
-                                        <span className="card_year">
-                                            Action
-                                        </span>
-                                        <span className="card_year">
-                                            Sci-Fi
-                                        </span>
+                                        {/* mobile menu dots */}
+                                        <div className="dropdown dropdown-end absolute top-3 right-3 z-10 min-[769px]:hidden block">
+                                            <div tabIndex={0} role="button" className="mobile_menu_dots bg-[#0C8CE9]">
+                                                <Image src={menu_dots} alt='menu_dots' />
+                                            </div>
+                                            <ul tabIndex={0} className="dropdown-content menu bg-white rounded-box z-1 w-[183px] p-2 text-[#10172A] mt-1">
+                                                <li><a className='flex justify-end'> <Image src={view_black} alt='View' /> <span>View Details</span></a></li>
+                                                <li><a className='flex justify-end'><Image src={undo_black} alt='View' /> <span>Undo</span></a></li>
+                                            </ul>
+                                        </div>
+
+                                        {/* Title gradient at bottom */}
+                                        <div className="saved_compact_page_card_title_gradient">
+                                            <h3 className="card_title pl-3 pb-3">{movie.title}</h3>
+                                        </div>
+
+                                        {/* Hover overlay with Undo button */}
+                                        <div className="saved_compact_page_card_overlay">
+                                            <button className="view_compact_page_card_undo_btn bg-[#0C8CE9] hover:bg-[#0D7DCF]">
+                                                <Image src={undo_btn} alt='undo_btn' />
+                                                <span>View Details</span>
+                                            </button>
+                                            <button className={`saved_compact_page_card_undo_btn`}>
+                                                <Image src={undo} alt='undo_btn' />
+                                                <span>Undo</span>
+                                            </button>
+                                        </div>
                                     </div>
-
-                                    {/* Description */}
-                                    <p className="profile_card_description">
-                                        Earth’s mightiest heroes unite to fight their greatest....
-                                        <span
-                                            className="text-[#5799EF] cursor-pointer"
-                                        >More</span>
-                                    </p>
-                                </div>
-                                {/* Buttons pinned at bottom */}
-                                <div className="card_btn_div">
-                                    <button className="remove_btn_profile">
-                                        <Image src={bookmark_white} alt="bookmark_white" />
-                                        Remove
-                                    </button>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    {/* card 2 */}
-                    <div className="h-full">
-                        <div className="card_div transition-all duration-300 ease h-full flex flex-col">
-                            {/* Image section */}
-                            <div
-                                className="relative overflow-hidden max-h-[303px] cursor-pointer"
-                            >
-                                <Image
-                                    src={series3}
-                                    alt="series3"
-                                    width={210}
-                                    height={315}
-                                    className="card_poster_img"
-                                />
-
-                                {/* Bookmark icon */}
-                                <div className="profile_card_category_tag text-[#F316B0]">
-                                    <Image
-                                        src={series_card_icon}
-                                        alt="series_card_icon"
-                                        width={14}
-                                        height={14}
-                                        className='pb-0.5'
-                                    />
-                                    <span>Series</span>
-                                </div>
-                                {/* Rating */}
-                                <div className="card_rating_div">
-                                    <FaStar /> <span className="text-white">9/10</span>
-                                </div>
-                            </div>
-
-                            {/* Content section */}
-                            <div className="card_content_div flex flex-col flex-grow">
-                                <div className="text_section flex-grow">
-                                    {/* Title */}
-                                    <h3 className="card_title">Avengers: Endgame</h3>
-
-                                    {/* Year and Tags */}
-                                    <div className="card_tag_div">
-                                        <span>2000</span>
-                                        <span className="card_year">
-                                            Action
-                                        </span>
-                                        <span className="card_year">
-                                            Sci-Fi
-                                        </span>
-                                    </div>
-
-                                    {/* Description */}
-                                    <p className="profile_card_description">
-                                        Earth’s mightiest heroes unite to fight their greatest....
-                                        <span
-                                            className="text-[#5799EF] cursor-pointer"
-                                        >More</span>
-                                    </p>
-                                </div>
-                                {/* Buttons pinned at bottom */}
-                                <div className="card_btn_div">
-                                    <button className="remove_btn_profile">
-                                        <Image src={bookmark_white} alt="bookmark_white" />
-                                        Remove
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* card 3 */}
-                    <div className="h-full">
-                        <div className="card_div transition-all duration-300 ease h-full flex flex-col">
-                            {/* Image section */}
-                            <div
-                                className="relative overflow-hidden max-h-[303px] cursor-pointer"
-                            >
-                                <Image
-                                    src={book3}
-                                    alt="book3"
-                                    width={210}
-                                    height={315}
-                                    className="card_poster_img"
-                                />
-
-                                {/* Bookmark icon */}
-                                <div className="profile_card_category_tag text-[#0C8CE9]">
-                                    <Image
-                                        src={book_card_icon}
-                                        alt="book_card_icon"
-                                        width={14}
-                                        height={14}
-                                    />
-                                    <span>Books</span>
-                                </div>
-                                {/* Rating */}
-                                <div className="card_rating_div">
-                                    <FaStar /> <span className="text-white">9/10</span>
-                                </div>
-                            </div>
-
-                            {/* Content section */}
-                            <div className="card_content_div flex flex-col flex-grow">
-                                <div className="text_section flex-grow">
-                                    {/* Title */}
-                                    <h3 className="card_title">Avengers: Endgame</h3>
-
-                                    {/* Year and Tags */}
-                                    <div className="card_tag_div">
-                                        <span>2000</span>
-                                        <span className="card_year">
-                                            Action
-                                        </span>
-                                        <span className="card_year">
-                                            Sci-Fi
-                                        </span>
-                                    </div>
-
-                                    {/* Description */}
-                                    <p className="profile_card_description">
-                                        Earth’s mightiest heroes unite to fight their greatest....
-                                        <span
-                                            className="text-[#5799EF] cursor-pointer"
-                                        >More</span>
-                                    </p>
-                                </div>
-                                {/* Buttons pinned at bottom */}
-                                <div className="card_btn_div">
-                                    <button className="remove_btn_profile">
-                                        <Image src={bookmark_white} alt="bookmark_white" />
-                                        Remove
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* card 4 */}
-                    <div className="h-full">
-                        <div className="card_div transition-all duration-300 ease h-full flex flex-col">
-                            {/* Image section */}
-                            <div
-                                className="relative overflow-hidden max-h-[303px] cursor-pointer"
-                            >
-                                <Image
-                                    src={movie4}
-                                    alt="movie4"
-                                    width={210}
-                                    height={315}
-                                    className="card_poster_img"
-                                />
-
-                                {/* Bookmark icon */}
-                                <div className="profile_card_category_tag">
-                                    <Image
-                                        src={movie_card_icon}
-                                        alt="movie_card_icon"
-                                        width={14}
-                                        height={14}
-                                    />
-                                    <span>Movies</span>
-                                </div>
-                                {/* Rating */}
-                                <div className="card_rating_div">
-                                    <FaStar /> <span className="text-white">9/10</span>
-                                </div>
-                            </div>
-
-                            {/* Content section */}
-                            <div className="card_content_div flex flex-col flex-grow">
-                                <div className="text_section flex-grow">
-                                    {/* Title */}
-                                    <h3 className="card_title">Avengers: Endgame</h3>
-
-                                    {/* Year and Tags */}
-                                    <div className="card_tag_div">
-                                        <span>2000</span>
-                                        <span className="card_year">
-                                            Action
-                                        </span>
-                                        <span className="card_year">
-                                            Sci-Fi
-                                        </span>
-                                    </div>
-
-                                    {/* Description */}
-                                    <p className="profile_card_description">
-                                        Earth’s mightiest heroes unite to fight their greatest....
-                                        <span
-                                            className="text-[#5799EF] cursor-pointer"
-                                        >More</span>
-                                    </p>
-                                </div>
-                                {/* Buttons pinned at bottom */}
-                                <div className="card_btn_div">
-                                    <button className="remove_btn_profile">
-                                        <Image src={bookmark_white} alt="bookmark_white" />
-                                        Remove
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* card 5 */}
-                    <div className="h-full">
-                        <div className="card_div transition-all duration-300 ease h-full flex flex-col">
-                            {/* Image section */}
-                            <div
-                                className="relative overflow-hidden max-h-[303px] cursor-pointer"
-                            >
-                                <Image
-                                    src={book1}
-                                    alt="book3"
-                                    width={210}
-                                    height={315}
-                                    className="card_poster_img"
-                                />
-
-                                {/* Bookmark icon */}
-                                <div className="profile_card_category_tag text-[#0C8CE9]">
-                                    <Image
-                                        src={book_card_icon}
-                                        alt="book_card_icon"
-                                        width={14}
-                                        height={14}
-                                    />
-                                    <span>Books</span>
-                                </div>
-                                {/* Rating */}
-                                <div className="card_rating_div">
-                                    <FaStar /> <span className="text-white">9/10</span>
-                                </div>
-                            </div>
-
-                            {/* Content section */}
-                            <div className="card_content_div flex flex-col flex-grow">
-                                <div className="text_section flex-grow">
-                                    {/* Title */}
-                                    <h3 className="card_title">Avengers: Endgame</h3>
-
-                                    {/* Year and Tags */}
-                                    <div className="card_tag_div">
-                                        <span>2000</span>
-                                        <span className="card_year">
-                                            Action
-                                        </span>
-                                        <span className="card_year">
-                                            Sci-Fi
-                                        </span>
-                                    </div>
-
-                                    {/* Description */}
-                                    <p className="profile_card_description">
-                                        Earth’s mightiest heroes unite to fight their greatest....
-                                        <span
-                                            className="text-[#5799EF] cursor-pointer"
-                                        >More</span>
-                                    </p>
-                                </div>
-                                {/* Buttons pinned at bottom */}
-                                <div className="card_btn_div">
-                                    <button className="remove_btn_profile">
-                                        <Image src={bookmark_white} alt="bookmark_white" />
-                                        Remove
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {/* card 6 */}
-                    <div className="h-full">
-                        <div className="card_div transition-all duration-300 ease h-full flex flex-col">
-                            {/* Image section */}
-                            <div
-                                className="relative overflow-hidden max-h-[303px] cursor-pointer"
-                            >
-                                <Image
-                                    src={empty_poster}
-                                    alt="empty_poster"
-                                    width={210}
-                                    height={315}
-                                    className="card_poster_img"
-                                />
-
-                                {/* Bookmark icon */}
-                                <div className="profile_card_category_tag text-[#0C8CE9]">
-                                    <Image
-                                        src={book_card_icon}
-                                        alt="book_card_icon"
-                                        width={14}
-                                        height={14}
-                                    />
-                                    <span>Books</span>
-                                </div>
-                                {/* Rating */}
-                                <div className="card_rating_div">
-                                    <FaStar /> <span className="text-white">9/10</span>
-                                </div>
-                            </div>
-
-                            {/* Content section */}
-                            <div className="card_content_div flex flex-col flex-grow">
-                                <div className="text_section flex-grow">
-                                    {/* Title */}
-                                    <h3 className="card_title">Avengers: Endgame</h3>
-
-                                    {/* Year and Tags */}
-                                    <div className="card_tag_div">
-                                        <span>2000</span>
-                                        <span className="card_year">
-                                            Action
-                                        </span>
-                                        <span className="card_year">
-                                            Sci-Fi
-                                        </span>
-                                    </div>
-
-                                    {/* Description */}
-                                    <p className="profile_card_description">
-                                        Earth’s mightiest heroes unite to fight their greatest....
-                                        <span
-                                            className="text-[#5799EF] cursor-pointer"
-                                        >More</span>
-                                    </p>
-                                </div>
-                                {/* Buttons pinned at bottom */}
-                                <div className="card_btn_div">
-                                    <button className="remove_btn_profile">
-                                        <Image src={undo} alt="undo" />
-                                        Undo
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
                 <div className='item_center'>
@@ -653,11 +343,11 @@ export default function Home() {
                 <h2 className='profile_page_section_subheading'>Manage your account settings and data</h2>
                 <div className='account_profile_btn_div'>
                     <button className='profile_log_out'>
-                        <Image src={sigh_out} alt='crown'/>
+                        <Image src={sigh_out} alt='crown' />
                         <span>Log Out</span>
                     </button>
                     <button className='profile_delete'>
-                        <Image src={trash} alt='crown'/>
+                        <Image src={trash} alt='crown' />
                         <span>Delete My Account</span>
                     </button>
                 </div>
