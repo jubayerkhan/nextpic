@@ -1,7 +1,8 @@
 import React from 'react'
 import Image from "next/image";
 import logo from "@/public/assets/logo.svg";
-import user from "@/public/assets/evans.png";
+import user from "@/public/assets/user.png";
+import evans from "@/public/assets/evans.png";
 import crown from "@/public/assets/crown.png";
 import heart from "@/public/assets/heart.png";
 import arrow_grow from "@/public/assets/arrow-grow.png";
@@ -39,20 +40,22 @@ export default function Home() {
                         <div className='profile_heading_left_container'>
                             <div className='profile_heading_left_container_div1'>
                                 <div className='profile_img_main_div1'>
-                                    <Image src={user} alt='user' className='profile_img_heading_left' height={164} width={164}/>
+                                    <Image src={evans} alt='evans' className='profile_img_heading_left' height={164} width={164} />
                                 </div>
                                 <div className='xl:flex gap-8 items-start flex-wrap'>
                                     <div>
                                         <h3 className='profile_img_heading_left_name'>Alex Rodriguez</h3>
                                         <p className='profile_img_heading_left_subtitle'>@user-265315</p>
-                                        <button className='premium_member_btn'>
-                                            <Image src={crown} alt='crown' className='' />
-                                            <span>Premium Member</span>
-                                        </button>
-                                    </div>
-                                    <div className='profile_calender_div'>
-                                        <Image src={calender} alt='calender' />
-                                        <span>Member since July 2025</span>
+                                        <div className='profile_page_btns_div'>
+                                            <button className='premium_member_btn'>
+                                                <Image src={crown} alt='crown' className='' />
+                                                <span>Premium Member</span>
+                                            </button>
+                                            <div className='profile_calender_div'>
+                                                <Image src={calender} alt='calender' />
+                                                <span>Member since July 2025</span>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

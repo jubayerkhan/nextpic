@@ -712,7 +712,7 @@
   }
 
   .profile_img_div2 {
-    @apply bg-[#6C3DF0] rounded-full;
+    @apply bg-[#6C3DF0] rounded-full p-2;
   }
 
   .profile_img_main_div2 {
