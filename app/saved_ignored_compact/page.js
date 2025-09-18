@@ -34,9 +34,10 @@ export default function Home() {
                 </div>
             </div>
             {/* profile heading section */}
-            <div className='saved_page_heading_div'>
-                <div className='saved_page_container'>
-                    <div className='min-[769px]:flex justify-between items-center flex-wrap'>
+            {/* profile heading section */}
+            <div className='profile_heading_div'>
+                <div className='profile_heading_container'>
+                    <div className='min-[769px]:flex justify-between lg:items-center gap-5 lg:flex-row flex-col'>
                         <div className='profile_heading_left_container'>
                             <div className='profile_heading_left_container_div1'>
                                 <div className='profile_img_main_div1'>
@@ -45,7 +46,7 @@ export default function Home() {
                                 <div className='xl:flex gap-8 items-start flex-wrap'>
                                     <div>
                                         <h3 className='profile_img_heading_left_name'>Alex Rodriguez</h3>
-                                        <p className='profile_img_heading_left_subtitle'>@user-265315</p>
+                                        <p className='profile_img_heading_left_subtitle'>annanovas71@gmail.com</p>
                                         <div className='profile_page_btns_div'>
                                             <button className='premium_member_btn'>
                                                 <Image src={crown} alt='crown' className='' />
@@ -65,7 +66,7 @@ export default function Home() {
                             <div className='profile_img_heading_right_card_div'>
                                 <p>Saved</p>
                                 <div className='profile_img_heading_right_card_inner_div'>
-                                    <h4 className='profile_img_heading_right_card_inner_div_no'>24</h4>
+                                    <h4 className='profile_img_heading_right_card_inner_div_no'>6</h4>
                                     <div className='profile_img_heading_right_card_inner_div_img'>
                                         <Image src={heart} alt='heart' />
                                     </div>

@@ -732,7 +732,7 @@
   }
 
   .profile_heading_left_container_div1 {
-    @apply flex sm:gap-12 gap-2 items-center flex-wrap;
+    @apply flex lg:gap-12 gap-5 items-center sm:flex-row flex-col w-full justify-center sm:justify-start;
   }
 
   .profile_img_heading_left {
@@ -740,11 +740,11 @@
   }
 
   .profile_img_heading_right {
-    @apply flex flex-col sm:flex-row sm:gap-6 gap-4 pt-5;
+    @apply flex flex-row sm:gap-6 gap-3 pt-5 lg:pt-0;
   }
 
   .profile_img_heading_right_card_div {
-    @apply bg-[#393d52] rounded-[20px] md:py-8 py-6 md:px-6 px-5 text-white min-w-[233px] md:h-[173px];
+    @apply bg-[#393d52] rounded-[20px] md:py-8 min-[400px]:py-6 py-3 md:px-6 min-[400px]:px-5 px-3 text-white lg:min-w-[233px] md:h-[173px] w-full;
   }
 
   .profile_img_heading_right_card_inner_div {
@@ -752,14 +752,14 @@
   }
 
   .profile_img_heading_left_name {
-    @apply text-white text-[34px] font-semibold;
+    @apply text-white text-[34px] font-semibold text-center sm:text-start;
   }
 
   .profile_img_heading_left_subtitle {
-    @apply text-white pt-[5px] md:pb-6 pb-3;
+    @apply text-white pt-[5px] md:pb-6 pb-3 text-center sm:text-start;
   }
   .profile_page_btns_div {
-    @apply flex min-[769px]:gap-10 gap-5 min-[769px]:items-center min-[769px]:flex-row flex-col;
+    @apply flex xl:gap-10 gap-4 xl:items-center xl:flex-row flex-col;
   }
 
   .premium_member_btn {
@@ -771,11 +771,11 @@
   }
 
   .profile_img_heading_right_card_inner_div_no {
-    @apply text-[34px] py-1;
+    @apply min-[400px]:text-[34px] text-2xl py-1;
   }
 
   .profile_img_heading_right_card_inner_div_img {
-    @apply bg-white/20 rounded-full p-3 w-12;
+    @apply bg-white/20 rounded-full min-[400px]:p-3 p-2 min-[400px]:w-12 w-8;
   }
 
   .profile_img_heading_right_card_inner_div_green_arrow {
