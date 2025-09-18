@@ -1053,7 +1053,7 @@
   }
 
   .saved_compact_page_card_overlay {
-    @apply absolute inset-0 bg-black/80 flex flex-col gap-2.5 items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5;
+    @apply absolute inset-0 bg-black/80 flex flex-col gap-2.5 items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 rounded-[2px];
   }
 
   .view_compact_page_card_undo_btn {
@@ -1068,6 +1068,29 @@
   .mobile_menu_dots {
     @apply p-1.5 rounded-[6px];
   }
+
+  /* saved movie page styles */
+  .client_dashboard {
+		@apply md:w-[24px] md:h-[24px] w-5 h-5 cursor-pointer;
+	}
+  .client_dashboard_pagination_div {
+		@apply flex justify-center items-center md:mt-[60px] mt-4 pr-3 md:pr-0;
+	}
+
+	.client_dashboard_pagination_ul {
+		@apply text-sm font-semibold flex md:gap-2 gap-1;
+	}
+
+	.client_dashboard_pagination_li {
+		@apply text-white md:px-[18px] px-3 md:py-[10px] py-1.5 rounded-[10px] hover:text-white hover:bg-[#8A38F5] bg-[#393D52] cursor-pointer flex items-center justify-center;
+	}
+	.client_dashboard_pagination_li_next_prev {
+		@apply text-white md:p-[10px] p-1.5 rounded-[10px] hover:text-white hover:bg-[#8A38F5] bg-[#393D52] cursor-pointer flex items-center justify-center;
+	}
+
+	.client_dashboard_pagination_dots {
+		@apply text-white p-[10px] rounded-[10px];
+	}
 }
 
 @media screen and (max-width: 767px) {

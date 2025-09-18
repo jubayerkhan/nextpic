@@ -8,17 +8,18 @@ import heart from "@/public/assets/heart.png";
 import arrow_grow from "@/public/assets/arrow-grow.png";
 import calender from "@/public/assets/calender.png";
 import Link from 'next/link';
-import { FaStar } from "react-icons/fa";
-import bookmark_white from "@/public/assets/bookmark_white.png";
 import menu_dots from "@/public/assets/menu_dots.png";
 import undo_btn from "@/public/assets/view_white.png";
+import next from "@/public/assets/next.png";
+import prev from "@/public/assets/prev_white.png";
+import next_double from "@/public/assets/next_double.png";
+import prev_double from "@/public/assets/prev_double_white.png";
 import undo from "@/public/assets/undo.png";
 import undo_black from "@/public/assets/undo_black.png";
 import view_black from "@/public/assets/view_black.png";
-import FilterPopup from '@/app/components/FilterPopup';
 import dummyMovies from "@/app/components/MovieGrid";
-import dummyBooks from "@/app/components/BookGrid";
-import dummySeries from "@/app/components/SeriesGrid";
+import dummySeries from '../components/SeriesGrid';
+import dummyBooks from '../components/BookGrid';
 
 
 export default function Home() {
@@ -97,7 +98,7 @@ export default function Home() {
                 <h3 className="cards_section_title pt-6 pb-5 text-2xl font-semibold">Movies</h3>
                 <div className='cards_grid_section min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6 pb-1.5'>
                     {/* card 1 */}
-                    {dummyMovies.map((movie, index) => (
+                    {[...dummyMovies, ...dummySeries, ...dummyMovies, ...dummyMovies].map((movie, index) => (
                         <div className="min-w-[207px] flex-shrink min-[769px]:min-w-0" key={index}>
                             <div className="saved_compact_page_card_container">
                                 {/* Image section */}
@@ -141,126 +142,45 @@ export default function Home() {
                         </div>
                     ))}
                 </div>
-                {/* Show More Button */}
-                <div className="item_center">
-                    <button className="movie_show_more_btn">
-                        Show More
-                    </button>
-                </div>
             </div>
-            {/* series card grid */}
-            <div className='saved_page_container_sm'>
-                <h3 className="cards_section_title pt-6 pb-5 text-2xl font-semibold">Series</h3>
-                <div className='cards_grid_section min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6 pb-1.5'>
-                    {/* card 1 */}
-                    {dummySeries.map((movie, index) => (
-                        <div className="min-w-[207px] flex-shrink min-[769px]:min-w-0" key={index}>
-                            <div className="saved_compact_page_card_container">
-                                {/* Image section */}
-                                <div className="relative overflow-hidden max-h-[303px] cursor-pointer h-full group">
-                                    <Image
-                                        src={movie.image}
-                                        alt="movie2"
-                                        width={207}
-                                        height={311}
-                                        className="card_poster_img h-full"
-                                    />
 
-                                    {/* mobile menu dots */}
-                                    <div className="dropdown dropdown-end absolute top-3 right-3 z-10 min-[769px]:hidden block">
-                                        <div tabIndex={0} role="button" className="mobile_menu_dots bg-[#F316B0]">
-                                            <Image src={menu_dots} alt='menu_dots' />
-                                        </div>
-                                        <ul tabIndex={0} className="dropdown-content menu bg-white rounded-box z-1 w-[183px] p-2 text-[#10172A] mt-1">
-                                            <li><a className='flex justify-end'> <Image src={view_black} alt='View' /> <span>View Details</span></a></li>
-                                            <li><a className='flex justify-end'><Image src={undo_black} alt='View' /> <span>Undo</span></a></li>
-                                        </ul>
-                                    </div>
-
-                                    {/* Title gradient at bottom */}
-                                    <div className="saved_compact_page_card_title_gradient">
-                                        <h3 className="card_title pl-3 pb-3">{movie.title}</h3>
-                                    </div>
-
-                                    {/* Hover overlay with Undo button */}
-                                    <div className="saved_compact_page_card_overlay">
-                                        <button className="view_compact_page_card_undo_btn bg-[#F316B0] hover:bg-[#CD1294]">
-                                            <Image src={undo_btn} alt='undo_btn' />
-                                            <span>View Details</span>
-                                        </button>
-                                        <button className={`saved_compact_page_card_undo_btn`}>
-                                            <Image src={undo} alt='undo_btn' />
-                                            <span>Undo</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                {/* Show More Button */}
-                <div className="item_center">
-                    <button className="series_show_more_btn">
-                        Show More
-                    </button>
-                </div>
-            </div>
-            {/* Books card grid */}
-            <div className='saved_page_container_sm'>
-                <h3 className="cards_section_title pt-6 pb-5 text-2xl font-semibold">Books</h3>
-                <div className='cards_grid_section min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr mb-6 pb-1.5'>
-                    {/* card 1 */}
-                    {dummyBooks.map((movie, index) => (
-                        <div className="min-w-[207px] flex-shrink min-[769px]:min-w-0" key={index}>
-                            <div className="saved_compact_page_card_container">
-                                {/* Image section */}
-                                <div className="relative overflow-hidden max-h-[303px] cursor-pointer h-full group">
-                                    <Image
-                                        src={movie.image}
-                                        alt="movie2"
-                                        width={207}
-                                        height={311}
-                                        className="card_poster_img h-full"
-                                    />
-
-                                    {/* mobile menu dots */}
-                                    <div className="dropdown dropdown-end absolute top-3 right-3 z-10 min-[769px]:hidden block">
-                                        <div tabIndex={0} role="button" className="mobile_menu_dots bg-[#0C8CE9]">
-                                            <Image src={menu_dots} alt='menu_dots' />
-                                        </div>
-                                        <ul tabIndex={0} className="dropdown-content menu bg-white rounded-box z-1 w-[183px] p-2 text-[#10172A] mt-1">
-                                            <li><a className='flex justify-end'> <Image src={view_black} alt='View' /> <span>View Details</span></a></li>
-                                            <li><a className='flex justify-end'><Image src={undo_black} alt='View' /> <span>Undo</span></a></li>
-                                        </ul>
-                                    </div>
-
-                                    {/* Title gradient at bottom */}
-                                    <div className="saved_compact_page_card_title_gradient">
-                                        <h3 className="card_title pl-3 pb-3">{movie.title}</h3>
-                                    </div>
-
-                                    {/* Hover overlay with Undo button */}
-                                    <div className="saved_compact_page_card_overlay">
-                                        <button className="view_compact_page_card_undo_btn bg-[#0C8CE9] hover:bg-[#0D7DCF]">
-                                            <Image src={undo_btn} alt='undo_btn' />
-                                            <span>View Details</span>
-                                        </button>
-                                        <button className={`saved_compact_page_card_undo_btn`}>
-                                            <Image src={undo} alt='undo_btn' />
-                                            <span>Undo</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                {/* Show More Button */}
-                <div className="item_center">
-                    <button className="book_show_more_btn">
-                        Show More
-                    </button>
-                </div>
+            {/* pagination */}
+            <div className="client_dashboard_pagination_div">
+                <ul className="client_dashboard_pagination_ul">
+                    <li className="client_dashboard_pagination_li_next_prev">
+                        <Image
+                            src={prev_double}
+                            alt="prev_dash_black"
+                            className="client_dashboard"
+                        />
+                    </li>
+                    <li className="client_dashboard_pagination_li_next_prev">
+                        <Image
+                            src={prev}
+                            alt="prev_dash_black"
+                            className="client_dashboard"
+                        />
+                    </li>
+                    <li className="client_dashboard_pagination_li">1</li>
+                    <li className="client_dashboard_pagination_li">2</li>
+                    <li className="client_dashboard_pagination_li">3</li>
+                    <li className="client_dashboard_pagination_li">4</li>
+                    <li className="client_dashboard_pagination_li">5</li>
+                    <li className="client_dashboard_pagination_li_next_prev">
+                        <Image
+                            src={next}
+                            alt="next_dash"
+                            className="client_dashboard"
+                        />
+                    </li>
+                    <li className="client_dashboard_pagination_li_next_prev">
+                        <Image
+                            src={next_double}
+                            alt="next_dash"
+                            className="client_dashboard"
+                        />
+                    </li>
+                </ul>
             </div>
         </div>
     );
