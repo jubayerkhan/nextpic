@@ -92,6 +92,19 @@ export default function Home() {
                     </p>
                 </div>
             </div>
+            {/* <div className='saved_page_container_sm'>
+                <div>
+                    <h5 className="text-white pb-3 text-[34px] font-semibold">
+                        Your “Passed” Content Library
+                    </h5>
+                    <h5 className="text-white pb-2">
+                        15 Passed
+                    </h5>
+                    <p className="result_text">
+                        Showing results for: Movies, Series, Games, Books
+                    </p>
+                </div>
+            </div> */}
             {/* movie card grid */}
             <div className='saved_page_container_sm'>
                 <h3 className="cards_section_title pt-6 pb-5 text-2xl font-semibold">Movies</h3>
