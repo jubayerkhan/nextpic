@@ -3,7 +3,6 @@
 @plugin "daisyui";
 
 @layer components {
-
   [disabled],
   .disabled,
   button[disabled],
@@ -45,16 +44,18 @@
   }
 
   .waved-btn::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg,
-        transparent,
-        rgba(255, 255, 255, 0.4),
-        transparent);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    );
     animation: wave 2s infinite;
   }
 
@@ -90,7 +91,7 @@
     @apply text-white text-center md:py-5 py-3;
   }
 
-  .filter_option_movies_div>.filter_option_movies_inner_div {
+  .filter_option_movies_div > .filter_option_movies_inner_div {
     @apply w-[180px];
   }
 
@@ -146,77 +147,109 @@
     @apply max-w-[1280px] mx-auto flex justify-center md:gap-5 gap-3;
   }
 
-  .filter_option_movies_div>div {
+  .filter_option_movies_div > div {
     @apply w-[302px];
   }
 
-  .filter_option_movies_div input[type='checkbox'] {
+  .filter_option_movies_div input[type="checkbox"] {
     display: none;
   }
 
-  .filter_option_movies_div input[type='checkbox']+label {
+  .filter_option_movies_div input[type="checkbox"] + label {
     text-align: center;
     border-radius: 10px;
-    color: #2C2C2C;
+    color: #2c2c2c;
     float: left;
     width: 100%;
     height: 100%;
   }
 
   /* Checkbox 1 (ID: movie) */
-  .movie:hover+label {
-    background: radial-gradient(circle at center, rgba(138, 56, 245, 0.2), rgba(0, 0, 0, 0.2));
-    border: 1px solid #652CA8;
-    transition: .2ms;
+  .movie:hover + label {
+    background: radial-gradient(
+      circle at center,
+      rgba(138, 56, 245, 0.2),
+      rgba(0, 0, 0, 0.2)
+    );
+    border: 1px solid #652ca8;
+    transition: 0.2ms;
   }
 
-  .movie:checked+label {
+  .movie:checked + label {
     background-color: rgba(71, 57, 86, 1) !important;
-    background: linear-gradient(to top, rgba(138, 56, 245, 0.2), rgba(0, 0, 0, 0.2));
-    border: 1px solid #652CA8;
-    transition: .2ms;
+    background: linear-gradient(
+      to top,
+      rgba(138, 56, 245, 0.2),
+      rgba(0, 0, 0, 0.2)
+    );
+    border: 1px solid #652ca8;
+    transition: 0.2ms;
   }
 
   /* Checkbox 2 (ID: series) */
-  .series:hover+label {
-    background: radial-gradient(circle at center, rgba(255, 99, 132, 0.2), rgba(0, 0, 0, 0.2));
-    border: 1px solid #96207A;
-    transition: .2ms;
+  .series:hover + label {
+    background: radial-gradient(
+      circle at center,
+      rgba(255, 99, 132, 0.2),
+      rgba(0, 0, 0, 0.2)
+    );
+    border: 1px solid #96207a;
+    transition: 0.2ms;
   }
 
-  .series:checked+label {
+  .series:checked + label {
     background-color: rgba(81, 52, 74, 1) !important;
-    border: 1px solid #96207A;
-    background: linear-gradient(to top, rgba(255, 99, 132, 0.2), rgba(0, 0, 0, 0.2));
-    transition: .2ms;
+    border: 1px solid #96207a;
+    background: linear-gradient(
+      to top,
+      rgba(255, 99, 132, 0.2),
+      rgba(0, 0, 0, 0.2)
+    );
+    transition: 0.2ms;
   }
 
   /* Checkbox 3 (ID: game) */
-  .game:hover+label {
-    border: 1px solid #B93F13;
-    background: radial-gradient(circle at center, rgba(246, 80, 9, .2), rgba(0, 0, 0, 0.2));
-    transition: .2ms;
+  .game:hover + label {
+    border: 1px solid #b93f13;
+    background: radial-gradient(
+      circle at center,
+      rgba(246, 80, 9, 0.2),
+      rgba(0, 0, 0, 0.2)
+    );
+    transition: 0.2ms;
   }
 
-  .game:checked+label {
-    background-color: #603A2A !important;
-    border: 1px solid #B93F13;
-    background: linear-gradient(to top, rgba(246, 80, 9, .2), rgba(0, 0, 0, 0.2));
-    transition: .2ms;
+  .game:checked + label {
+    background-color: #603a2a !important;
+    border: 1px solid #b93f13;
+    background: linear-gradient(
+      to top,
+      rgba(246, 80, 9, 0.2),
+      rgba(0, 0, 0, 0.2)
+    );
+    transition: 0.2ms;
   }
 
   /* Checkbox 4 (ID: book) */
-  .book:hover+label {
-    border: 1px solid #105CAD;
-    background: radial-gradient(circle at center, rgba(75, 192, 192, 0.2), rgba(0, 0, 0, 0.2));
-    transition: .2ms;
+  .book:hover + label {
+    border: 1px solid #105cad;
+    background: radial-gradient(
+      circle at center,
+      rgba(75, 192, 192, 0.2),
+      rgba(0, 0, 0, 0.2)
+    );
+    transition: 0.2ms;
   }
 
-  .book:checked+label {
+  .book:checked + label {
     background-color: #394360 !important;
-    border: 1px solid #105CAD;
-    background: linear-gradient(to top, rgba(75, 192, 192, 0.2), rgba(0, 0, 0, 0.2));
-    transition: .2ms;
+    border: 1px solid #105cad;
+    background: linear-gradient(
+      to top,
+      rgba(75, 192, 192, 0.2),
+      rgba(0, 0, 0, 0.2)
+    );
+    transition: 0.2ms;
   }
 
   /* filter btn */
@@ -240,48 +273,48 @@
     @apply md:pt-12 pt-4 md:pb-[72px] pb-4 flex justify-center md:gap-6 gap-3;
   }
 
-  .filter_btn_div_flex input[type='checkbox'] {
+  .filter_btn_div_flex input[type="checkbox"] {
     display: none;
   }
 
-  .filter_btn_div_flex input[type='checkbox']+label {
+  .filter_btn_div_flex input[type="checkbox"] + label {
     @apply py-3 md:px-6 px-3 rounded-[10px] flex gap-2.5 items-center text-white font-medium w-full md:w-auto md:mb-0 justify-center cursor-pointer border border-[#444444] transition-all duration-300 ease-in-out;
   }
 
   /* Checkbox 1 (ID: random) */
-  #random:hover+label {
+  #random:hover + label {
     @apply shadow-[0px_4px_10px_0px_#8A38F5];
   }
 
-  #random:checked+label {
+  #random:checked + label {
     @apply bg-gradient-to-t from-[#FEADFF] to-[#6C3DF0];
   }
 
   /* Checkbox 2 (ID: mypicks) */
-  #mypicks:hover+label {
+  #mypicks:hover + label {
     @apply shadow-[0px_4px_10px_0px_#8A38F5];
   }
 
-  #mypicks:checked+label {
+  #mypicks:checked + label {
     @apply bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0];
   }
 
   /* class format  */
 
-  .random:hover+label {
+  .random:hover + label {
     @apply shadow-[0px_4px_10px_0px_#8A38F5];
   }
 
-  .random:checked+label {
+  .random:checked + label {
     @apply bg-gradient-to-t from-[#FEADFF] to-[#6C3DF0];
   }
 
   /* Checkbox 2 (ID: mypicks) */
-  .mypick:hover+label {
+  .mypick:hover + label {
     @apply shadow-[0px_4px_10px_0px_#8A38F5];
   }
 
-  .mypick:checked+label {
+  .mypick:checked + label {
     @apply bg-gradient-to-r from-[#FF4F6D] to-[#6C3DF0];
   }
 
@@ -318,7 +351,6 @@
     top: -4px;
     /* The change you want to animate */
   }
-
 
   .card_poster_img {
     @apply w-full h-auto object-cover;
@@ -405,11 +437,11 @@
   /* secondary filter styles */
 
   /* for radio */
-  .filter2_option_movies_div input[type='radio'] {
+  .filter2_option_movies_div input[type="radio"] {
     display: none;
   }
 
-  .filter2_option_movies_div input[type='radio']+label {
+  .filter2_option_movies_div input[type="radio"] + label {
     text-align: center;
     float: left;
     width: 100%;
@@ -421,11 +453,11 @@
     @apply flex gap-2.5 min-[769px]:flex-wrap pt-2.5;
   }
 
-  .filter2_option_movies_div input[type='checkbox'] {
+  .filter2_option_movies_div input[type="checkbox"] {
     display: none;
   }
 
-  .filter2_option_movies_div input[type='checkbox']+label {
+  .filter2_option_movies_div input[type="checkbox"] + label {
     text-align: center;
     float: left;
     width: 100%;
@@ -433,57 +465,56 @@
   }
 
   /* Movies */
-  .filter2_option_movies_div input.movie-checkbox+label:hover {
-    border-color: #652CA8;
+  .filter2_option_movies_div input.movie-checkbox + label:hover {
+    border-color: #652ca8;
     background-color: #282031;
     transition: all 0.3s ease;
   }
 
-  .filter2_option_movies_div input.movie-checkbox:checked+label {
-    border-color: #652CA8;
+  .filter2_option_movies_div input.movie-checkbox:checked + label {
+    border-color: #652ca8;
     background-color: #473956;
     transition: all 0.3s ease;
   }
 
   /* Series */
-  .filter2_option_movies_div input.series-checkbox+label:hover {
-    border-color: #96207A;
-    background-color: #31202D;
+  .filter2_option_movies_div input.series-checkbox + label:hover {
+    border-color: #96207a;
+    background-color: #31202d;
     transition: all 0.3s ease;
   }
 
-  .filter2_option_movies_div input.series-checkbox:checked+label {
-    border-color: #96207A;
-    background-color: #51344A;
+  .filter2_option_movies_div input.series-checkbox:checked + label {
+    border-color: #96207a;
+    background-color: #51344a;
     transition: all 0.3s ease;
   }
 
   /* Games */
-  .filter2_option_movies_div input.game-checkbox+label:hover {
-    border-color: #B93F13;
-    background-color: #33241D;
+  .filter2_option_movies_div input.game-checkbox + label:hover {
+    border-color: #b93f13;
+    background-color: #33241d;
     transition: all 0.3s ease;
   }
 
-  .filter2_option_movies_div input.game-checkbox:checked+label {
-    border-color: #B93F13;
-    background-color: #603A2A;
+  .filter2_option_movies_div input.game-checkbox:checked + label {
+    border-color: #b93f13;
+    background-color: #603a2a;
     transition: all 0.3s ease;
   }
 
   /* Books */
-  .filter2_option_movies_div input.book-checkbox+label:hover {
-    border-color: #105CAD;
+  .filter2_option_movies_div input.book-checkbox + label:hover {
+    border-color: #105cad;
     background-color: #212636;
     transition: all 0.3s ease;
   }
 
-  .filter2_option_movies_div input.book-checkbox:checked+label {
-    border-color: #105CAD;
+  .filter2_option_movies_div input.book-checkbox:checked + label {
+    border-color: #105cad;
     background-color: #394360;
     transition: all 0.3s ease;
   }
-
 
   .filter2_option_book_div {
     @apply border-1 border-[#394056] hover:border-[#652CA8] hover:bg-[#473956] rounded-full py-[10px] px-5 cursor-pointer focus:bg-[#394360] transition;
@@ -498,11 +529,11 @@
     @apply md:flex grid grid-cols-3 md:gap-6 gap-3 min-[769px]:flex-wrap pt-6;
   }
 
-  .filter2_movies_platform_div input[type='checkbox'] {
+  .filter2_movies_platform_div input[type="checkbox"] {
     display: none;
   }
 
-  .filter2_movies_platform_div input[type='checkbox']+label {
+  .filter2_movies_platform_div input[type="checkbox"] + label {
     text-align: center;
     float: left;
     width: 100%;
@@ -510,53 +541,53 @@
   }
 
   /* Movies */
-  .filter2_movies_platform_div input.movie-platform-checkbox+label:hover {
-    border-color: #652CA8;
+  .filter2_movies_platform_div input.movie-platform-checkbox + label:hover {
+    border-color: #652ca8;
     background-color: #282031;
     transition: all 0.3s ease;
   }
 
-  .filter2_movies_platform_div input[type='checkbox']:checked+label {
-    border-color: #652CA8;
+  .filter2_movies_platform_div input[type="checkbox"]:checked + label {
+    border-color: #652ca8;
     background-color: #473956;
     transition: all 0.3s ease;
   }
 
   /* Series */
-  .filter2_movies_platform_div input.series-platform-checkbox+label:hover {
-    border-color: #96207A;
-    background-color: #31202D;
+  .filter2_movies_platform_div input.series-platform-checkbox + label:hover {
+    border-color: #96207a;
+    background-color: #31202d;
     transition: all 0.3s ease;
   }
 
-  .filter2_movies_platform_div input.series-platform-checkbox:checked+label {
-    border-color: #96207A;
-    background-color: #51344A;
+  .filter2_movies_platform_div input.series-platform-checkbox:checked + label {
+    border-color: #96207a;
+    background-color: #51344a;
     transition: all 0.3s ease;
   }
 
   /* Games */
-  .filter2_movies_platform_div input.game-platform-checkbox+label:hover {
-    border-color: #B93F13;
-    background-color: #33241D;
+  .filter2_movies_platform_div input.game-platform-checkbox + label:hover {
+    border-color: #b93f13;
+    background-color: #33241d;
     transition: all 0.3s ease;
   }
 
-  .filter2_movies_platform_div input.game-platform-checkbox:checked+label {
-    border-color: #B93F13;
-    background-color: #603A2A;
+  .filter2_movies_platform_div input.game-platform-checkbox:checked + label {
+    border-color: #b93f13;
+    background-color: #603a2a;
     transition: all 0.3s ease;
   }
 
   /* book */
-  .filter2_movies_platform_div input.book-platform-checkbox+label:hover {
-    border-color: #105CAD;
+  .filter2_movies_platform_div input.book-platform-checkbox + label:hover {
+    border-color: #105cad;
     background-color: #212636;
     transition: all 0.3s ease;
   }
 
-  .filter2_movies_platform_div input.book-platform-checkbox:checked+label {
-    border-color: #105CAD;
+  .filter2_movies_platform_div input.book-platform-checkbox:checked + label {
+    border-color: #105cad;
     background-color: #394360;
     transition: all 0.3s ease;
   }
@@ -570,11 +601,11 @@
     @apply md:flex grid grid-cols-3 md:gap-6 gap-3 flex-wrap pt-6;
   }
 
-  .popup_movies_platform_div input[type='checkbox'] {
+  .popup_movies_platform_div input[type="checkbox"] {
     display: none;
   }
 
-  .popup_movies_platform_div input[type='checkbox']+label {
+  .popup_movies_platform_div input[type="checkbox"] + label {
     text-align: center;
     float: left;
     width: 100%;
@@ -582,14 +613,14 @@
   }
 
   /* Movies */
-  .popup_movies_platform_div input.movie-platform-checkbox+label:hover {
-    border-color: #652CA8;
+  .popup_movies_platform_div input.movie-platform-checkbox + label:hover {
+    border-color: #652ca8;
     background-color: #282031;
     transition: all 0.3s ease;
   }
 
-  .popup_movies_platform_div input.movie-platform-checkbox:checked+label {
-    border-color: #652CA8;
+  .popup_movies_platform_div input.movie-platform-checkbox:checked + label {
+    border-color: #652ca8;
     background-color: #473956;
     transition: all 0.3s ease;
   }
@@ -892,7 +923,6 @@
   }
 
   .modal {
-
     &.modal-open,
     &[open],
     &:target {
@@ -1109,11 +1139,11 @@
     --menu-active-fg: black !important;
     --menu-active-bg: none !important;
     font-size: 0.875rem;
-}
+  }
 }
 
 @media screen and (max-width: 767px) {
-  .cards_grid_section>.h-full {
+  .cards_grid_section > .h-full {
     height: auto;
   }
 }
