@@ -35,7 +35,7 @@ export default function Home() {
             </div>
             {/* profile heading section */}
             <div className='profile_heading_div'>
-                <div className='profile_heading_container'>
+                <div className='profile_heading_container_2'>
                     <div className='min-[769px]:flex justify-between lg:items-center gap-5 lg:flex-row flex-col'>
                         <div className='profile_heading_left_container'>
                             <div className='profile_heading_left_container_div1'>

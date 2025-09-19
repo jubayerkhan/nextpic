@@ -759,6 +759,9 @@
   .profile_heading_container {
     @apply max-w-[1516px] mx-auto;
   }
+  .profile_heading_container_2 {
+    @apply md:mx-12 mx-0;
+  }
 
   .profile_heading_left_container {
     @apply flex gap-[32px] items-start flex-wrap;
