@@ -1091,6 +1091,10 @@
   .saved_compact_page_card_overlay {
     @apply absolute inset-0 bg-black/80 flex flex-col gap-2.5 items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 rounded-[2px];
   }
+  
+  .saved_compact_page_card_overlay_loader {
+    @apply absolute inset-0 bg-black/80 flex flex-col gap-2.5 items-center justify-center opacity-100 transition-opacity duration-300 p-5 rounded-[2px];
+  }
 
   .view_compact_page_card_undo_btn {
     @apply px-[15px] py-1.5 bg-[#8A38F5] text-white rounded-full shadow-lg hover:bg-[#702bc9] transition flex items-center gap-2 cursor-pointer text-sm w-full justify-center;
