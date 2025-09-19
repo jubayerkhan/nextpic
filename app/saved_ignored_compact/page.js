@@ -127,9 +127,10 @@ export default function Home() {
                                         <div tabIndex={0} role="button" className="mobile_menu_dots bg-[#8A38F5]">
                                             <Image src={menu_dots} alt='menu_dots' />
                                         </div>
-                                        <ul tabIndex={0} className="dropdown-content menu bg-white rounded-box z-1 w-[183px] p-2 text-[#10172A] mt-1">
-                                            <li><a className='flex justify-end'> <Image src={view_black} alt='View' /> <span>View Details</span></a></li>
-                                            <li><a className='flex justify-end'><Image src={undo_black} alt='View' /> <span>Undo</span></a></li>
+                                        <ul tabIndex={0} className="dropdown-content menu bg-white rounded-box z-1 w-[183px] p-2 text-[#10172A] mt-1 focus:bg-none">
+                                            <li><a className=''> <Image src={view_black} alt='View' /> <span>View Details</span></a></li>
+                                            <hr className='border-t-1 border-black/10' />
+                                            <li><a className=''><Image src={undo_black} alt='View' /> <span>Undo</span></a></li>
                                         </ul>
                                     </div>
 
@@ -181,12 +182,13 @@ export default function Home() {
 
                                     {/* mobile menu dots */}
                                     <div className="dropdown dropdown-end absolute top-3 right-3 z-10 min-[769px]:hidden block">
-                                        <div tabIndex={0} role="button" className="mobile_menu_dots bg-[#F316B0]">
+                                        <div tabIndex={0} role="button" className="mobile_menu_dots bg-[#8A38F5]">
                                             <Image src={menu_dots} alt='menu_dots' />
                                         </div>
-                                        <ul tabIndex={0} className="dropdown-content menu bg-white rounded-box z-1 w-[183px] p-2 text-[#10172A] mt-1">
-                                            <li><a className='flex justify-end'> <Image src={view_black} alt='View' /> <span>View Details</span></a></li>
-                                            <li><a className='flex justify-end'><Image src={undo_black} alt='View' /> <span>Undo</span></a></li>
+                                        <ul tabIndex={0} className="dropdown-content menu bg-white rounded-box z-1 w-[183px] p-2 text-[#10172A] mt-1 focus:bg-none">
+                                            <li><a className=''> <Image src={view_black} alt='View' /> <span>View Details</span></a></li>
+                                            <hr className='border-t-1 border-black/10' />
+                                            <li><a className=''><Image src={undo_black} alt='View' /> <span>Undo</span></a></li>
                                         </ul>
                                     </div>
 
@@ -238,12 +240,13 @@ export default function Home() {
 
                                     {/* mobile menu dots */}
                                     <div className="dropdown dropdown-end absolute top-3 right-3 z-10 min-[769px]:hidden block">
-                                        <div tabIndex={0} role="button" className="mobile_menu_dots bg-[#0C8CE9]">
+                                        <div tabIndex={0} role="button" className="mobile_menu_dots bg-[#8A38F5]">
                                             <Image src={menu_dots} alt='menu_dots' />
                                         </div>
-                                        <ul tabIndex={0} className="dropdown-content menu bg-white rounded-box z-1 w-[183px] p-2 text-[#10172A] mt-1">
-                                            <li><a className='flex justify-end'> <Image src={view_black} alt='View' /> <span>View Details</span></a></li>
-                                            <li><a className='flex justify-end'><Image src={undo_black} alt='View' /> <span>Undo</span></a></li>
+                                        <ul tabIndex={0} className="dropdown-content menu bg-white rounded-box z-1 w-[183px] p-2 text-[#10172A] mt-1 focus:bg-none">
+                                            <li><a className=''> <Image src={view_black} alt='View' /> <span>View Details</span></a></li>
+                                            <hr className='border-t-1 border-black/10' />
+                                            <li><a className=''><Image src={undo_black} alt='View' /> <span>Undo</span></a></li>
                                         </ul>
                                     </div>
 
