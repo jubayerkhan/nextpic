@@ -1128,6 +1128,9 @@
   .client_dashboard_pagination_li {
     @apply text-white md:px-[18px] px-3 md:py-[10px] py-1.5 rounded-[10px] hover:text-white hover:bg-[#8A38F5] bg-[#393D52] cursor-pointer flex items-center justify-center;
   }
+  .client_dashboard_pagination_li_active {
+    @apply md:px-[18px] px-3 md:py-[10px] py-1.5 rounded-[10px] text-white bg-[#8A38F5] cursor-pointer flex items-center justify-center;
+  }
 
   .client_dashboard_pagination_li_next_prev {
     @apply text-white md:p-[10px] p-1.5 rounded-[10px] hover:text-white hover:bg-[#8A38F5] bg-[#393D52] cursor-pointer flex items-center justify-center;

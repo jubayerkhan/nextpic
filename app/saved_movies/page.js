@@ -162,7 +162,7 @@ export default function Home() {
                             className="client_dashboard"
                         />
                     </li>
-                    <li className="client_dashboard_pagination_li">1</li>
+                    <li className="client_dashboard_pagination_li_active">1</li>
                     <li className="client_dashboard_pagination_li">2</li>
                     <li className="client_dashboard_pagination_li">3</li>
                     <li className="client_dashboard_pagination_li">4</li>
