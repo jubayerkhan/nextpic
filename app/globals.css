@@ -676,11 +676,11 @@
     @apply text-transparent bg-clip-text bg-gradient-to-b from-[#D3C3FF] to-[#6C3DF0];
   }
 
-  .subscribe_page_monthly {
+  .subscribe_page_monthly_active {
     @apply text-transparent bg-clip-text bg-gradient-to-b from-[#D3C3FF] to-[#6C3DF0] text-2xl font-semibold;
   }
 
-  .subscribe_page_yearly {
+  .subscribe_page_monthly {
     @apply text-2xl text-[#7E8598] font-semibold;
   }
 
@@ -694,6 +694,49 @@
 
   .pricing_section_top_div {
     @apply flex gap-6 justify-center items-center;
+  }
+  .pricing_section_top_div .toggle:before {
+    height: 25px !important;
+    width: 25px !important;
+    border-radius: 100% !important;
+    inset-inline-start: -5px !important;
+  }
+  /* When checked (active) knob */
+  .pricing_section_top_div .toggle:checked:before {
+    inset-inline-start: auto !important; /* reset left */
+    inset-inline-end: -7px !important; /* push to right */
+  }
+
+  .pricing_section_top_div .toggle {
+    /* inset-inline-start: 5px !important; */
+    --toggle-p: calc(var(--size) * 0.38) !important;
+    --size: calc(var(--size-selector, 0.25rem) * 6);
+    width: calc(
+      (var(--size) * 2) -
+        (var(--border) + var(--toggle-p) calc(calc(0.25rem * 6) * 0.38)) * 2
+    );
+    height: var(--size);
+    border: var(--border) solid currentColor;
+    color: var(--input-color);
+    position: relative;
+    display: inline-grid;
+    flex-shrink: 0;
+    cursor: pointer;
+    appearance: none;
+    place-content: center;
+    vertical-align: middle;
+    webkit-user-select: none;
+    user-select: none;
+    grid-template-columns: 0fr 1fr 1fr;
+    --radius-selector-max: calc(
+      var(--radius-selector) + var(--radius-selector) + var(--radius-selector)
+    );
+    border-radius: calc(
+      var(--radius-selector) + min(var(--toggle-p), var(--radius-selector-max)) +
+        min(var(--border), var(--radius-selector-max))
+    );
+    padding: var(--toggle-p);
+    box-shadow: 0 1px currentColor inset;
   }
 
   .ul_li_span {
@@ -1099,7 +1142,7 @@
   .saved_compact_page_card_overlay {
     @apply absolute inset-0 bg-black/80 flex flex-col gap-2.5 items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-5 rounded-[2px];
   }
-  
+
   .saved_compact_page_card_overlay_loader {
     @apply absolute inset-0 bg-black/80 flex flex-col gap-2.5 items-center justify-center opacity-100 transition-opacity duration-300 p-5 rounded-[2px];
   }
