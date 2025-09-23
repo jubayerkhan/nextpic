@@ -964,6 +964,14 @@
     @apply bg-[#393d52] p-6 rounded-[20px];
   }
 
+  /* profile unsubscribe section style */
+  .not_subscribe_div {
+    @apply max-w-[690px] mx-auto bg-[#D2C2FF1A] rounded-[20px] py-12 xl:px-[156px] text-center;
+  }
+  .profile_page_unsubscribe_heading {
+    @apply text-white text-2xl font-semibold pb-2.5 text-center;
+  }
+
   /* ================================= */
   /* saved and igonore page styles */
   /* ================================= */
