@@ -695,17 +695,6 @@
   .pricing_section_top_div {
     @apply flex gap-6 justify-center items-center;
   }
-  .pricing_section_top_div .toggle:before {
-    height: 25px !important;
-    width: 25px !important;
-    border-radius: 100% !important;
-    inset-inline-start: -5px !important;
-  }
-  /* When checked (active) knob */
-  .pricing_section_top_div .toggle:checked:before {
-    inset-inline-start: auto !important; /* reset left */
-    inset-inline-end: -7px !important; /* push to right */
-  }
 
   .pricing_section_top_div .toggle {
     /* inset-inline-start: 5px !important; */
@@ -1207,4 +1196,16 @@
   .cards_grid_section > .h-full {
     height: auto;
   }
+}
+
+.pricing_section_top_div .toggle:before {
+  height: 25px !important;
+  width: 25px !important;
+  border-radius: 100% !important;
+  inset-inline-start: -5px !important;
+}
+/* When checked (active) knob */
+.pricing_section_top_div .toggle:checked:before {
+  inset-inline-start: auto !important; /* reset left */
+  inset-inline-end: -7px !important; /* push to right */
 }
