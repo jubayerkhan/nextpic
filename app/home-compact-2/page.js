@@ -3,7 +3,6 @@ import FilterCompact_2 from "../components/FilterCompact_2";
 import { MovieGrid } from "../components/MovieGrid_2";
 import { SeriesGrid } from "../components/SeriesGrid_2";
 import { BookGrid } from "../components/BookGrid_2";
-import FilterPopup from "../components/FilterPopup";
 
 export default function HomeS() {
   return (

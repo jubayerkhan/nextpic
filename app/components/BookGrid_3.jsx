@@ -1,8 +1,5 @@
 import MovieCard from "./CardCompact";
 import Image from "next/image";
-import shuffle from "@/public/assets/shuffle.png";
-import magic from "@/public/assets/magic.png";
-import not_found_book from "@/public/assets/not_found_book.svg";
 
 const dummyBooks = [
     {

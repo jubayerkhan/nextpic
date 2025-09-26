@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import header_img from "@/public/assets/header_img.svg";
-import movie_icon from "@/public/assets/movie_icon.png";
-import series from "@/public/assets/series.png";
 import filter from "@/public/assets/filter.png";
 
 export default function Filter() {

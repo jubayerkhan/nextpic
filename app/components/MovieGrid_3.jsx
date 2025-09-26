@@ -1,8 +1,5 @@
 import Image from "next/image";
 import MovieCard from "./CardCompact";
-import shuffle from "@/public/assets/shuffle.png";
-import magic from "@/public/assets/magic.png";
-import not_found_movie from "@/public/assets/not_found_movie.svg";
 
 const dummyMovies = [
     {
