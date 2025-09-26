@@ -18,6 +18,7 @@ import SeriesBMd from "@/public/assets/SeriesBMd.png";
 import BooksBMd from "@/public/assets/BooksBMd.png";
 import bookmark_white_2 from "@/public/assets/bookmark_white_2.png";
 import sign_in from "@/public/assets/sign_in.png";
+import star from "@/public/assets/star.png";
 import { useRef } from "react";
 
 // Helper function to get the correct bookmark icon path
@@ -59,25 +60,36 @@ export default function Card({ item, type }) {
   };
 
   const handleClick = (e) => {
-    e.preventDefault();     // stop default behavior
-    e.stopPropagation();    // stop bubbling to parent (card onClick)
+    e.preventDefault(); // stop default behavior
+    e.stopPropagation(); // stop bubbling to parent (card onClick)
     bookmarkModalRef.current?.showModal(); // open bookmark modal
   };
 
-
   const avengers = [
-    { name: "Robert Downey Jr.", role: "Tony Stark", img: "/assets/robert.png" },
+    {
+      name: "Robert Downey Jr.",
+      role: "Tony Stark",
+      img: "/assets/robert.png",
+    },
     { name: "Chris Evans", role: "Steve Rogers", img: "/assets/evans.png" },
     { name: "Mark Ruffalo", role: "Bruce Banner", img: "/assets/mark.png" },
     { name: "Chris Hemsworth", role: "Thor", img: "/assets/chris.png" },
-    { name: "Scarlett Johansson", role: "Natasha Romanoff", img: "/assets/scarlett.png" },
+    {
+      name: "Scarlett Johansson",
+      role: "Natasha Romanoff",
+      img: "/assets/scarlett.png",
+    },
     { name: "Don Cheadle", role: "James Rhodes", img: "/assets/don.png" },
     { name: "Paul Rudd", role: "Scott Lang", img: "/assets/paul.png" },
-    { name: "Benedict Cumberbatch", role: "Doctor Strange", img: "/assets/benedict.png" },
+    {
+      name: "Benedict Cumberbatch",
+      role: "Doctor Strange",
+      img: "/assets/benedict.png",
+    },
     { name: "Chadwick Boseman", role: "T’Challa", img: "/assets/chadwick.png" },
     { name: "Brie Larson", role: "Carlo Dancers", img: "/assets/brie.png" },
     { name: "Tom Holland", role: "Peter Parker", img: "/assets/tom.png" },
-    { name: "Karen Gillan", role: "Nebula", img: "/assets/karen.png" }
+    { name: "Karen Gillan", role: "Nebula", img: "/assets/karen.png" },
   ];
 
   const moviePlatforms = [
@@ -90,7 +102,11 @@ export default function Card({ item, type }) {
 
   return (
     <div className="h-full">
-      <div className={`card_div transition-all duration-300 ease h-full flex flex-col ${shadowColor[type] || ""}`}>
+      <div
+        className={`card_div transition-all duration-300 ease h-full flex flex-col ${
+          shadowColor[type] || ""
+        }`}
+      >
         {/* Image section */}
         <div
           className="relative overflow-hidden max-h-[303px] cursor-pointer"
@@ -104,6 +120,11 @@ export default function Card({ item, type }) {
             className="card_poster_img"
           />
 
+          {/* rating */}
+          <div className="card_tag_div_3">
+            <Image src={star} alt="star" />
+            <span>{item.rating}/10</span>
+          </div>
           {/* Bookmark icon */}
           <label
             className="card_bookmark_img hover:opacity-100 md:opacity-80"
@@ -116,33 +137,44 @@ export default function Card({ item, type }) {
           <dialog
             ref={bookmarkModalRef}
             className="modal"
-            onClick={e => e.stopPropagation()} // Prevents bubbling to parent
+            onClick={(e) => e.stopPropagation()} // Prevents bubbling to parent
           >
             <div className="modal-box relative bg-white/20 backdrop-blur-[10px] rounded-[40px] py-12 px-6 text-center border-2 border-[#7B808F]">
-              <div className={`filter_option_img_div ${type === "movie"
-                ? "bg-[#8A38F5]"   // purple for movie
-                : type === "series"
-                  ? "bg-[#F316B0]"   // pink for series
-                  : type === "book"
-                    ? "bg-[#0C8CE9]"   // blue for book
-                    : "bg-gray-500"    // fallback
-                }`}>
-                <Image src={bookmark_white_2} alt='bookmark_white_2' />
+              <div
+                className={`filter_option_img_div ${
+                  type === "movie"
+                    ? "bg-[#8A38F5]" // purple for movie
+                    : type === "series"
+                    ? "bg-[#F316B0]" // pink for series
+                    : type === "book"
+                    ? "bg-[#0C8CE9]" // blue for book
+                    : "bg-gray-500" // fallback
+                }`}
+              >
+                <Image src={bookmark_white_2} alt="bookmark_white_2" />
               </div>
-              <h3 className="bookmark_modal_box_title">Please log in to save bookmarks</h3>
+              <h3 className="bookmark_modal_box_title">
+                Please log in to save bookmarks
+              </h3>
               <p>Log in to save and access your favorite content anytime</p>
               <div className="bookmark_modal_box_btn_div">
-                <button className="bookmark_modal_box_cancel_btn" onClick={() => bookmarkModalRef.current?.close()}>
+                <button
+                  className="bookmark_modal_box_cancel_btn"
+                  onClick={() => bookmarkModalRef.current?.close()}
+                >
                   Cancel
                 </button>
-                <button className={`bookmark_modal_box_log_btn ${type === "movie"
-                  ? "bg-[#8A38F5]"   // purple for movie
-                  : type === "series"
-                    ? "bg-[#F316B0]"   // pink for series
-                    : type === "book"
-                      ? "bg-[#0C8CE9]"   // blue for book
-                      : "bg-gray-500"    // fallback
-                  }`}>
+                <button
+                  className={`bookmark_modal_box_log_btn ${
+                    type === "movie"
+                      ? "bg-[#8A38F5]" // purple for movie
+                      : type === "series"
+                      ? "bg-[#F316B0]" // pink for series
+                      : type === "book"
+                      ? "bg-[#0C8CE9]" // blue for book
+                      : "bg-gray-500" // fallback
+                  }`}
+                >
                   <Image src={sign_in} alt="sign_in" />
                   <span>Log in</span>
                 </button>
@@ -153,7 +185,6 @@ export default function Card({ item, type }) {
             </form>
           </dialog>
         </div>
-
 
         {/* Content section */}
         <div className="card_content_div flex flex-col flex-grow">
@@ -201,7 +232,7 @@ export default function Card({ item, type }) {
       <dialog
         ref={modalRef}
         className="modal modal-middle w-full px-5"
-        style={{ maxHeight: "100vh" }}  // limit dialog height to 90% viewport height
+        style={{ maxHeight: "100vh" }} // limit dialog height to 90% viewport height
         onClick={(e) => {
           if (e.target === modalRef.current) {
             closeModal(); // ✅ closes only when clicking backdrop
@@ -233,7 +264,12 @@ export default function Card({ item, type }) {
               }}
               className="absolute md:right-6 right-[-8px] md:top-[-2px] top-[-10px] text-white cursor-pointer md:border-1 border-white hover:border-transparent rounded-full md:px-5 px-3 py-2 z-20 flex gap-2 hover:bg-[#FF4F6D] items-center font-medium"
             >
-              <span className="hidden md:block pb-0.5">Close</span> <Image className="md:w-[14px] md:h-[14px] w-4 h-4" src={cross_small} alt="cross_small" />
+              <span className="hidden md:block pb-0.5">Close</span>{" "}
+              <Image
+                className="md:w-[14px] md:h-[14px] w-4 h-4"
+                src={cross_small}
+                alt="cross_small"
+              />
             </button>
 
             <div className="flex flex-col md:flex-row gap-6">
@@ -253,7 +289,9 @@ export default function Card({ item, type }) {
                     <div
                       className="absolute inset-0 rounded-full"
                       style={{
-                        background: `conic-gradient(#FFB900 ${75 * 3.6}deg, #423D0F 0deg)`,
+                        background: `conic-gradient(#FFB900 ${
+                          75 * 3.6
+                        }deg, #423D0F 0deg)`,
                       }}
                     ></div>
 
@@ -266,11 +304,12 @@ export default function Card({ item, type }) {
                         // opacity: "30%",
                       }}
                     >
-                      <span className="md:text-xl font-bold text-white">75%</span>
+                      <span className="md:text-xl font-bold text-white">
+                        75%
+                      </span>
                     </div>
                   </div>
                 </div>
-
 
                 <div>
                   <h1 className="cards_popup_titles_top_div">{item.title}</h1>
@@ -283,20 +322,44 @@ export default function Card({ item, type }) {
                   </div>
                   {/* Rating */}
                   <div className="flex items-center gap-2.5 text-yellow-400 py-6 text-2xl font-bold">
-                    <FaStar /> <span className="text-white">{item.rating}/10</span>
+                    <FaStar />{" "}
+                    <span className="text-white">{item.rating}/10</span>
                   </div>
                   {/* Year and Tags */}
                   <div className="text-sm text-[#7B808F] mt-1 flex flex-wrap gap-2.5 items-center">
                     {item.genres.map((genre, idx) => (
-                      <span key={idx} className="text-white px-2.5 py-0.5 rounded-full text-[14px] border-1 border-[#7B808F]">
+                      <span
+                        key={idx}
+                        className="text-white px-2.5 py-0.5 rounded-full text-[14px] border-1 border-[#7B808F]"
+                      >
                         {genre}
                       </span>
                     ))}
                   </div>
-                  <h4 className="font-semibold pt-6 pb-2.5 text-base">Overview</h4>
-                  <p className="text-base">The epic conclusion to over a decade of storytelling in the Marvel Cinematic Universe, Avengers: Endgame picks up in the aftermath of the devastating events of Infinity War (2018). With half of all life across the universe erased by Thanos snap, the remaining Avengers must regroup, mourn, and find a way to undo the destruction.</p>
-                  <p className="text-base pt-6 pb-2.5"><span className="font-semibold">Directors: </span><span className="text-[#8A38F5]">Anthony Russo</span>, <span className="text-[#8A38F5]">Joe Russo</span></p>
-                  <p className="text-base"><span className="font-semibold">Writers: </span><span className="text-[#8A38F5]">Christopher Markus</span>, <span className="text-[#8A38F5]">Stephen McFeely</span>, <span className="text-[#8A38F5]">Stan Lee</span></p>
+                  <h4 className="font-semibold pt-6 pb-2.5 text-base">
+                    Overview
+                  </h4>
+                  <p className="text-base">
+                    The epic conclusion to over a decade of storytelling in the
+                    Marvel Cinematic Universe, Avengers: Endgame picks up in the
+                    aftermath of the devastating events of Infinity War (2018).
+                    With half of all life across the universe erased by Thanos
+                    snap, the remaining Avengers must regroup, mourn, and find a
+                    way to undo the destruction.
+                  </p>
+                  <p className="text-base pt-6 pb-2.5">
+                    <span className="font-semibold">Directors: </span>
+                    <span className="text-[#8A38F5]">Anthony Russo</span>,{" "}
+                    <span className="text-[#8A38F5]">Joe Russo</span>
+                  </p>
+                  <p className="text-base">
+                    <span className="font-semibold">Writers: </span>
+                    <span className="text-[#8A38F5]">
+                      Christopher Markus
+                    </span>,{" "}
+                    <span className="text-[#8A38F5]">Stephen McFeely</span>,{" "}
+                    <span className="text-[#8A38F5]">Stan Lee</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -304,7 +367,11 @@ export default function Card({ item, type }) {
 
           {/* bottom popup section */}
           <div className="md:px-6 px-[0px] md:pb-10 pb-0">
-            {type === "book" ? (<h2 className="cards_popup_titles">Top Billed Cast</h2>) : (<h2 className="cards_popup_titles">Top Billed Cast</h2>)}
+            {type === "book" ? (
+              <h2 className="cards_popup_titles">Top Billed Cast</h2>
+            ) : (
+              <h2 className="cards_popup_titles">Top Billed Cast</h2>
+            )}
             <div className="flex flex-col md:flex-row md:gap-6 gap-4 pt-6">
               {type === "book" ? (
                 /* Book details section */
@@ -315,19 +382,27 @@ export default function Card({ item, type }) {
                         <tbody>
                           <tr>
                             <td className="book_popup_table">ISBN:</td>
-                            <td className="book_popup_table_info">9780063453982, 0063453983</td>
+                            <td className="book_popup_table_info">
+                              9780063453982, 0063453983
+                            </td>
                           </tr>
                           <tr>
                             <td className="book_popup_table">Published:</td>
-                            <td className="book_popup_table_info">2015-02-10</td>
+                            <td className="book_popup_table_info">
+                              2015-02-10
+                            </td>
                           </tr>
                           <tr>
                             <td className="book_popup_table">Publisher:</td>
-                            <td className="book_popup_table_info">Harper Collins</td>
+                            <td className="book_popup_table_info">
+                              Harper Collins
+                            </td>
                           </tr>
                           <tr>
                             <td className="book_popup_table">Author:</td>
-                            <td className="book_popup_table_info">Yuval Noah Harari</td>
+                            <td className="book_popup_table_info">
+                              Yuval Noah Harari
+                            </td>
                           </tr>
                           <tr>
                             <td className="book_popup_table">Page count:</td>
@@ -335,25 +410,32 @@ export default function Card({ item, type }) {
                           </tr>
                           <tr>
                             <td className="book_popup_table">Format:</td>
-                            <td className="book_popup_table_info">April 26, 2019</td>
+                            <td className="book_popup_table_info">
+                              April 26, 2019
+                            </td>
                           </tr>
                           <tr>
                             <td className="book_popup_table">Language:</td>
                             <td className="book_popup_table_info">English</td>
                           </tr>
                           <tr>
-                            <td className="book_popup_table">Country of Origin:</td>
+                            <td className="book_popup_table">
+                              Country of Origin:
+                            </td>
                             <td className="book_popup_table_info">USA</td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
                     <h3 className="cards_popup_titles pt-12 pb-6">Author</h3>
-                    <div
-                      className="rounded-[20px] h-full overflow-hidden transition-transform duration-300 min-w-[180px] md:min-w-auto max-w-[204px]"
-                    >
+                    <div className="rounded-[20px] h-full overflow-hidden transition-transform duration-300 min-w-[180px] md:min-w-auto max-w-[204px]">
                       <div className="relative w-full h-48">
-                        <Image src={author} alt='profile author' fill className="object-cover" />
+                        <Image
+                          src={author}
+                          alt="profile author"
+                          fill
+                          className="object-cover"
+                        />
                       </div>
                       <div className="p-4 text-center text-white bg-black/30 h-full">
                         <h4 className="font-bold text-sm">Yuval Noah Harari</h4>
@@ -370,7 +452,12 @@ export default function Card({ item, type }) {
                       className="rounded-[20px] h-full overflow-hidden transition-transform duration-300 min-w-[180px] md:min-w-auto"
                     >
                       <div className="relative w-full h-48">
-                        <Image src={hero.img} alt={hero.name} fill className="object-cover" />
+                        <Image
+                          src={hero.img}
+                          alt={hero.name}
+                          fill
+                          className="object-cover"
+                        />
                       </div>
                       <div className="p-4 text-center text-white bg-black/30 h-full">
                         <h4 className="font-bold">{hero.name}</h4>
@@ -394,7 +481,9 @@ export default function Card({ item, type }) {
                   {moviePlatforms.map((platform, index) => {
                     const id = `platform_new_${index + Math.random()}`;
                     return (
-                      <div key={id} className="min-w-[120px] md:min-w-0"> {/* ensures horizontal scroll on mobile */}
+                      <div key={id} className="min-w-[120px] md:min-w-0">
+                        {" "}
+                        {/* ensures horizontal scroll on mobile */}
                         <input
                           id={id}
                           type="checkbox"
@@ -402,7 +491,10 @@ export default function Card({ item, type }) {
                           value={platform.name}
                           className="movie-platform-checkbox"
                         />
-                        <label htmlFor={id} className="popup_platform_option_div">
+                        <label
+                          htmlFor={id}
+                          className="popup_platform_option_div"
+                        >
                           <div className="bg-white rounded-full p-3 h-[54px] w-[54px] mx-auto">
                             <img
                               src={platform.img}
@@ -426,11 +518,15 @@ export default function Card({ item, type }) {
                     <p className="font-light">Released</p>
                   </div>
                   <div className="pb-6">
-                    <h5 className="font-semibold pb-[5px]">Original Theatrical Release</h5>
+                    <h5 className="font-semibold pb-[5px]">
+                      Original Theatrical Release
+                    </h5>
                     <p className="font-light">April 26, 2019</p>
                   </div>
                   <div className="pb-6">
-                    <h5 className="font-semibold pb-[5px]">Original Language</h5>
+                    <h5 className="font-semibold pb-[5px]">
+                      Original Language
+                    </h5>
                     <p className="font-light">English</p>
                   </div>
                   <div className="pb-6">
@@ -447,7 +543,11 @@ export default function Card({ item, type }) {
                   <div className="flex gap-[15px] items-center">
                     <Image className="cursor-pointer" src={Insta} alt="Insta" />
                     <Image className="cursor-pointer" src={x} alt="x" />
-                    <Image className="cursor-pointer" src={facebook} alt="facebook" />
+                    <Image
+                      className="cursor-pointer"
+                      src={facebook}
+                      alt="facebook"
+                    />
                     <Image className="cursor-pointer" src={links} alt="links" />
                   </div>
                 </div>

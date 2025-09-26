@@ -647,6 +647,9 @@
     @apply text-white text-sm absolute bottom-3 left-4 flex items-center gap-[5px] bg-black/50 rounded-full 
     px-1.5 py-[2px];
   }
+  .filter_compact_btn {
+    @apply border-1 border-[#394056] p-2 rounded-full cursor-pointer hover:bg-[#6C3DF0];
+  }
 
   /* ============================ */
   /* subscrive page styles */

@@ -1,4 +1,4 @@
-import MovieCard from "./Card";
+import MovieCard from "./CardCompact";
 import Image from "next/image";
 import shuffle from "@/public/assets/shuffle.png";
 import magic from "@/public/assets/magic.png";
@@ -86,79 +86,6 @@ export function BookGrid() {
             <h3 className="cards_section_title_compact_2 pt-0">Books</h3>
             {/* compact filter */}
             <div>
-                {/* btn div */}
-                <div className="filter_btn_div_flex_compact_2">
-                    {/* Random Pick */}
-                    <div className=''>
-                        <input
-                            type="radio"
-                            id="random"
-                            name="filter"
-                            value="random"
-                            className="hidden peer"
-                            defaultChecked
-                        />
-                        <label
-                            htmlFor="random"
-                            className="py-3 md:px-6 px-3 rounded-[10px] flex gap-2.5 items-center text-white font-medium w-full md:w-auto md:mb-0 justify-center cursor-pointer border-1 border-[#444444] hover:bg-transparent"
-                        >
-                            <Image src={shuffle} alt="shuffle" className="h-4 w-4" />
-                            <span>Random Pick</span>
-                        </label>
-                    </div>
-
-                    {/* Get My Picks */}
-                    <div>
-                        <input
-                            type="radio"
-                            id="mypicks"
-                            name="filter"
-                            value="mypicks"
-                            className="hidden peer"
-                        />
-                        <label
-                            htmlFor="mypicks"
-                            className="py-3 md:px-6 px-3 rounded-[10px] flex gap-2.5 items-center text-white font-medium w-full md:w-auto md:mb-0 justify-center cursor-pointer border-1 border-[#444444] hover:bg-transparent"
-                        >
-                            <Image src={magic} alt="magic" className="h-4 w-4" />
-                            <span>Get My Picks</span>
-                        </label>
-                    </div>
-                </div>
-                <div className="movie_reset_2_div">
-                    <p className="movie_reset_2_text">Mood (Choose a Mood)</p>
-                    <button className="books_reset_2_btn">Reset All</button>
-                </div>
-                {/* Mood filter */}
-                <div className="filter2_option_movies_div pb-2 md:mb-3 mb-2 pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
-                    {[
-                        "Feel-Good",
-                        "Thrilling",
-                        "Romantic",
-                        "Chill",
-                        "Mind-Bending",
-                        "Epic",
-                        "Funny",
-                        "Heartwarming",
-                        "Inspiring",
-                    ].map((genre, index) => {
-                        const id = `mood${index + 1}`;
-                        return (
-                            <div key={id} className="flex-shrink-0 min-[769px]:flex-shrink min-[769px]:min-w-0">
-                                <input
-                                    id={id}
-                                    type="radio"
-                                    name="mood_options"
-                                    value={id}
-                                    className="game-checkbox"
-                                />
-                                <label htmlFor={id} className="filter2_option_book_div">
-                                    <h5 className="filter2_option_title">{genre}</h5>
-                                </label>
-                            </div>
-                        );
-                    })}
-                </div>
                 <div className="movie_reset_2_div">
                     <p className="movie_reset_2_text">Genres (Choose a Genre)</p>
                     <button className="books_reset_2_btn">Reset All</button>
@@ -186,7 +113,7 @@ export function BookGrid() {
                                 <input
                                     id={id}
                                     type="checkbox"
-                                    name="book_options"
+                                    name="book_options_3"
                                     value={id}
                                     className="book-checkbox"
                                 />
@@ -205,7 +132,7 @@ export function BookGrid() {
                 {/* platform filter */}
                 <div className="filter2_movies_platform_div pb-2 mb-4 gap-2.5 flex min-[769px]:flex-wrap pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr">
                     {bookPlatforms.map((platform, index) => {
-                        const id = `movie_platform${index + 1}`;
+                        const id = `book_platform${index + 1}`;
                         return (
                             <div key={id} className="flex-shrink-0 md:flex-shrink min-[769px]:min-w-0">
                                 <input
@@ -213,7 +140,7 @@ export function BookGrid() {
                                     type="checkbox"
                                     name="movie_platform"
                                     value={platform.name}
-                                    className="movie-platform-checkbox"
+                                    className="book-platform-checkbox"
                                 />
                                 <label htmlFor={id} className="filter2_platform_option_div_2">
                                     <div className="bg-white rounded-full p-2 h-[40px] w-[40px] mx-auto">
@@ -249,14 +176,6 @@ export function BookGrid() {
                 <button className="book_show_more_btn">
                     Show More
                 </button>
-            </div>
-            {/* not found div */}
-            <div className="not_found_div hidden">
-                <div className="item_center">
-                    <Image src={not_found_book} alt="not_found_book" />
-                </div>
-                <h2 className="not_found_text">Ups!... no results found!</h2>
-                <p className="not_found_text_sm">Please try a different mood or genre</p>
             </div>
         </div>
     );

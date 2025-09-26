@@ -156,7 +156,7 @@ export function MovieGrid() {
                         );
                     })}
                 </div>
-                <p className="card_pass_message hidden">Click pass to remove already watched/unwanted items</p>
+                <p className="card_pass_message">Click pass to remove already watched/unwanted items</p>
             </div>
 
             {/* Responsive Container */}

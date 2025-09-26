@@ -1,8 +1,8 @@
 import NavbarCompact from "../components/NavbarCompact";
 import FilterMood from "../components/FilterMood";
 import { MovieGrid } from "../components/MovieGrid_3";
-import { SeriesGrid } from "../components/SeriesGrid_2";
-import { BookGrid } from "../components/BookGrid_2";
+import { SeriesGrid } from "../components/SeriesGrid_3";
+import { BookGrid } from "../components/BookGrid_3";
 import FilterPopup from "../components/FilterPopup";
 
 export default function HomeS() {
@@ -12,7 +12,6 @@ export default function HomeS() {
       <FilterMood/>
       <MovieGrid/>
       <SeriesGrid/>
-      {/* <GameGrid/> */}
       <BookGrid/>
     </div>
   );

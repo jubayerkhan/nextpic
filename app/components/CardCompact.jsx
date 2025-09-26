@@ -121,10 +121,10 @@ export default function Card({ item, type }) {
           />
 
           {/* Year and Tags */}
-          <div className="card_tag_div_2">
+          <div className="card_tag_div_2 bg-black/50 px-1.5 py-0.5 rounded-full">
             <span>{item.year}</span>
           </div>
-          {/* Year and Tags */}
+          {/* rating */}
           <div className="card_tag_div_3">
             <Image src={star} alt="star"/>
             <span>{item.rating}/10</span>
@@ -197,7 +197,7 @@ export default function Card({ item, type }) {
             <h3 className="card_title">{item.title}</h3>
 
             {/* Description */}
-            <p className="card_description">
+            <p className="card_description mt-0">
               {item.description}{" "}
               <span
                 className="text-[#5799EF] cursor-pointer"

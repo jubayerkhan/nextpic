@@ -33,7 +33,7 @@ export default function Filter() {
           Pick a Mood , if you want a fun
           <span className="inline-flex items-center gap-3">
             touch
-            <div className="border-1 border-[#394056] p-2 rounded-full cursor-pointer">
+            <div className="filter_compact_btn">
               <Image src={filter} alt="filter" />
             </div>
           </span>
@@ -41,7 +41,7 @@ export default function Filter() {
       </h2>
 
       {/* Mood filter */}
-      <div className="filter2_option_movies_div pb-2 md:mb-3 mb-2 pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr md:justify-center">
+      <div className="filter2_option_movies_div pb-2 md:mb-3 mb-2 pt-0 min-[769px]:overflow-visible overflow-x-auto scrollbar-hide auto-rows-fr min-[769px]:justify-center">
         {[
           "Feel-Good",
           "Thrilling",
