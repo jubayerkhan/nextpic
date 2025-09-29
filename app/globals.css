@@ -350,10 +350,10 @@
   .tooltip {
     position: relative;
     display: inline-block;
-    --tt-bg: #6C3DF0 !important;
+    --tt-bg: #6c3df0 !important;
     --tt-off: calc(100% + 0.5rem);
     --tt-tail: calc(100% + 1px + 0.25rem);
-}
+  }
 
   .card_bookmark_img {
     z-index: 999 !important;
