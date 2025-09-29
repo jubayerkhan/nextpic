@@ -31,6 +31,7 @@ export default function Filter() {
           Pick a Mood , if you want a fun
           <span className="inline-flex items-center gap-3">
             touch
+            {/* filter_compact_btn_active */}
             <div className="filter_compact_btn">
               <Image src={filter} alt="filter" />
             </div>

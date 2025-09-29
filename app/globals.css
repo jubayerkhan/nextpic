@@ -650,6 +650,9 @@
   .filter_compact_btn {
     @apply border-1 border-[#394056] p-2 rounded-full cursor-pointer hover:bg-[#6C3DF0];
   }
+  .filter_compact_btn_active {
+    @apply border-1 border-[#394056] p-2 rounded-full cursor-pointer bg-[#6C3DF0];
+  }
 
   /* ============================ */
   /* subscrive page styles */
