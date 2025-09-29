@@ -32,7 +32,7 @@ export default function Filter() {
           <span className="inline-flex items-center gap-3">
             touch
             {/* filter_compact_btn_active */}
-            <div className="filter_compact_btn">
+            <div className="filter_compact_btn tooltip" data-tip="Filter by Mood">
               <Image src={filter} alt="filter" />
             </div>
           </span>

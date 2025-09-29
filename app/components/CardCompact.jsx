@@ -109,7 +109,7 @@ export default function Card({ item, type }) {
       >
         {/* Image section */}
         <div
-          className="relative overflow-hidden max-h-[303px] cursor-pointer"
+          className="relative overflow-visible max-h-[303px] cursor-pointer"
           onClick={openModal} // opens main modal
         >
           <Image
@@ -126,7 +126,7 @@ export default function Card({ item, type }) {
           </div>
           {/* rating */}
           <div className="card_tag_div_3">
-            <Image src={star} alt="star"/>
+            <Image src={star} alt="star" />
             <span>{item.rating}/10</span>
           </div>
           {/* Bookmark icon */}
@@ -134,7 +134,9 @@ export default function Card({ item, type }) {
             className="card_bookmark_img hover:opacity-100 md:opacity-80"
             onClick={handleClick} // calls handleClick with stopPropagation
           >
-            <Image src={bookmarkIcon} alt="bookmark" width={34} height={34} />
+            <div className="tooltip tooltip-left" data-tip="Add to Bookmark">
+              <Image src={bookmarkIcon} alt="bookmark" width={34} height={34} />
+            </div>
           </label>
 
           {/* Bookmark Modal */}

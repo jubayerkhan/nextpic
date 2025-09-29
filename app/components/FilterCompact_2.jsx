@@ -15,7 +15,7 @@ export default function Filter() {
                 <h2 className="filter_heading lg:hidden block pb-3 lg:pb-0">
                     <span>
                         Discover Your Next Favorite{" "}
-                        <span className="inline-flex items-center ">
+                        <span className="inline-flex items-center">
                             Pick
                             <Image
                                 src={header_img}
