@@ -29,7 +29,7 @@ export default function Filter() {
       <h2 className="filter_title_compact_2">
         <span>
           Pick a Mood , if you want a fun
-          <span className="inline-flex items-center gap-3">
+          <span className="inline-flex items-center gap-3 filter_compact_parent">
             touch
             {/* filter_compact_btn_active */}
             <div className="filter_compact_btn tooltip" data-tip="Filter by Mood">

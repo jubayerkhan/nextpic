@@ -109,7 +109,7 @@ export default function Card({ item, type }) {
       >
         {/* Image section */}
         <div
-          className="relative overflow-visible max-h-[303px] cursor-pointer"
+          className="relative overflow-hidden max-h-[303px] cursor-pointer rounded-t-[20px]"
           onClick={openModal} // opens main modal
         >
           <Image
@@ -129,12 +129,15 @@ export default function Card({ item, type }) {
             <Image src={star} alt="star" />
             <span>{item.rating}/10</span>
           </div>
-          {/* Bookmark icon */}
+          
+        </div>
+
+        {/* Bookmark icon */}
           <label
             className="card_bookmark_img hover:opacity-100 md:opacity-80"
             onClick={handleClick} // calls handleClick with stopPropagation
           >
-            <div className="tooltip tooltip-left" data-tip="Add to Bookmark">
+            <div className={`tooltip ${type}`} data-tip="Add to Bookmark">
               <Image src={bookmarkIcon} alt="bookmark" width={34} height={34} />
             </div>
           </label>
@@ -190,7 +193,6 @@ export default function Card({ item, type }) {
               <button>close</button>
             </form>
           </dialog>
-        </div>
 
         {/* Content section */}
         <div className="card_content_div flex flex-col flex-grow">

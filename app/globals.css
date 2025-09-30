@@ -317,7 +317,7 @@
 
   /* card style */
   .card_div {
-    @apply bg-[#1F2842] rounded-[20px] overflow-hidden text-white shadow-md max-w-[207px] md:max-w-full flex flex-col;
+    @apply bg-[#1F2842] rounded-[20px] text-white shadow-md max-w-[207px] md:max-w-full flex flex-col relative;
   }
 
   .card_div .card_poster_img {
@@ -347,12 +347,24 @@
     @apply absolute top-2 right-2 cursor-pointer;
   }
 
-  .tooltip {
+  .filter_compact_parent .tooltip {
     position: relative;
     display: inline-block;
     --tt-bg: #6c3df0 !important;
     --tt-off: calc(100% + 0.5rem);
     --tt-tail: calc(100% + 1px + 0.25rem);
+    /* overflow: visible !important;
+    z-index: 999 !important; */
+  }
+
+  .tooltip.movie {
+    --tt-bg: #8A38F5 !important;
+  }
+  .tooltip.series {
+    --tt-bg: #F316B0 !important;
+  }
+  .tooltip.book {
+    --tt-bg: #0C8CE9 !important;
   }
 
   .card_bookmark_img {
