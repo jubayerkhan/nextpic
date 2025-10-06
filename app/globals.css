@@ -357,6 +357,10 @@
     z-index: 999 !important; */
   }
 
+  .tooltip.mood {
+    --tt-bg: #6c3df0 !important;
+  }
+
   .tooltip.movie {
     --tt-bg: #8A38F5 !important;
   }
@@ -901,7 +905,7 @@
   }
 
   .subscription_detail_card_div {
-    @apply bg-[#393d52] rounded-[20px] min-[769px]:py-[24px] py-5 min-[769px]:px-6 px-5 text-white min-w-[233px];
+    @apply bg-[#393d52] rounded-[20px] min-[769px]:py-[24px] py-5 min-[769px]:px-6 px-5 text-white min-w-[233px] relative;
   }
 
   .subscription_detail_card_img_div {
@@ -910,6 +914,24 @@
 
   .subscription_detail_card_title {
     @apply text-2xl font-semibold py-[5px];
+  }
+  .subscription_detail_card_prices {
+    @apply text-2xl font-semibold pt-[5px] md:pb-6 pb-3;
+  }
+  .subscription_detail_card_active_btn {
+    @apply absolute right-6 top-6 text-[#00DDA9] border-1 border-[#00DDA9] rounded-full px-3 py-[5px];
+  }
+  .subscription_detail_card_enable_btn {
+    @apply text-[#00DDA9] border-1 border-[#00DDA9] rounded-full px-3 py-[5px] text-sm;
+  }
+  .subscription_detail_card_subscrive_btn {
+    @apply text-[#E5396A] bg-[#312020] w-full font-medium py-3 rounded-[10px] border-1 border-[#E5396A] cursor-pointer;
+  }
+  .subscription_detail_card_hr {
+    @apply border-b-1 border-[#D2C2FF1A] pb-5 mb-5;
+  }
+  .subscription_detail_card_auto_renew_div {
+    @apply flex justify-between items-center;
   }
 
   .transection_heading {

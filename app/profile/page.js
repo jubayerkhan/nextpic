@@ -151,6 +151,7 @@ export default function Home() {
         <div className="subscription_detail_cards_div">
           {/* card 1 */}
           <div className="subscription_detail_card_div">
+            <button className="subscription_detail_card_active_btn">Active</button>
             <div className="subscription_detail_card_div_inner">
               <div className="subscription_detail_card_img_div bg-gradient-to-b from-[#D3C3FF] to-[#6C3DF0]">
                 <Image src={crown} alt="crown" />
@@ -161,6 +162,8 @@ export default function Home() {
               </div>
             </div>
             <p>Unlimited recommendations and advanced features</p>
+            <h3 className="subscription_detail_card_prices">$9.99/month</h3>
+            <button className="subscription_detail_card_subscrive_btn">Cancel Subscription</button>
           </div>
           {/* card 2 */}
           <div className="subscription_detail_card_div">
@@ -173,8 +176,17 @@ export default function Home() {
                 <h3 className="subscription_detail_card_title">
                   December 15, 2026
                 </h3>
-                <p className="text-[#00DDA9]">Auto-renewed enabled</p>
+                {/* <p className="text-[#00DDA9]">Auto-renewed enabled</p> */}
               </div>
+            </div>
+            <p className="subscription_detail_card_hr">Your subscription will renew in 9 days</p>
+            <div className="subscription_detail_card_auto_renew_div pb-[15px]">
+              <p>Auto-Renewal Status</p>
+              <button className="subscription_detail_card_enable_btn">Enabled</button>
+            </div>
+            <div className="subscription_detail_card_auto_renew_div">
+              <p>Renewal Amount</p>
+              <p>$90.99</p>
             </div>
           </div>
         </div>
