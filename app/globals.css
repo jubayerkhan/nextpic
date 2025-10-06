@@ -897,11 +897,11 @@
   }
 
   .subscription_detail_card_div_inner {
-    @apply flex items-center min-[769px]:gap-6 gap-4;
+    @apply flex items-center min-[769px]:gap-6 gap-4 mb-[15px];
   }
 
   .subscription_detail_card_div {
-    @apply bg-[#393d52] rounded-[20px] min-[769px]:py-[39px] py-5 min-[769px]:px-12 px-5 text-white min-w-[233px];
+    @apply bg-[#393d52] rounded-[20px] min-[769px]:py-[24px] py-5 min-[769px]:px-6 px-5 text-white min-w-[233px];
   }
 
   .subscription_detail_card_img_div {

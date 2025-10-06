@@ -158,9 +158,9 @@ export default function Home() {
               <div>
                 <p>Current Plan</p>
                 <h3 className="subscription_detail_card_title">Premium</h3>
-                <p>Unlimited recommendations</p>
               </div>
             </div>
+            <p>Unlimited recommendations and advanced features</p>
           </div>
           {/* card 2 */}
           <div className="subscription_detail_card_div">
