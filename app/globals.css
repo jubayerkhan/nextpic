@@ -918,6 +918,24 @@
   .subscription_detail_card_prices {
     @apply text-2xl font-semibold pt-[5px] md:pb-6 pb-3;
   }
+  .subscription_cancle_btn {
+    @apply w-full bg-gradient-to-b from-[#FF97B8] to-[#B10041] text-white rounded-[10px] py-3 cursor-pointer hover:shadow-[0_4px_10px_0_#FF4F6D];
+  }
+  .subscription_keep_btn {
+    @apply w-full hover:bg-[#393d52] text-white rounded-[10px] py-3 border-1 border-white cursor-pointer;
+  }
+  .subscription_list_ul_title {
+    @apply text-[#BD8A00] text-sm font-semibold;
+  }
+  .subscription_list_ul_div {
+    @apply w-full bg-[#33241D] rounded-[20px] p-[13px] mb-12 border-1 border-[#BD8A00];
+  }
+  .subscription_cancel_modal_close_btn {
+    @apply absolute right-[30px] top-[30px];
+  }
+  .subscription_list_ul {
+    @apply list-disc list-inside text-sm text-[#BD8A00] mt-2;
+  }
   .subscription_detail_card_active_btn {
     @apply absolute right-6 top-6 text-[#00DDA9] border-1 border-[#00DDA9] rounded-full px-3 py-[5px] text-sm font-semibold;
   }

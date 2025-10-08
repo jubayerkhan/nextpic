@@ -174,15 +174,15 @@ export default function Home() {
               id="my_modal_2"
             >
               <div className="modal-box relative bg-[#282e3f] rounded-[40px] py-12 px-6 max-w-[626px]">
-                <Image src={cross_small} alt="cross_small" className="absolute right-[30px] top-[30px]" onClick={()=>document.getElementById('my_modal_2').close()}/>
+                <Image src={cross_small} alt="cross_small" className="subscription_cancel_modal_close_btn" onClick={()=>document.getElementById('my_modal_2').close()}/>
                 <div className="modal_warning_img_div">
                   <Image src={warning} alt="warning" className="mx-auto"/>
                 </div>
                 <h2 className="modal_warning_title">Cancel Subscription</h2>
                 <p className="modal_warning_text">Are you sure you want to cancel your Premium subscription? You'll lose access to all premium features at the end of your current billing period.</p>
-                <div className="w-full bg-[#33241D] rounded-[20px] p-[13px] mb-12 border-1 border-[#BD8A00]">
-                  <h5 className="text-[#BD8A00] text-sm font-semibold">What happens next:</h5>
-                  <ul className="list-disc list-inside text-sm text-[#BD8A00] mt-2">
+                <div className="subscription_list_ul_div">
+                  <h5 className="subscription_list_ul_title">What happens next:</h5>
+                  <ul className="subscription_list_ul">
                     <li>Your subscription will remain active until December 7, 2024</li>
                     <li>You'll keep all premium features until then</li>
                     <li>No additional charges will be made</li>
@@ -190,8 +190,8 @@ export default function Home() {
                   </ul>
                 </div>
                 <div className="grid grid-cols-2 gap-6">
-                  <button className="w-full hover:bg-[#393d52] text-white rounded-[10px] py-3 border-1 border-white cursor-pointer" onClick={()=>document.getElementById('my_modal_2').close()}>Keep Subscription</button>
-                  <button className="w-full bg-gradient-to-b from-[#FF97B8] to-[#B10041] text-white rounded-[10px] py-3 cursor-pointer hover:shadow-[0_4px_10px_0_#FF4F6D]">Confirm Cancel</button>
+                  <button className="subscription_keep_btn" onClick={()=>document.getElementById('my_modal_2').close()}>Keep Subscription</button>
+                  <button className="subscription_cancle_btn">Confirm Cancel</button>
                 </div>
               </div>
               <form method="dialog" className="modal-backdrop">
