@@ -20,8 +20,8 @@ import movie2 from "@/public/assets/movie2.png";
 import book3 from "@/public/assets/book3.png";
 import book1 from "@/public/assets/book1.png";
 import empty_poster from "@/public/assets/empty_poster.png";
-import movie4 from "@/public/assets/movie4.png";
-import series3 from "@/public/assets/series3.png";
+import cross_small from "@/public/assets/cross_small.png";
+import warning from "@/public/assets/warning.png";
 import star_white from "@/public/assets/star_white.png";
 import sigh_out from "@/public/assets/sign_out.png";
 import trash from "@/public/assets/trash.png";
@@ -151,7 +151,9 @@ export default function Home() {
         <div className="subscription_detail_cards_div">
           {/* card 1 */}
           <div className="subscription_detail_card_div">
-            <button className="subscription_detail_card_active_btn">Active</button>
+            <button className="subscription_detail_card_active_btn">
+              Active
+            </button>
             <div className="subscription_detail_card_div_inner">
               <div className="subscription_detail_card_img_div bg-gradient-to-b from-[#D3C3FF] to-[#6C3DF0]">
                 <Image src={crown} alt="crown" />
@@ -163,7 +165,39 @@ export default function Home() {
             </div>
             <p>Unlimited recommendations and advanced features</p>
             <h3 className="subscription_detail_card_prices">$9.99/month</h3>
-            <button className="subscription_detail_card_subscrive_btn">Cancel Subscription</button>
+            <button className="subscription_detail_card_subscrive_btn" onClick={()=>document.getElementById('my_modal_2').showModal()}>
+              Cancel Subscription
+            </button>
+            {/* Bookmark Modal */}
+            <dialog
+              className="modal"
+              id="my_modal_2"
+            >
+              <div className="modal-box relative bg-[#282e3f] rounded-[40px] py-12 px-6 max-w-[626px]">
+                <Image src={cross_small} alt="cross_small" className="absolute right-[30px] top-[30px]" onClick={()=>document.getElementById('my_modal_2').close()}/>
+                <div className="modal_warning_img_div">
+                  <Image src={warning} alt="warning" className="mx-auto"/>
+                </div>
+                <h2 className="modal_warning_title">Cancel Subscription</h2>
+                <p className="modal_warning_text">Are you sure you want to cancel your Premium subscription? You'll lose access to all premium features at the end of your current billing period.</p>
+                <div className="w-full bg-[#33241D] rounded-[20px] p-[13px] mb-12 border-1 border-[#BD8A00]">
+                  <h5 className="text-[#BD8A00] text-sm font-semibold">What happens next:</h5>
+                  <ul className="list-disc list-inside text-sm text-[#BD8A00] mt-2">
+                    <li>Your subscription will remain active until December 7, 2024</li>
+                    <li>You'll keep all premium features until then</li>
+                    <li>No additional charges will be made</li>
+                    <li>You can reactivate anytime before expiration</li>
+                  </ul>
+                </div>
+                <div className="grid grid-cols-2 gap-6">
+                  <button className="w-full hover:bg-[#393d52] text-white rounded-[10px] py-3 border-1 border-white cursor-pointer" onClick={()=>document.getElementById('my_modal_2').close()}>Keep Subscription</button>
+                  <button className="w-full bg-gradient-to-b from-[#FF97B8] to-[#B10041] text-white rounded-[10px] py-3 cursor-pointer hover:shadow-[0_4px_10px_0_#FF4F6D]">Confirm Cancel</button>
+                </div>
+              </div>
+              <form method="dialog" className="modal-backdrop">
+                <button>close</button>
+              </form>
+            </dialog>
           </div>
           {/* card 2 */}
           <div className="subscription_detail_card_div">
@@ -179,10 +213,14 @@ export default function Home() {
                 {/* <p className="text-[#00DDA9]">Auto-renewed enabled</p> */}
               </div>
             </div>
-            <p className="subscription_detail_card_hr">Your subscription will renew in 9 days</p>
+            <p className="subscription_detail_card_hr">
+              Your subscription will renew in 9 days
+            </p>
             <div className="subscription_detail_card_auto_renew_div pb-[15px]">
               <p>Auto-Renewal Status</p>
-              <button className="subscription_detail_card_enable_btn">Enabled</button>
+              <button className="subscription_detail_card_enable_btn">
+                Enabled
+              </button>
             </div>
             <div className="subscription_detail_card_auto_renew_div">
               <p>Renewal Amount</p>
