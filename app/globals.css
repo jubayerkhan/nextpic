@@ -931,7 +931,7 @@
     @apply w-full bg-[#33241D] rounded-[20px] p-[13px] mb-12 border-1 border-[#BD8A00];
   }
   .subscription_cancel_modal_close_btn {
-    @apply absolute right-[30px] top-[30px];
+    @apply absolute right-[30px] top-[30px] cursor-pointer;
   }
   .subscription_list_ul {
     @apply list-disc list-inside text-sm text-[#BD8A00] mt-2;
