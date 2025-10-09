@@ -928,7 +928,10 @@
     @apply text-[#BD8A00] text-sm font-semibold;
   }
   .subscription_list_ul_div {
-    @apply w-full bg-[#33241D] rounded-[20px] p-[13px] mb-12 border-1 border-[#BD8A00];
+    @apply w-full bg-[#33241D] rounded-[20px] p-[13px] md:mb-6 mb-4 border-1 border-[#BD8A00];
+  }
+  .subscription_modal_grid {
+    @apply grid grid-cols-2 sm:gap-6 gap-4;
   }
   .subscription_cancel_modal_close_btn {
     @apply absolute right-[30px] top-[30px] cursor-pointer;
@@ -956,13 +959,13 @@
     @apply text-2xl font-semibold md:pb-6 pb-4;
   }
   .modal_warning_img_div {
-    @apply mx-auto p-[15px] w-[54px] rounded-full bg-gradient-to-b from-[#FF97B8] to-[#E5396A] flex items-center justify-center mb-12;
+    @apply mx-auto p-[15px] w-[54px] rounded-full bg-gradient-to-b from-[#FF97B8] to-[#E5396A] flex items-center justify-center md:mb-6 mb-4;
   }
   .modal_warning_title {
-    @apply text-[34px] font-semibold text-white pb-[5px] text-center;
+    @apply md:text-[34px] text-2xl font-semibold text-white pb-[5px] text-center;
   }
   .modal_warning_text {
-    @apply text-[14px] pb-6 text-white text-center;
+    @apply text-[14px] md:pb-5 pb-4 text-white text-center;
   }
 
   .subscription_detail_cards_div {

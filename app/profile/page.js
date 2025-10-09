@@ -173,7 +173,7 @@ export default function Home() {
               className="modal"
               id="my_modal_2"
             >
-              <div className="modal-box relative bg-[#282e3f] rounded-[40px] py-12 px-6 max-w-[626px]">
+              <div className="modal-box relative bg-[#282e3f] rounded-[40px] md:py-12 md:px-8 max-w-[626px]">
                 <Image src={cross_small} alt="cross_small" className="subscription_cancel_modal_close_btn" onClick={()=>document.getElementById('my_modal_2').close()}/>
                 <div className="modal_warning_img_div">
                   <Image src={warning} alt="warning" className="mx-auto"/>
@@ -189,7 +189,7 @@ export default function Home() {
                     <li>You can reactivate anytime before expiration</li>
                   </ul>
                 </div>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="subscription_modal_grid">
                   <button className="subscription_keep_btn" onClick={()=>document.getElementById('my_modal_2').close()}>Keep Subscription</button>
                   <button className="subscription_cancle_btn">Confirm Cancel</button>
                 </div>
