@@ -362,13 +362,13 @@
   }
 
   .tooltip.movie {
-    --tt-bg: #8A38F5 !important;
+    --tt-bg: #8a38f5 !important;
   }
   .tooltip.series {
-    --tt-bg: #F316B0 !important;
+    --tt-bg: #f316b0 !important;
   }
   .tooltip.book {
-    --tt-bg: #0C8CE9 !important;
+    --tt-bg: #0c8ce9 !important;
   }
 
   .card_bookmark_img {
@@ -919,10 +919,10 @@
     @apply text-2xl font-semibold pt-[5px] md:pb-6 pb-3;
   }
   .subscription_cancle_btn {
-    @apply w-full bg-gradient-to-b from-[#FF97B8] to-[#B10041] text-white rounded-[10px] py-3 cursor-pointer hover:shadow-[0_4px_10px_0_#FF4F6D];
+    @apply w-full bg-gradient-to-b from-[#FF97B8] to-[#B10041] text-white rounded-[10px] py-3 cursor-pointer hover:shadow-[0_4px_10px_0_#FF4F6D] sm:text-base text-sm;
   }
   .subscription_keep_btn {
-    @apply w-full hover:bg-[#393d52] text-white rounded-[10px] py-3 border-1 border-white cursor-pointer;
+    @apply w-full hover:bg-[#393d52] text-white rounded-[10px] py-3 border-1 border-white cursor-pointer sm:text-base text-sm;
   }
   .subscription_list_ul_title {
     @apply text-[#BD8A00] text-sm font-semibold;
@@ -958,6 +958,7 @@
   .transection_heading {
     @apply text-2xl font-semibold md:pb-6 pb-4;
   }
+
   .modal_warning_img_div {
     @apply mx-auto p-[15px] w-[54px] rounded-full bg-gradient-to-b from-[#FF97B8] to-[#E5396A] flex items-center justify-center md:mb-6 mb-4;
   }
