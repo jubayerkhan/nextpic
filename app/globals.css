@@ -794,6 +794,11 @@
     border-radius: 20px !important;
   }
 
+  /* Stop arrow rotation in DaisyUI collapse */
+  /* .collapse-arrow > input:checked ~ .collapse-title::after {
+    transform: rotate(45deg) !important;
+  } */
+
   /* ===================== */
   /* profile page styles */
   /* ===================== */
