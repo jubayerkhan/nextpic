@@ -782,7 +782,7 @@
   }
 
   .question_section_title {
-    @apply to-white font-bold md:text-[44px] text-4xl text-center md:pb-[74px] pb-8;
+    @apply text-white font-bold md:text-[44px] text-4xl text-center md:pb-[74px] pb-8;
   }
 
   .pricing_card_price {

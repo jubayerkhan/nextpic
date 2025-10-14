@@ -125,10 +125,10 @@ export default function Home() {
         <h2 className="question_section_title">Frequently Asked Questions</h2>
         <div className="collapse collapse-arrow bg-[#2d304c] border-2 border-[#384056] mb-6">
           <input type="radio" name="my-accordion-2" defaultChecked />
-          <div className="collapse-title font-semibold text-lg">
+          <div className="collapse-title font-semibold text-lg text-white">
             Can I cancel my subscription anytime?
           </div>
-          <div className="collapse-content">
+          <div className="collapse-content text-white">
             Yes, you can cancel your subscription at any time. No questions
             asked, no cancellation fees. Your subscription will remain active
             until the end of your current billing period.
@@ -136,40 +136,40 @@ export default function Home() {
         </div>
         <div className="collapse collapse-arrow bg-[#2d304c] border-2 border-[#384056] mb-6">
           <input type="radio" name="my-accordion-2" />
-          <div className="collapse-title font-semibold text-lg">
+          <div className="collapse-title font-semibold text-lg text-white">
             What's included in my subscription?
           </div>
-          <div className="collapse-content">
+          <div className="collapse-content text-white">
             Click on "Forgot Password" on the login page and follow the
             instructions sent to your email.
           </div>
         </div>
         <div className="collapse collapse-arrow bg-[#2d304c] border-2 border-[#384056] mb-6">
           <input type="radio" name="my-accordion-2" />
-          <div className="collapse-title font-semibold text-lg">
+          <div className="collapse-title font-semibold text-lg text-white">
             How does the recommendation system work?
           </div>
-          <div className="collapse-content">
+          <div className="collapse-content text-white">
             Go to "My Account" settings and select "Edit Profile" to make
             changes.
           </div>
         </div>
         <div className="collapse collapse-arrow bg-[#2d304c] border-2 border-[#384056] mb-6">
           <input type="radio" name="my-accordion-2" />
-          <div className="collapse-title font-semibold text-lg">
+          <div className="collapse-title font-semibold text-lg text-white">
             Can I use Nextpick on multiple devices?
           </div>
-          <div className="collapse-content">
+          <div className="collapse-content text-white">
             Go to "My Account" settings and select "Edit Profile" to make
             changes.
           </div>
         </div>
         <div className="collapse collapse-arrow bg-[#2d304c] border-2 border-[#384056] mb-6">
           <input type="radio" name="my-accordion-2" />
-          <div className="collapse-title font-semibold text-lg">
+          <div className="collapse-title font-semibold text-lg text-white">
             Is there a free trial?
           </div>
-          <div className="collapse-content">
+          <div className="collapse-content text-white">
             Go to "My Account" settings and select "Edit Profile" to make
             changes.
           </div>
