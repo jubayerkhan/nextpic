@@ -762,7 +762,7 @@
   }
 
   .subscrive_page_ul_li {
-    @apply flex items-start gap-2.5 md:pb-6 pb-3;
+    @apply flex items-start gap-2.5 md:pb-6 pb-3 text-white;
   }
 
   .subscrive_page_trial_btn {
@@ -1178,11 +1178,14 @@
   }
 
   .get_started_text {
-    @apply text-center text-2xl font-semibold pb-[5px];
+    @apply text-center text-2xl font-semibold pb-[5px] text-white;
   }
 
   .get_started_text_line {
-    @apply text-center md:pb-6 pb-4;
+    @apply text-center md:pb-6 pb-4 text-white;
+  }
+  .benifits_text {
+    @apply text-2xl font-semibold md:pb-6 pb-4 text-white;
   }
 
   .signup_page_logo {

@@ -18,7 +18,7 @@ export default function Home() {
             <Image src={sign_in} alt="sign_in"/>
             <span>Join NextPick</span>
           </button>
-          <p className="text-2xl font-semibold md:pb-6 pb-4">Benefits of Subscription</p>
+          <p className="benifits_text">Benefits of Subscription</p>
           <ul>
             <li className="subscrive_page_ul_li">
               <span className="ul_li_span">
