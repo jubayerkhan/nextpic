@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "^15.5.2",
+    "next": "^16.2.7",
     "npm-install-global": "^1.0.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
